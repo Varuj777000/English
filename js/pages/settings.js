@@ -320,7 +320,9 @@ function onChatFileChosen(event) {
 function renderChatReport(report) {
   const parts = [];
   if (report.topicsBoosted.length) {
-    const names = report.topicsBoosted.map(function (t) { return t.title; }).join(", ");
+    // Одна тема может встретиться в нескольких ошибках — называем её один раз
+    const names = report.topicsBoosted.map(function (t) { return t.title; })
+      .filter(function (title, i, all) { return all.indexOf(title) === i; }).join(", ");
     parts.push("<p>Повышен приоритет тем: <b>" + escapeHtml(names) + "</b>.</p>");
   }
   if (report.otherAdded.length) {

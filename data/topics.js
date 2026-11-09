@@ -280,7 +280,7 @@ DATA.topics.push(
       "**Запоминаем сочетаниями:** **at** home / work / school / the station / the airport / a party; **in** bed / hospital / the country / the city; **on** the left / the right / the first floor.",
       "**in the cinema и at the cinema:** at the cinema — «в кино» (смотрим фильм, общая ситуация); in the cinema — внутри здания.",
       "**Движение:** to (куда), from (откуда), into (внутрь), out of (из). **go to** school, **come from** Russia. ✗ I go to home → ✓ I go **home** (home без to).",
-      "**Типичные ошибки:** ✗ in the work → ✓ **at** work. ✗ at the bus → ✓ **on** the bus. ✗ on the street (в целом по-русски «на улице») → ✓ **in** the street (британский вариант), **on** the street (американский)."
+      "**Типичные ошибки:** ✗ in the work → ✓ **at** work. ✗ at the bus → ✓ **on** the bus. ✗ at the street → ✓ **in** the street (британский вариант) или **on** the street (американский): оба правильные."
     ],
     examples: [
       { en: "The keys are on the table.", ru: "Ключи на столе." },
@@ -675,7 +675,7 @@ DATA.topics.push(
       "**Правописание:** big → **bigger**, hot → **hotter** (удвоение); easy → **easier**, happy → **happier** (y → i); nice → **nicer** (на -e добавляем только -r).",
       "**Двусложные:** на -y — easier; на -ow, -le, -er часто тоже -er (narrow → narrower, clever → cleverer); остальные — **more**: more careful, more modern.",
       "**Усиление:** **much / a lot / far** + сравнительная: **much** bigger. **a bit / slightly** — чуть-чуть: **a bit** cheaper.",
-      "**the + превосходная + in / of:** the best student **in** the class, the tallest **of** all. ✗ the best student of the class.",
+      "**the + превосходная + in / of:** после места и группы людей обычно **in** (the best student **in** the class, the tallest **in** the team); перед «всеми» или числом — **of** (the tallest **of** all, the best **of** the three).",
       "**Типичные ошибки:** ✗ more better → ✓ **better**. ✗ the most biggest → ✓ the **biggest**. ✗ bigger **that** → ✓ bigger **than**."
     ],
     examples: [
@@ -1003,9 +1003,9 @@ DATA.topics.push(
       "Исключения: good → **well**, fast → **fast**, hard → **hard**, late → **late**. (hardly = «едва», lately = «в последнее время» — другое значение!)",
       "После глаголов-связок **be, look, feel, sound, seem, smell, taste** — прилагательное: You **look tired**. It **sounds good**.",
       "**Прилагательные на -ly:** friendly, lovely, lonely, elderly — это прилагательные, не наречия. Наречие — **in a friendly way**.",
-      "**Пары с разным смыслом:** **hard** — трудный / усердно, **hardly** — едва; **late** — поздно, **lately** — в последнее время; **high** / **highly**; **near** / **nearly**.",
+      "**Пары с разным смыслом:** **hard** — трудный / усердно, **hardly** — едва; **late** — поздно, **lately** — в последнее время; **high** (высоко) / **highly** (очень: highly successful); **near** (рядом) / **nearly** (почти).",
       "**Сравнение наречий:** quickly → **more** quickly; fast → faster; well → better. **as + наречие + as:** as **quickly** as possible.",
-      "**Типичные ошибки:** ✗ She sings beautiful → ✓ She sings **beautifully**. ✗ He speaks good English → ✓ He speaks **good** English / He speaks English **well**. ✗ I feel badly → ✓ I feel **bad**."
+      "**Типичные ошибки:** ✗ She sings beautiful → ✓ She sings **beautifully**. ✗ He speaks English good → ✓ He speaks English **well** (прилагательное good ставим перед существительным: He speaks **good** English). ✗ I feel badly → ✓ I feel **bad**."
     ],
     examples: [
       { en: "She speaks English very well.", ru: "Она очень хорошо говорит по-английски." },
@@ -1377,7 +1377,7 @@ DATA.topics.push(
       "**Предлог:** The woman **I talked to** (разговорно) = The woman **to whom** I talked (формально).",
       "**whose, where, when:** a man **whose** car was stolen; the city **where** I was born; the day **when** we met.",
       "**which к целой мысли:** He passed the exam, **which** surprised everyone.",
-      "**Типичные ошибки:** ✗ The man who he called → ✓ The man **who** called / **whom** he called (местоимение не повторяем). ✗ the book which I read it → ✓ the book **which** I read."
+      "**Типичные ошибки:** ✗ The man who I called him → ✓ The man (who) **I called** (him повторять не нужно). ✗ the book which I read it → ✓ the book **which** I read."
     ],
     examples: [
       { en: "I have a friend who speaks five languages.", ru: "У меня есть друг, который говорит на пяти языках." },
@@ -1989,7 +1989,7 @@ DATA.topics.push(
       "**4) Обратный порядок:** выделяемое в начале: **A holiday is what** I need. **The people are what** I like most about my job.",
       "**Действие через do:** **What I did was** (to) call him. **What happened was that** the car broke down.",
       "**Время:** be согласуется со временем главной мысли: **What I need is** a rest. **What I needed was** a rest.",
-      "**Типичные ошибки:** ✗ What I need **it** is a holiday — лишнее it. ✗ It was John **broke** the window — нужен who / that: It was John **who broke**. ✗ What I like most about my job **are** the people — после What-части обычно **is**: …**is** the people."
+      "**Типичные ошибки:** ✗ What I need **it** is a holiday — лишнее it. ✗ It was John **broke** the window — нужен who / that: It was John **who broke**."
     ],
     examples: [
       { en: "What I need is a holiday.", ru: "Что мне нужно, так это отпуск." },

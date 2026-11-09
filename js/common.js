@@ -41,6 +41,15 @@ function renderHeader() {
       '<a class="logo" href="index.html">English<span>Trainer</span></a>' +
       '<nav class="nav">' + links + "</nav>" +
     "</div>";
+
+  // На телефоне меню — одна строка с прокруткой (см. css): прокручиваем её так,
+  // чтобы текущая страница была видна посередине, а не за правым краем.
+  const nav = header.querySelector(".nav");
+  const active = header.querySelector(".nav-link.active");
+  if (nav && active && nav.scrollWidth > nav.clientWidth) {
+    const left = active.getBoundingClientRect().left - nav.getBoundingClientRect().left + nav.scrollLeft;
+    nav.scrollLeft = left - (nav.clientWidth - active.offsetWidth) / 2;
+  }
 }
 
 // Защита от «поломки» страницы: превращает < > & " в безопасные символы.
