@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Неправильные глаголы — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <h1>Неправильные глаголы</h1>
+    <p class="verbs-stats" id="verb-stats"></p>
+
+    <div class="chips verbs-tabs" id="verb-tabs">
+      <button type="button" class="chip active" data-tab="reference">Справочник</button>
+      <button type="button" class="chip" data-tab="train">Тренировка</button>
+    </div>
+
+    <!-- Справочник -->
+    <section id="view-reference">
+      <p class="muted">Три формы: <b>V1</b> — инфинитив, <b>V2</b> — Past Simple, <b>V3</b> — Past Participle
+        (для Present Perfect и пассива). Для самопроверки скройте столбец кнопкой и открывайте ячейки по клику.</p>
+      <div class="card verbs-controls">
+        <input type="search" id="verb-search" placeholder="Поиск: go, went, идти…" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <p class="muted small verbs-label">Частотность</p>
+        <div class="chips" id="verb-tiers"></div>
+        <p class="muted small verbs-label">Группа</p>
+        <select id="verb-group"></select>
+        <p class="muted small verbs-label">Самопроверка</p>
+        <div class="chips" id="verb-hide"></div>
+      </div>
+
+      <p class="muted small" id="verb-count"></p>
+      <div class="card verbs-list" id="verb-list"></div>
+    </section>
+
+    <!-- Тренировка -->
+    <section id="view-train" class="hidden">
+      <div id="train-setup"></div>
+      <div id="train-session" class="hidden">
+        <div class="test-top">
+          <span class="muted" id="train-mode-label"></span>
+          <span class="muted small" id="train-counter"></span>
+        </div>
+        <div class="progress-bar"><div id="train-progress"></div></div>
+        <div class="card" id="train-card"></div>
+        <button type="button" class="btn btn-small" id="train-stop-btn">Закончить тренировку</button>
+      </div>
+      <div id="train-summary" class="hidden"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/stories/past.js"></script>
+  <script src="data/stories/present.js"></script>
+  <script src="data/stories/perfect.js"></script>
+  <script src="data/stories/future.js"></script>
+  <script src="data/stories/wordformation.js"></script>
+  <script src="data/stories/passive.js"></script>
+  <script src="data/stories/b2.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <script src="data/verbs.js"></script>
+  <script src="data/verb-examples.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/verbs.js"></script>
+  <script src="js/pages/verbs.js"></script>
+  <script src="js/pages/verbs-train.js"></script>
+</body>
+</html>

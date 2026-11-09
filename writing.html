@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Письмо — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Список заданий (заполняет скрипт) -->
+    <section id="wr-list">
+      <h1>Письмо по шаблону</h1>
+      <p class="muted">Выберите задание: сайт даёт план письма, полезные фразы и подсвечивает ваши типичные ошибки,
+        пока вы пишете. Потом одной кнопкой можно скопировать текст для проверки в чате с Claude — найденные ошибки
+        вернутся сюда в «Мои ошибки».</p>
+      <div id="wr-tasks"></div>
+    </section>
+
+    <!-- Письмо: одно задание -->
+    <section id="wr-edit" class="hidden">
+      <p><a href="#" id="wr-back">← Все задания</a></p>
+      <h1 id="wr-title"></h1>
+      <p id="wr-prompt"></p>
+      <p class="muted small" id="wr-meta"></p>
+
+      <div class="card">
+        <h3>План</h3>
+        <ol id="wr-steps" class="wr-steps"></ol>
+      </div>
+
+      <div class="card">
+        <h3>Полезные фразы <span class="muted small">(нажмите — вставится в текст)</span></h3>
+        <div id="wr-phrases" class="wr-phrases"></div>
+      </div>
+
+      <label for="wr-text"><b>Ваш текст (по-английски)</b></label>
+      <textarea id="wr-text" rows="12" spellcheck="false" autocomplete="off" autocapitalize="sentences"
+        placeholder="Начните писать здесь…"></textarea>
+      <p class="small" id="wr-count"></p>
+
+      <div class="card">
+        <h3>Что уже получилось</h3>
+        <ul id="wr-checks" class="wr-checks"></ul>
+        <div id="wr-pitfalls"></div>
+        <p class="muted small">Подсказки работают по шаблонам и могут ошибаться: они не заменяют проверку живым человеком.</p>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" id="wr-done">Готово — сохранить</button>
+        <button type="button" class="btn" id="wr-copy">Скопировать для проверки в чате</button>
+        <button type="button" class="btn" id="wr-clear">Очистить</button>
+      </div>
+      <div id="wr-message"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/writing.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/chat-import.js"></script>
+  <script src="js/writing.js"></script>
+  <script src="js/pages/writing.js"></script>
+</body>
+</html>

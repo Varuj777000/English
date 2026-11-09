@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Темы — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <h1>Темы и правила</h1>
+    <p class="muted">Все темы сайта с объяснениями. Нажмите на тему, чтобы открыть правило.</p>
+
+    <!-- Фильтры -->
+    <input type="search" id="search" placeholder="Поиск: например, «артикли» или «present»">
+    <div class="chips" id="level-filter"></div>
+
+    <!-- Сюда скрипт выведет список тем -->
+    <div id="topic-list"></div>
+
+    <!-- Блок для чата с Claude -->
+    <h2 id="for-claude">Список тем для чата с Claude</h2>
+    <p>
+      Скопируйте этот текст и отправьте Claude в начале занятия. Там описан формат файла
+      и все ID тем. Файл, который пришлёт Claude, можно будет загрузить на сайт
+      (кнопка «Загрузить файл из чата» в настройках).
+    </p>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="copy-btn">Скопировать</button>
+      <button class="btn" id="download-btn">Скачать как файл .txt</button>
+    </div>
+    <pre class="copy-block" id="claude-text"></pre>
+  </main>
+
+  <!-- Данные (порядок важен: сначала js/data.js) -->
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <!-- Код -->
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/chat-import.js"></script>
+  <script src="js/pages/topics.js"></script>
+</body>
+</html>

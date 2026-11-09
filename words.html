@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Слова — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <!-- 1. Управление словами: добавление и список -->
+    <section id="view-manage">
+      <h1>Слова</h1>
+
+      <!-- Сюда скрипт выведет карточку повторения: сколько слов на сегодня -->
+      <div id="review-box"></div>
+
+      <!-- Послушать любое слово или фразу -->
+      <div class="card" id="listen-box">
+        <h3>Послушать любое слово или фразу</h3>
+        <div class="btn-row">
+          <input type="text" id="listen-input" placeholder="что угодно на английском" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1; min-width:160px">
+          <button type="button" class="btn btn-primary" id="listen-btn">🔊 Слушать</button>
+        </div>
+      </div>
+
+      <!-- Добавить одно слово -->
+      <div class="card">
+        <h3>Добавить слово</h3>
+        <form id="add-form" class="form">
+          <label>Английское слово или фраза
+            <input type="text" id="w-en" placeholder="reliable" autocomplete="off" autocapitalize="off" spellcheck="false">
+          </label>
+          <label>Перевод
+            <input type="text" id="w-ru" placeholder="надёжный" autocomplete="off">
+          </label>
+          <label>Пример <span class="muted small">(необязательно)</span>
+            <input type="text" id="w-example" placeholder="She is a reliable friend." autocomplete="off" autocapitalize="off">
+          </label>
+          <div class="btn-row">
+            <button type="submit" class="btn btn-primary">Добавить</button>
+          </div>
+        </form>
+        <div id="add-message"></div>
+      </div>
+
+      <!-- Добавить списком -->
+      <div class="card">
+        <h3>Добавить списком</h3>
+        <p class="muted small">
+          По одному слову на строку в формате <b>word — перевод</b>. Вместо «—» можно ставить обычный дефис.
+          Пример можно добавить после знака <b>|</b>.
+        </p>
+        <textarea id="list-input" rows="7" spellcheck="false" placeholder="reliable — надёжный
+look after — присматривать, заботиться
+deadline — срок | The deadline is on Friday."></textarea>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="list-btn">Добавить список</button>
+        </div>
+        <div id="list-message"></div>
+      </div>
+
+      <!-- Мои слова -->
+      <h2>Мои слова <span class="muted" id="my-count"></span></h2>
+      <input type="search" id="my-search" placeholder="Поиск по моим словам">
+      <div id="my-words"></div>
+    </section>
+
+    <!-- 2. Повторение слов (карточки) -->
+    <section id="view-review" class="hidden">
+      <div class="test-top">
+        <span class="muted">Повторение слов</span>
+        <span id="rv-counter" class="muted small"></span>
+      </div>
+      <div class="progress-bar"><div id="rv-progress"></div></div>
+      <div class="card" id="rv-card"></div>
+      <button class="btn btn-small" id="rv-stop-btn">Закончить повторение</button>
+    </section>
+
+    <!-- 3. Итоги повторения -->
+    <section id="view-review-finish" class="hidden"></section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/words-store.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/pages/words.js"></script>
+</body>
+</html>

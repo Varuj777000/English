@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мои ошибки — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <h1>Мои ошибки</h1>
+    <p class="muted">Ваши настоящие предложения с ошибками. Сайт показывает неправильный вариант,
+      вы печатаете исправление — через 1, 6 дней и дальше с растущими интервалами, пока не запомнится.
+      Ошибки из чата с Claude (файл на странице «Настройки») попадают сюда сами.</p>
+
+    <!-- Цифры и кнопка повторения (заполняет скрипт) -->
+    <div id="summary"></div>
+
+    <!-- Добавить ошибку вручную -->
+    <div class="card">
+      <h3>Добавить ошибку</h3>
+      <form id="add-form" class="form">
+        <label>Как вы написали (неправильно)
+          <input type="text" id="m-wrong" placeholder="I have been in Russia" autocomplete="off" autocapitalize="off" spellcheck="false">
+        </label>
+        <label>Как правильно
+          <input type="text" id="m-correct" placeholder="I have been to Russia" autocomplete="off" autocapitalize="off" spellcheck="false">
+        </label>
+        <label>Почему <span class="muted small">(необязательно)</span>
+          <input type="text" id="m-expl" placeholder="been to — когда ездил и вернулся" autocomplete="off">
+        </label>
+        <label>Тема <span class="muted small">(необязательно: сайт чаще даст упражнения по ней)</span>
+          <select id="m-topic"><option value="">— без темы —</option></select>
+        </label>
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary">Добавить</button>
+        </div>
+      </form>
+      <div id="add-message"></div>
+    </div>
+
+    <h2>Список <span class="muted" id="count"></span></h2>
+    <input type="search" id="search" placeholder="Поиск по ошибкам">
+    <div id="list"></div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/chat-import.js"></script>
+  <script src="js/pages/mistakes.js"></script>
+</body>
+</html>

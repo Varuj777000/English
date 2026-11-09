@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Говорение — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <h1>Говорение</h1>
+
+    <!-- Старт: как это работает и сколько фраз на сегодня (заполняет скрипт) -->
+    <section id="sp-setup">
+      <p class="muted">Слушаете фразу, повторяете вслух, записываете себя и сравниваете с образцом.
+        Запись остаётся только на этой странице — она нигде не сохраняется и никуда не отправляется.
+        Оценку ставите вы сами: так вы заметите, где звучите иначе.</p>
+      <div id="sp-stats"></div>
+      <div id="sp-recog-setting"></div>
+      <div id="sp-notice"></div>
+      <div class="btn-row"><button type="button" class="btn btn-primary" id="sp-start">Начать</button></div>
+    </section>
+
+    <!-- Сессия: одна фраза за раз -->
+    <section id="sp-session" class="hidden">
+      <div class="test-top">
+        <span class="muted" id="sp-source"></span>
+        <span class="muted small" id="sp-counter"></span>
+      </div>
+      <div class="progress-bar"><div id="sp-progress"></div></div>
+      <div class="card" id="sp-card"></div>
+      <button type="button" class="btn btn-small" id="sp-stop">Закончить</button>
+    </section>
+
+    <!-- Итог -->
+    <section id="sp-summary" class="hidden"></section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/words-store.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/speaking.js"></script>
+  <script src="js/pages/speaking.js"></script>
+</body>
+</html>

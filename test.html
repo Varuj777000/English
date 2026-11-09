@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тест уровня — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Страница состоит из трёх «экранов». Скрипт показывает один из них. -->
+
+    <!-- 1. Вступление -->
+    <section id="view-intro" class="hidden">
+      <h1>Стартовый тест уровня</h1>
+      <div id="intro-previous"></div>
+      <div class="card">
+        <p>Тест определит ваш уровень по шкале CEFR (A1–C1) и найдёт сильные и слабые темы.
+           По ним сайт составит план занятий.</p>
+        <ul>
+          <li><b>3 раздела:</b> грамматика, лексика, чтение.</li>
+          <li><b>15–20 минут.</b> Вопросы постепенно усложняются.</li>
+          <li>Если вопросы станут слишком сложными, сайт сам пропустит остальные вопросы раздела.</li>
+          <li>Не знаете ответ — нажмите <b>«Не знаю»</b>. Не угадывайте: так результат будет точнее.</li>
+          <li>Можно закрыть страницу — тест продолжится с того же места.</li>
+        </ul>
+        <div class="btn-row" id="intro-buttons"></div>
+      </div>
+    </section>
+
+    <!-- 2. Вопрос -->
+    <section id="view-question" class="hidden">
+      <div class="test-top">
+        <span id="q-section" class="muted"></span>
+        <span id="q-counter" class="muted small"></span>
+      </div>
+      <div class="progress-bar"><div id="q-progress"></div></div>
+
+      <div id="q-passage"></div>
+      <div class="card">
+        <p class="question" id="q-text"></p>
+        <div class="options" id="q-options"></div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="next-btn" disabled>Далее</button>
+          <button class="btn" id="dont-know-btn">Не знаю</button>
+        </div>
+      </div>
+      <p class="muted small">На компьютере: клавиши 1–4 — выбор ответа, Enter — далее.</p>
+      <button class="btn btn-small" id="quit-btn">Прервать тест</button>
+    </section>
+
+    <!-- 3. Результат -->
+    <section id="view-result" class="hidden"></section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/pages/test.js"></script>
+</body>
+</html>

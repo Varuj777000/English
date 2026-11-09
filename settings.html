@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Настройки — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <h1>Настройки</h1>
+
+    <!-- Время в день -->
+    <div class="card">
+      <h3>Сколько времени в день вы обычно занимаетесь?</h3>
+      <p class="muted small">Это значение подставляется по умолчанию на странице занятия — там его тоже можно поменять.</p>
+      <div class="chips" id="duration"></div>
+    </div>
+
+    <!-- Уровень слов -->
+    <div class="card">
+      <h3>Уровень слов для повторения</h3>
+      <p class="muted small">
+        Грамматика и лексика часто прокачаны по-разному. По умолчанию сайт сам определяет уровень слов
+        отдельно — по разделу «Лексика» в стартовом тесте и контрольных. Здесь можно выбрать его вручную.
+      </p>
+      <div class="chips" id="vocab-level"></div>
+      <p class="muted small" id="vocab-level-note"></p>
+    </div>
+
+    <!-- Озвучка -->
+    <div class="card">
+      <h3>Озвучка произношения</h3>
+      <p class="muted small">Кнопки 🔊 на карточках слов, в упражнениях и на странице «Темы» читают
+        английский текст вслух голосом браузера — без интернета и сторонних сервисов.</p>
+      <div id="tts-controls">
+        <p class="muted small">Акцент</p>
+        <div class="chips" id="tts-accent"></div>
+        <p class="muted small">Скорость</p>
+        <div class="chips" id="tts-rate"></div>
+      </div>
+      <div id="tts-unavailable-note" class="notice warn hidden"></div>
+    </div>
+
+    <!-- Повторение слов: пауза и разгрузка -->
+    <div class="card">
+      <h3>Новые слова и накопившееся повторение</h3>
+      <p>Каждый день сайт сам добавляет в повторение новые слова. Если вы временно не занимаетесь на сайте,
+         поставьте паузу — очередь перестанет расти.</p>
+      <div class="chips" id="pause-new-words"></div>
+      <p class="muted small" id="pause-note"></p>
+      <p>Если карточек накопилось слишком много, их можно разложить по дням (по 10 в день, начиная с
+         сегодня). Слова и прогресс по ним сохранятся.</p>
+      <button class="btn" id="spread-due-btn">Разложить накопившееся по дням</button>
+      <div id="spread-message"></div>
+    </div>
+
+    <!-- Резервная копия -->
+    <div class="card">
+      <h3>Резервная копия</h3>
+      <p>Весь прогресс хранится только в этом браузере. Если очистить его данные или сесть за другой
+         компьютер — прогресс пропадёт. Скачайте копию и держите файл в надёжном месте; при необходимости
+         его можно будет загрузить обратно (в том числе на другом устройстве).</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="backup-download-btn">Скачать мой прогресс</button>
+        <button class="btn" id="backup-upload-btn">Загрузить прогресс из файла</button>
+        <input type="file" id="backup-file" accept="application/json,.json" class="hidden">
+      </div>
+      <div id="backup-message"></div>
+      <h3 style="margin-top:18px">Автоматическая копия</h3>
+      <div class="chips" id="auto-backup"></div>
+      <p class="muted small" id="auto-backup-note"></p>
+    </div>
+
+    <!-- Импорт из чата -->
+    <div class="card">
+      <h3>Импорт из чата с Claude</h3>
+      <p>Если Claude в чате проверял ваши тексты и прислал файл с ошибками и словами (формат описан
+         на <a href="topics.html#for-claude">странице «Темы»</a>) — загрузите его здесь. Ошибки по темам,
+         которые есть на сайте, повысят их приоритет в занятиях. Ошибки без подходящей темы попадут в
+         раздел «Другое» и будут повторяться карточками. Слова сразу попадут в повторение.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="chat-upload-btn">Загрузить файл из чата</button>
+        <input type="file" id="chat-file" accept="application/json,.json" class="hidden">
+      </div>
+      <div id="chat-message"></div>
+    </div>
+
+    <!-- Спорные ответы -->
+    <section id="disputed-section"></section>
+
+    <!-- Карточки «Другое» -->
+    <section id="other-section"></section>
+
+    <!-- Сброс -->
+    <div class="card">
+      <h3>Начать заново</h3>
+      <p class="muted small">Удаляет весь прогресс из этого браузера без возможности отмены. Перед этим стоит скачать резервную копию.</p>
+      <button class="btn" id="reset-btn">Начать всё заново</button>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/stories/past.js"></script>
+  <script src="data/stories/present.js"></script>
+  <script src="data/stories/perfect.js"></script>
+  <script src="data/stories/future.js"></script>
+  <script src="data/stories/wordformation.js"></script>
+  <script src="data/stories/passive.js"></script>
+  <script src="data/stories/b2.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <script src="data/checkpoints.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/story.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/words-store.js"></script>
+  <script src="js/chat-import.js"></script>
+  <script src="js/pages/settings.js"></script>
+</body>
+</html>

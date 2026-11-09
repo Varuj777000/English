@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Занятие — English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <!-- 1. Начало занятия -->
+    <section id="view-start" class="hidden"></section>
+
+    <!-- 2. Упражнение -->
+    <section id="view-exercise" class="hidden">
+      <div class="test-top">
+        <span id="ex-topic" class="muted"></span>
+        <span id="ex-counter" class="muted small"></span>
+      </div>
+      <div class="progress-bar"><div id="ex-progress"></div></div>
+      <div id="ex-rule"></div>
+      <div id="ex-passage"></div>
+      <div class="card" id="ex-card"></div>
+      <div class="btn-row" style="margin-top:0">
+        <button class="btn btn-small" id="stop-btn">Закончить занятие</button>
+        <button class="btn btn-small" id="quick-word-btn" type="button" title="Не поняли слово? Добавьте его в повторение">+ Добавить слово</button>
+      </div>
+      <!-- Быстрое добавление слова прямо во время занятия -->
+      <form class="card form hidden" id="quick-word" style="margin-top:12px">
+        <label>Английское слово или фраза
+          <input type="text" id="qw-en" autocomplete="off" autocapitalize="off" spellcheck="false">
+        </label>
+        <label>Перевод
+          <input type="text" id="qw-ru" autocomplete="off">
+        </label>
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary btn-small">Добавить в повторение</button>
+          <button type="button" class="btn btn-small" id="qw-close">Закрыть</button>
+        </div>
+        <div id="qw-msg" class="small" style="margin-top:8px"></div>
+      </form>
+    </section>
+
+    <!-- 3. Итоги -->
+    <section id="view-finish" class="hidden"></section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/stories/past.js"></script>
+  <script src="data/stories/present.js"></script>
+  <script src="data/stories/perfect.js"></script>
+  <script src="data/stories/future.js"></script>
+  <script src="data/stories/wordformation.js"></script>
+  <script src="data/stories/passive.js"></script>
+  <script src="data/stories/b2.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/story.js"></script>
+  <script src="js/words-store.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/pages/lesson.js"></script>
+</body>
+</html>

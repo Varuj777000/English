@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>English Trainer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Главный экран: приветствие, цель на сегодня, карточки слов (заполняет скрипт ниже) -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="hello"><b id="hero-greet">Hello</b> Рады видеть снова</span>
+        <h1 id="hero-title">Сегодня: <span class="grad">занятие</span></h1>
+        <p class="lead" id="hero-lead">Десять минут, живые карточки и упражнения. Продолжим с того места, где вы остановились.</p>
+        <div class="btn-row hero-cta">
+          <a class="btn btn-primary" id="hero-start" href="lesson.html">Начать занятие →</a>
+          <a class="btn" href="progress.html">Мой прогресс</a>
+        </div>
+        <div class="goal">
+          <div class="ring">
+            <svg width="76" height="76" viewBox="0 0 76 76" aria-hidden="true"><defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF5FA2"/><stop offset="1" stop-color="#5B3DF5"/></linearGradient></defs><circle class="t" cx="38" cy="38" r="34"/><circle class="p" id="ring-p" cx="38" cy="38" r="34"/></svg>
+            <span id="ring-text">0/10</span>
+          </div>
+          <div><small>Цель на сегодня</small><b id="goal-text">10 заданий</b></div>
+        </div>
+        <div class="week-goal">
+          <div class="week-head"><b id="week-text">Неделя</b><span class="muted small" id="week-note"></span></div>
+          <div class="week-dots" id="week-dots"></div>
+        </div>
+      </div>
+      <div class="stage" id="hero-stage">
+        <div class="sticker s1"><i>🔥</i><span id="sticker-streak">Серия 0 дней</span></div>
+        <div class="sticker s2"><i>🧠</i><span id="sticker-due">Слов на повторение: 0</span></div>
+      </div>
+    </section>
+
+    <!-- Декоративная бегущая строка (только оформление) -->
+    <div class="ticker" aria-hidden="true"><div>
+      <span>serendipity</span><span>break the ice</span><span>perseverance</span><span>piece of cake</span><span>wanderlust</span><span>once in a blue moon</span><span>ephemeral</span><span>spill the beans</span>
+      <span>serendipity</span><span>break the ice</span><span>perseverance</span><span>piece of cake</span><span>wanderlust</span><span>once in a blue moon</span><span>ephemeral</span><span>spill the beans</span>
+    </div></div>
+
+    <!-- Сюда скрипт выведет напоминание про резервную копию, если её давно не скачивали -->
+    <div id="backup-box"></div>
+
+    <!-- Сюда скрипт выведет напоминание о контрольной, если она уже пора -->
+    <div id="checkpoint-box"></div>
+
+    <!-- Сюда скрипт выведет: «Пройдите тест» или ваш текущий уровень -->
+    <div id="level-box"></div>
+
+    <!-- Мой путь: шкала уровней (заполняет скрипт по вашему прогрессу) -->
+    <section id="path-box" class="path-box hidden">
+      <div class="path-head">
+        <div><span class="eyebrow">Мой путь</span><h2 id="path-title"></h2></div>
+        <p class="muted" id="path-sub"></p>
+      </div>
+      <div class="track"><div class="nodes" id="path-nodes"></div></div>
+    </section>
+
+    <!-- Неправильные глаголы: ссылка и повторение на сегодня -->
+    <div id="verbs-box"></div>
+
+
+    <h2>Что сейчас есть в учебных данных</h2>
+    <div class="grid" id="content-stats"></div>
+
+    <h2>Разделы</h2>
+    <div class="card">
+      <ul>
+        <li><a href="topics.html">Темы и правила</a> — все объяснения и список ID для Claude ✓</li>
+        <li><a href="test.html">Стартовый тест уровня</a> — уровень, сильные и слабые темы ✓</li>
+        <li><a href="lesson.html">Ежедневное занятие</a> — упражнения по слабым темам ✓</li>
+        <li><a href="stories.html">Рассказы</a> — мини-рассказы с рамкой глаголов, каждый пропуск влияет на свою тему ✓</li>
+        <li><a href="verbs.html">Неправильные глаголы</a> — справочник и тренировка трёх форм ✓</li>
+        <li><a href="writing.html">Письмо</a> — письма по шаблону с подсказками и проверкой в чате ✓</li>
+        <li><a href="speaking.html">Говорение</a> — повторяете фразы вслух, записываете себя и сравниваете с образцом ✓</li>
+        <li><a href="mistakes.html">Мои ошибки</a> — ваши предложения с ошибками: исправляете и повторяете по интервалам ✓</li>
+        <li><a href="words.html">Слова</a> — добавление слов и повторение по SM-2 ✓</li>
+        <li><a href="checkpoint.html">Контрольная</a> и <a href="progress.html">прогресс</a> — пересчёт уровня раз в 2 недели ✓</li>
+        <li><a href="settings.html">Настройки</a> — резервная копия и импорт из чата ✓</li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="data/topics.js"></script>
+  <script src="data/exercises/a1.js"></script>
+  <script src="data/exercises/a2.js"></script>
+  <script src="data/exercises/b1.js"></script>
+  <script src="data/exercises/b2.js"></script>
+  <script src="data/exercises/c1.js"></script>
+  <script src="data/exercises/listen-a1.js"></script>
+  <script src="data/exercises/listen-a2.js"></script>
+  <script src="data/exercises/listen-b1.js"></script>
+  <script src="data/exercises/listen-b2.js"></script>
+  <script src="data/exercises/listen-c1.js"></script>
+  <script src="data/reading/texts.js"></script>
+  <script src="data/words/a1.js"></script>
+  <script src="data/words/a2.js"></script>
+  <script src="data/words/b1.js"></script>
+  <script src="data/words/b2.js"></script>
+  <script src="data/words/c1.js"></script>
+  <script src="data/placement-test.js"></script>
+  <script src="data/verbs.js"></script>
+  <script src="data/verb-examples.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/words-store.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/verbs.js"></script>
+  <script>
+    // Показываем, сколько контента загружено
+    // Склонение по числу: 1 слово, 2 слова, 5 слов
+    function pluralRu(n, one, few, many) {
+      const m10 = n % 10, m100 = n % 100;
+      if (m10 === 1 && m100 !== 11) return one;
+      if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+      return many;
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const withExercises = DATA.topics.filter(function (t) {
+        return exercisesOfTopic(t.id).length > 0;
+      }).length;
+      const stats = [
+        { value: DATA.topics.length, label: "тем (с упражнениями: " + withExercises + ")" },
+        { value: DATA.exercises.length, label: "упражнений" },
+        { value: DATA.texts.filter(function (t) { return !t.listen; }).length, label: "текстов для чтения" },
+        { value: DATA.texts.filter(function (t) { return t.listen; }).length, label: "диалогов на слух" },
+        { value: DATA.words.length, label: "слов" }
+      ];
+      // Уровень или приглашение пройти тест
+      const progress = loadProgress();
+      if (enrollNewWords(progress) > 0) saveProgress(progress);
+
+      // ---- Главный экран (только чтение данных, прогресс не меняется) ----
+      const heroToday = progress.activity[todayStr()];
+      // Задания дня = упражнения + карточки слов — так же считается и серия (см. recordActivity в storage.js)
+      const heroDone = heroToday ? heroToday.exercises + (heroToday.words || 0) : 0;
+      const heroGoal = 10;
+      const hour = new Date().getHours();
+      document.getElementById("hero-greet").textContent =
+        hour < 5 ? "Good night" : hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
+      document.getElementById("ring-text").textContent = Math.min(heroDone, heroGoal) + "/" + heroGoal;
+      document.getElementById("goal-text").textContent =
+        heroDone >= heroGoal ? "Цель выполнена" : "Ещё " + (heroGoal - heroDone) + " до цели";
+      document.getElementById("ring-p").style.strokeDashoffset = String(213.6 * (1 - Math.min(heroDone / heroGoal, 1)));
+      const heroStreak = currentStreak(progress);
+      document.getElementById("sticker-streak").textContent = "Серия " + heroStreak + " " + dayWord(heroStreak);
+      document.getElementById("sticker-due").textContent = "Слов на повторение: " + dueWordKeys(progress).length;
+      // Цель недели: сколько дней (пн–вс) вы занимались, из RULES.goals.weeklyDays.
+      // День засчитывается по тому же правилу, что и для серии: заданий не меньше RULES.lesson.streakMinExercises.
+      const weekOffset = (new Date().getDay() + 6) % 7; // 0 = понедельник
+      const weekStart = addDays(todayStr(), -weekOffset);
+      const dayNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+      let activeDays = 0;
+      document.getElementById("week-dots").innerHTML = dayNames.map(function (name, i) {
+        const date = addDays(weekStart, i);
+        const a = progress.activity[date];
+        const active = !!a && (a.exercises + (a.words || 0)) >= RULES.lesson.streakMinExercises;
+        if (active) activeDays += 1;
+        return '<span class="wd' + (active ? " on" : "") + (i === weekOffset ? " today" : "") + '" title="' + date + '">' + name + "</span>";
+      }).join("");
+      document.getElementById("week-text").textContent = "Неделя: " + activeDays + " из " + RULES.goals.weeklyDays + " дней";
+      document.getElementById("week-note").textContent =
+        activeDays >= RULES.goals.weeklyDays ? "Цель недели выполнена" : "Осталось " + (RULES.goals.weeklyDays - activeDays);
+
+      // Реальный план на сегодня: что пора повторить (слова, «Мои ошибки», упражнения с ошибками)
+      const planWords = dueWordKeys(progress).length;
+      const planMistakes = dueOtherMistakeIds(progress).length;
+      const planExercises = Object.keys(progress.exercises || {}).filter(function (id) {
+        const r = progress.exercises[id];
+        return r && r.again && r.again <= todayStr();
+      }).length;
+      const planParts = [];
+      if (planWords) planParts.push(planWords + " " + pluralRu(planWords, "слово", "слова", "слов"));
+      if (planMistakes) planParts.push(planMistakes + " " + pluralRu(planMistakes, "ваша ошибка", "ваши ошибки", "ваших ошибок"));
+      if (planExercises) planParts.push(planExercises + " " + pluralRu(planExercises, "упражнение с ошибкой", "упражнения с ошибками", "упражнений с ошибками"));
+      const heroTitle = document.getElementById("hero-title");
+      const heroLead = document.getElementById("hero-lead");
+      if (!progress.level) {
+        heroTitle.innerHTML = 'Сначала узнаем ваш <span class="grad">уровень</span>';
+        heroLead.textContent = "Короткий тест подскажет, с чего начинать, и подстроит занятия под вас.";
+      } else if (planParts.length) {
+        heroTitle.innerHTML = 'К повторению: <span class="grad">' + escapeHtml(planParts.join(", ")) + "</span>";
+        heroLead.textContent = "Они пойдут в начале занятия, а потом — новые упражнения по вашим слабым темам.";
+      } else {
+        heroTitle.innerHTML = 'Повторять нечего — время для <span class="grad">нового</span>';
+        heroLead.textContent = "Всё, что подошло по сроку, уже повторено. Занятие подберёт упражнения по слабым темам.";
+      }
+
+      if (!progress.level) {
+        const startBtn = document.getElementById("hero-start");
+        startBtn.href = "test.html";
+        startBtn.textContent = "Пройти тест уровня →";
+      }
+
+      // Две карточки «слова дня»: выбираются по дате, поэтому за день не меняются
+      const pool = DATA.words.filter(function (w) { return !progress.level || w.level === progress.level; });
+      const wordPool = pool.length ? pool : DATA.words;
+      if (wordPool.length) {
+        let seed = 0;
+        todayStr().split("").forEach(function (ch) { seed = (seed * 31 + ch.charCodeAt(0)) % 100003; });
+        const picks = [wordPool[seed % wordPool.length], wordPool[(seed + 7) % wordPool.length]];
+        const faces = [["f-pink", "f-mint"], ["f-ink", "f-lilac"]];
+        const stage = document.getElementById("hero-stage");
+        picks.forEach(function (w, i) {
+          const card = document.createElement("button");
+          card.type = "button";
+          card.className = "fcard fc" + (i + 1);
+          card.setAttribute("aria-label", "Карточка: " + w.en);
+          card.innerHTML =
+            '<div class="in">' +
+              '<div class="face ' + faces[i][0] + '"><div class="lab"><span>' + (i ? "Слово дня" : "Слово") + "</span><span>" + escapeHtml(w.level || "") + "</span></div>" +
+                '<div class="w">' + escapeHtml(w.en) + '</div><div class="hint">нажмите, чтобы перевернуть</div></div>' +
+              '<div class="face back ' + faces[i][1] + '"><div class="lab"><span>Перевод</span><span>' + escapeHtml(w.level || "") + "</span></div>" +
+                '<div class="tr">' + escapeHtml(w.ru) + '</div><div class="ex">' + escapeHtml(w.example || "") + "</div></div>" +
+            "</div>";
+          card.addEventListener("click", function () { card.classList.toggle("flip"); });
+          stage.insertBefore(card, stage.lastElementChild);
+        });
+      }
+
+      // Напоминание про резервную копию — если не скачивали ни разу
+      // или дольше RULES.backup.reminderAfterDays дней
+      const backupBox = document.getElementById("backup-box");
+      const daysSinceBackup = progress.lastBackupDate ? daysBetween(progress.lastBackupDate, todayStr()) : null;
+      if (daysSinceBackup === null || daysSinceBackup >= RULES.backup.reminderAfterDays) {
+        backupBox.innerHTML =
+          '<div class="notice warn">' +
+          (daysSinceBackup === null
+            ? "Вы ещё ни разу не скачивали резервную копию прогресса."
+            : "Резервная копия прогресса не скачивалась уже " + daysSinceBackup + " дней.") +
+          ' Весь прогресс хранится только в этом браузере и может пропасть. ' +
+          '<a href="settings.html">Скачать копию</a></div>';
+      }
+
+      // Напоминание о контрольной
+      const checkpointBox = document.getElementById("checkpoint-box");
+      if (progress.level && isCheckpointDue(progress)) {
+        checkpointBox.innerHTML =
+          '<div class="notice warn">Пора пройти контрольную проверку — она пересчитает уровень и план занятий. ' +
+          '<a href="checkpoint.html">Пройти сейчас</a></div>';
+      }
+
+      const levelBox = document.getElementById("level-box");
+      if (progress.level) {
+        const today = progress.activity[todayStr()];
+        const doneToday = today ? today.exercises + (today.words || 0) : 0;
+        const dueWords = dueWordKeys(progress).length;
+        levelBox.innerHTML =
+          '<div class="card">' +
+            '<p>Ваш уровень: <span class="badge ' + progress.level + '">' + progress.level + "</span> " +
+            '<a href="progress.html" class="small">весь прогресс</a></p>' +
+            '<div class="grid" style="margin-bottom:14px">' +
+              '<div class="stat"><div class="value">' + currentStreak(progress) + '</div><div class="label">дней подряд</div></div>' +
+              '<div class="stat"><div class="value">' + doneToday + '</div><div class="label">заданий сегодня</div></div>' +
+              '<div class="stat"><div class="value">' + dueWords + '</div><div class="label">слов на повторение</div></div>' +
+            "</div>" +
+            '<a class="btn btn-primary" href="lesson.html">' + (doneToday ? "Ещё занятие" : "Начать занятие") + "</a>" +
+          "</div>";
+      } else {
+        levelBox.innerHTML =
+          '<div class="card"><h3>Начните со стартового теста</h3>' +
+          "<p>15–20 минут. Сайт определит ваш уровень и слабые темы и подстроит под них занятия.</p>" +
+          '<a class="btn btn-primary" href="test.html">Пройти тест</a></div>';
+      }
+
+      // ---- Мой путь: шкала уровней по реальному прогрессу (только чтение) ----
+      if (progress.level) {
+        const curIdx = levelIndex(progress.level);
+        const perLevel = LEVELS.map(function (lv) {
+          const topics = DATA.topics.filter(function (t) { return t.level === lv && exercisesOfTopic(t.id).length > 0; });
+          const practiced = topics.filter(function (t) {
+            const st = progress.topics[t.id];
+            return st && st.attempts > 0;
+          }).length;
+          return { total: topics.length, practiced: practiced };
+        });
+        const cur = perLevel[curIdx];
+        const frac = cur.total ? cur.practiced / cur.total : 0;
+        const names = { A1: "Первые шаги", A2: "Повседневное", B1: "Уверенный старт", B2: "Свободная речь", C1: "Профессиональный" };
+        const nodes = document.getElementById("path-nodes");
+        nodes.style.setProperty("--n", LEVELS.length);
+        nodes.style.setProperty("--fill-ratio", Math.min((curIdx + frac) / (LEVELS.length - 1), 1).toFixed(3));
+        nodes.innerHTML = LEVELS.map(function (lv, i) {
+          const p = perLevel[i];
+          let state = "", sub;
+          if (i < curIdx) { state = " done"; sub = "пройден"; }
+          else if (i === curIdx) { state = " now"; sub = p.total ? "отработано тем: " + p.practiced + " из " + p.total : "упражнения скоро"; }
+          else { sub = p.total ? "тем: " + p.total : "упражнения скоро"; }
+          return '<div class="node' + state + '"><div class="c">' + lv + "</div><b>" + escapeHtml(names[lv] || lv) + "</b><small>" + sub + "</small></div>";
+        }).join("");
+        document.getElementById("path-title").textContent = "Вы на уровне " + progress.level;
+        document.getElementById("path-sub").textContent =
+          "Слов в изучении: " + Object.keys(progress.words || {}).length +
+          (curIdx < LEVELS.length - 1 ? ". Следующий уровень: " + LEVELS[curIdx + 1] + "." : ".");
+        document.getElementById("path-box").classList.remove("hidden");
+      }
+
+      // Неправильные глаголы: ссылка, сколько выучено и сколько пора повторить
+      const verbInfo = verbStats(progress);
+      document.getElementById("verbs-box").innerHTML =
+        '<div class="notice' + (verbInfo.due > 0 ? " warn" : "") + '">' +
+        '<a href="verbs.html"><b>Неправильные глаголы</b></a> — выучено ' + verbInfo.learned + " из " + verbInfo.total + "." +
+        (verbInfo.due > 0
+          ? " К повторению сегодня: <b>" + verbInfo.due + "</b> " + verbWord(verbInfo.due) + '. <a href="verbs.html">Повторить</a>'
+          : "") +
+        "</div>";
+
+      document.getElementById("content-stats").innerHTML = stats.map(function (s) {
+        return '<div class="stat"><div class="value">' + s.value + '</div><div class="label">' + s.label + "</div></div>";
+      }).join("");
+    });
+  </script>
+</body>
+</html>

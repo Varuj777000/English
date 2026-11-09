@@ -1,0 +1,12 @@
+# Личные файлы ученика: остаются только на компьютере, в публичный репозиторий не попадают
+journal.md
+tutor-journal.md
+chat-import-*.json
+
+# Резервные копии прогресса (скачиваются из «Настроек» сайта)
+english-trainer-backup-*.json
+
+# Служебное
+.claude/
+Thumbs.db
+.DS_Store
