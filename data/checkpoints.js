@@ -394,3 +394,13 @@ DATA.checkpoints.push(
     q: "I never watch ___ films — they are too scary.", options: ["horror", "comedy", "cartoon"], answer: "horror",
     explain: "horror — фильмы ужасов." }
 );
+
+// ДОПОЛНЕНИЕ: вопросы контрольной по теме «Смешанные времена»
+DATA.checkpoints.push(
+  { id: "cp-g-b1-19", section: "grammar", level: "B1", topic: "mixed-tenses", type: "choice",
+    q: "I ___ in this city since I was born.", options: ["live", "am living", "have lived", "lived"], answer: "have lived",
+    explain: "since — с прошлого до сейчас: Present Perfect." },
+  { id: "cp-g-b1-20", section: "grammar", level: "B1", topic: "mixed-tenses", type: "choice",
+    q: "While I ___ home, I met an old friend.", options: ["walk", "was walking", "have walked", "had walked"], answer: "was walking",
+    explain: "While + длинное действие-фон в прошлом: Past Continuous." }
+);

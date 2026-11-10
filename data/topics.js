@@ -2025,3 +2025,30 @@ DATA.topics.push(
     ]
   }
 );
+
+// ДОПОЛНЕНИЕ «База B1»: тема, где время не подсказано — его нужно выбрать самому.
+DATA.topics.push(
+  {
+    id: "mixed-tenses", level: "A2", category: "grammar",
+    title: "Смешанные времена: выбери время сам",
+    summary: "Present, Past, Perfect и Future в одном наборе — время определяем по словам-маркерам и смыслу.",
+    explanation: [
+      "В этой теме никто не подсказывает, какое время нужно. Это главный навык для свободной речи и письма: сначала **понять ситуацию**, потом выбрать форму.",
+      "**Три вопроса перед каждым предложением.** 1) **Когда?** — сейчас, в прошлом, в будущем или «с прошлого до сейчас». 2) **Процесс или факт?** — действие в процессе (-ing) или привычка / законченное действие. 3) **Есть ли слово-маркер?**",
+      "**Настоящее.** Привычка, факт (always, usually, every day) — **Present Simple**: She **works** in a bank. Прямо сейчас, временно (now, at the moment, Look!, today) — **Present Continuous**: She **is working** now. Глаголы состояния (know, like, want, need, belong) — только Simple.",
+      "**Прошлое.** Названо законченное время (yesterday, last week, in 2015, two years ago, when I was a child) — **Past Simple**: I **saw** him yesterday. Действие-фон, которое прервали (while, when…) — **Past Continuous**: I **was cooking** when he called. Действие РАНЬШЕ другого прошлого (by the time, already, before) — **Past Perfect**: The train **had left** when I arrived.",
+      "**С прошлого до сейчас.** Время не названо, важен результат или опыт (ever, never, already, yet, just), либо действие ещё длится (for, since, How long) — **Present Perfect**: I **have lost** my keys. I **have lived** here since 2019. По-русски во втором случае настоящее («живу»), в английском — Perfect.",
+      "**Будущее.** Мнение, предсказание, решение в момент речи — **will**. План — **be going to**. Но после **if, when, as soon as, until, before, after** о будущем — **Present Simple**, без will: I'll call you when I **get** home.",
+      "**Типичные ошибки.** ✗ I have seen him yesterday → ✓ I **saw** him yesterday. ✗ I live here since 2019 → ✓ I **have lived** here since 2019. ✗ I didn't finished → ✓ I didn't **finish**. ✗ We had went → ✓ We had **gone**. ✗ When I'll see her → ✓ When I **see** her. ✗ I have been in Italy → ✓ I have been **to** Italy. ✗ Does he playing → ✓ Does he **play**.",
+      "**Как проверять себя.** В предложении один «набор»: do/does/did + глагол без окончаний ИЛИ be + -ing ИЛИ have/had + третья форма. Если видите два набора сразу («is works», «did went», «has went») — это ошибка."
+    ],
+    examples: [
+      { en: "I usually walk to work, but today I'm taking the bus.", ru: "Обычно я хожу на работу пешком, но сегодня еду на автобусе." },
+      { en: "I was cooking dinner when the phone rang.", ru: "Я готовил ужин, когда зазвонил телефон." },
+      { en: "I have lived here since 2019.", ru: "Я живу здесь с 2019 года." },
+      { en: "We went to Spain two years ago.", ru: "Мы ездили в Испанию два года назад." },
+      { en: "When I got to the station, the train had already left.", ru: "Когда я добрался до вокзала, поезд уже ушёл." },
+      { en: "I'll call you when I get home.", ru: "Я позвоню тебе, когда приду домой." }
+    ]
+  }
+);
