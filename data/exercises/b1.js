@@ -966,3 +966,64 @@ DATA.exercises.push(
   { id: "conf-026", topic: "confusing-words", type: "translate", q: "Она сказала, что занята.", answers: ["She said that she was busy.", "She said she was busy."], explain: "Нет «кому» — said. Время сдвигается: was busy." },
   { id: "conf-027", topic: "confusing-words", type: "translate", q: "Я оставил телефон дома.", answers: ["I left my phone at home.", "I have left my phone at home.", "I left the phone at home.", "I left my mobile at home."], explain: "«Оставил / забыл дома» — left … at home." }
 );
+
+// =====================================================================
+// ДОПОЛНЕНИЕ «Этап 2»: три новые темы B1 — косвенные вопросы, вопросы к
+// подлежащему, both / either / neither.
+// =====================================================================
+DATA.exercises.push(
+
+  // ---------- indirect-questions ----------
+  { id: "indq-001", topic: "indirect-questions", type: "choice", q: "Could you tell me where ___?", options: ["the station is", "is the station", "does the station be"], answer: "the station is", explain: "После вежливого начала (Could you tell me…) порядок слов как в утверждении: подлежащее + глагол." },
+  { id: "indq-002", topic: "indirect-questions", type: "choice", q: "Do you know what time ___?", options: ["the film starts", "does the film start", "starts the film"], answer: "the film starts", explain: "В косвенном вопросе нет do/does: the film starts." },
+  { id: "indq-003", topic: "indirect-questions", type: "choice", q: "I wonder ___ she is at home.", options: ["if", "what", "does"], answer: "if", explain: "Общий вопрос (да/нет) вводится через **if** или whether." },
+  { id: "indq-004", topic: "indirect-questions", type: "choice", q: "Can you tell me how much ___?", options: ["this costs", "does this cost", "costs this"], answer: "this costs", explain: "Прямой порядок слов и окончание -s на самом глаголе: this costs." },
+  { id: "indq-005", topic: "indirect-questions", type: "choice", q: "I'd like to know why ___ late.", options: ["he was", "was he", "did he be"], answer: "he was", explain: "После why в косвенном вопросе — подлежащее, потом глагол: he was." },
+  { id: "indq-006", topic: "indirect-questions", type: "fill", q: "Do you know ___ the bank opens on Sundays?", hint: "«ли»", answers: ["if", "whether"], explain: "Вопрос без вопросительного слова — if / whether." },
+  { id: "indq-007", topic: "indirect-questions", type: "fill", q: "Could you tell me where the toilets ___?", hint: "be", answers: ["are"], explain: "Глагол стоит ПОСЛЕ подлежащего: where the toilets are." },
+  { id: "indq-008", topic: "indirect-questions", type: "fill", q: "I have no idea where she ___.", hint: "live", answers: ["lives"], explain: "does исчезает, поэтому -s возвращается к глаголу: she lives." },
+  { id: "indq-009", topic: "indirect-questions", type: "fill", q: "Do you know what he ___ yesterday?", hint: "say", answers: ["said"], explain: "did исчезает — глагол сам встаёт в прошедшее время: said." },
+  { id: "indq-010", topic: "indirect-questions", type: "fix", q: "Could you tell me where is the bus stop?", answers: ["Could you tell me where the bus stop is?"], explain: "Косвенный вопрос — прямой порядок слов: where the bus stop **is**." },
+  { id: "indq-011", topic: "indirect-questions", type: "fix", q: "Do you know what time does the shop close?", answers: ["Do you know what time the shop closes?"], explain: "Убираем does, глагол получает -s: the shop closes." },
+  { id: "indq-012", topic: "indirect-questions", type: "fix", q: "I wonder where did she go.", answers: ["I wonder where she went."], explain: "Без did: where she **went**." },
+  { id: "indq-013", topic: "indirect-questions", type: "fix", q: "Can you tell me is there a bank near here?", answers: ["Can you tell me if there is a bank near here?", "Can you tell me whether there is a bank near here?"], explain: "Вопрос да/нет: if + прямой порядок (there is)." },
+  { id: "indq-014", topic: "indirect-questions", type: "translate", q: "Вы не знаете, где находится музей?", answers: ["Do you know where the museum is?", "Do you know where the museum is located?"], explain: "Do you know + where + подлежащее + глагол." },
+  { id: "indq-015", topic: "indirect-questions", type: "translate", q: "Не могли бы вы сказать, сколько это стоит?", answers: ["Could you tell me how much it costs?", "Could you tell me how much this costs?", "Could you tell me how much it is?", "Could you tell me how much this is?", "Can you tell me how much it costs?", "Can you tell me how much this costs?", "Can you tell me how much it is?", "Can you tell me how much this is?"], explain: "Could you tell me + how much + it costs (не does it cost)." },
+  { id: "indq-016", topic: "indirect-questions", type: "translate", q: "Интересно, почему он не пришёл.", answers: ["I wonder why he did not come.", "I wonder why he has not come."], explain: "I wonder why + подлежащее + глагол. Отрицание остаётся (didn't come), меняется только порядок слов." },
+
+  // ---------- subject-questions ----------
+  { id: "subq-001", topic: "subject-questions", type: "choice", q: "Who ___ this picture?", options: ["painted", "did paint", "did painted"], answer: "painted", explain: "Вопрос к подлежащему (кто сделал?) — без do/did: Who painted…?" },
+  { id: "subq-002", topic: "subject-questions", type: "choice", q: "Who ___ you see at the party?", options: ["did", "was", "were"], answer: "did", explain: "Здесь подлежащее — you, вопрос «кого?»: нужен did." },
+  { id: "subq-003", topic: "subject-questions", type: "choice", q: "What ___ next?", options: ["happened", "did happen", "did happened"], answer: "happened", explain: "What — подлежащее: What happened? Без did." },
+  { id: "subq-004", topic: "subject-questions", type: "choice", q: "Who ___ in this house?", options: ["lives", "does live", "do live"], answer: "lives", explain: "Вопрос к подлежащему в Present Simple: глагол с -s, без does." },
+  { id: "subq-005", topic: "subject-questions", type: "choice", q: "Which team ___ the match?", options: ["won", "did win", "did won"], answer: "won", explain: "Which team — подлежащее: Which team won?" },
+  { id: "subq-006", topic: "subject-questions", type: "fill", q: "Who ___ you this ring?", hint: "give, прошедшее", answers: ["gave"], explain: "«Кто дал?» — вопрос к подлежащему: Who gave…? (без did)." },
+  { id: "subq-007", topic: "subject-questions", type: "fill", q: "Who ___ she work with?", hint: "вспомогательный глагол", answers: ["does"], explain: "Подлежащее — she, спрашиваем «с кем?»: нужен does." },
+  { id: "subq-008", topic: "subject-questions", type: "fill", q: "What ___ you so angry yesterday?", hint: "make", answers: ["made"], explain: "What — подлежащее («что разозлило?»): What made you angry?" },
+  { id: "subq-009", topic: "subject-questions", type: "fill", q: "How many people ___ to the meeting yesterday?", hint: "come", answers: ["came"], explain: "How many people — подлежащее: без did, глагол в прошедшем — came." },
+  { id: "subq-010", topic: "subject-questions", type: "fix", q: "Who did break the window?", answers: ["Who broke the window?"], explain: "Кто разбил? — вопрос к подлежащему, did не нужен." },
+  { id: "subq-011", topic: "subject-questions", type: "fix", q: "Who you invited to the party?", answers: ["Who did you invite to the party?"], explain: "Подлежащее — you, значит обычный вопрос: did + you + invite." },
+  { id: "subq-012", topic: "subject-questions", type: "fix", q: "What did happen to your car?", answers: ["What happened to your car?"], explain: "What happened? — всегда без did." },
+  { id: "subq-013", topic: "subject-questions", type: "fix", q: "Who does know the answer?", answers: ["Who knows the answer?"], explain: "Who knows? — глагол с -s, без does." },
+  { id: "subq-014", topic: "subject-questions", type: "translate", q: "Кто тебе звонил?", answers: ["Who called you?", "Who phoned you?", "Who rang you?"], explain: "«Кто звонил?» — вопрос к подлежащему: Who called you?" },
+  { id: "subq-015", topic: "subject-questions", type: "translate", q: "Кому ты звонил?", answers: ["Who did you call?", "Who did you phone?", "Whom did you call?", "Who did you ring?"], explain: "«Кому?» — вопрос к дополнению: Who did you call?" },
+  { id: "subq-016", topic: "subject-questions", type: "translate", q: "Что случилось?", answers: ["What happened?", "What has happened?"], explain: "What happened? — без did." },
+
+  // ---------- both-either-neither ----------
+  { id: "quant-001", topic: "both-either-neither", type: "choice", q: "___ of my parents are doctors.", options: ["Both", "Either", "Neither"], answer: "Both", explain: "**both** — «оба», глагол во множественном числе (are)." },
+  { id: "quant-002", topic: "both-either-neither", type: "choice", q: "I have two brothers. ___ of them lives in Russia — they both moved abroad.", options: ["Neither", "Both", "None"], answer: "Neither", explain: "**neither** — «ни один из двух». О трёх и более — none." },
+  { id: "quant-003", topic: "both-either-neither", type: "choice", q: "Tea or coffee? — ___. I don't mind.", options: ["Either", "Neither", "Both"], answer: "Either", explain: "**either** — «любой из двух»." },
+  { id: "quant-004", topic: "both-either-neither", type: "choice", q: "___ of my three sisters is married.", options: ["None", "Neither", "Both"], answer: "None", explain: "Сестёр три — neither и both не подходят (они только о двух): none." },
+  { id: "quant-005", topic: "both-either-neither", type: "choice", q: "___ student in the class has a book.", options: ["Every", "All", "Both"], answer: "Every", explain: "**every** + единственное число (student has). All — с множественным: all students have." },
+  { id: "quant-006", topic: "both-either-neither", type: "fill", q: "Both Tom ___ Anna speak French.", answers: ["and"], explain: "both … **and** …" },
+  { id: "quant-007", topic: "both-either-neither", type: "fill", q: "Neither my father ___ my mother likes football.", answers: ["nor"], explain: "neither … **nor** …" },
+  { id: "quant-008", topic: "both-either-neither", type: "fill", q: "You can either take the bus ___ walk.", answers: ["or"], explain: "either … **or** …" },
+  { id: "quant-009", topic: "both-either-neither", type: "fill", q: "___ the students passed the exam. Nobody failed.", hint: "все", answers: ["All"], explain: "all + the + множественное число: all the students." },
+  { id: "quant-010", topic: "both-either-neither", type: "fix", q: "Both of them is from Spain.", answers: ["Both of them are from Spain."], explain: "both — всегда множественное число: are." },
+  { id: "quant-011", topic: "both-either-neither", type: "fix", q: "Neither of my friends don't smoke.", answers: ["Neither of my friends smokes.", "Neither of my friends smoke."], explain: "neither уже отрицание — второе (don't) не нужно." },
+  { id: "quant-012", topic: "both-either-neither", type: "fix", q: "I don't like both films.", answers: ["I don't like either film.", "I don't like either of the films.", "I like neither film.", "I like neither of the films."], explain: "В отрицании «ни тот, ни другой» — not … **either** (или neither без not)." },
+  { id: "quant-013", topic: "both-either-neither", type: "fix", q: "Every children need love.", answers: ["Every child needs love.", "All children need love."], explain: "every + единственное число: every child needs." },
+  { id: "quant-014", topic: "both-either-neither", type: "translate", q: "Мы оба устали.", answers: ["We are both tired.", "Both of us are tired."], explain: "both ставится после be: We are both tired." },
+  { id: "quant-015", topic: "both-either-neither", type: "translate", q: "Ни один из двух ответов не верен.", answers: ["Neither answer is correct.", "Neither of the answers is correct.", "Neither of the two answers is correct.", "Neither answer is right.", "Neither of the answers is right.", "Neither of the two answers is right."], explain: "neither + единственное число, без второго отрицания." },
+  { id: "quant-016", topic: "both-either-neither", type: "translate", q: "Все мои друзья живут здесь.", answers: ["All my friends live here.", "All of my friends live here."], explain: "all (of) my friends + множественное число." }
+);

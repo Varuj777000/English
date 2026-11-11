@@ -2052,3 +2052,311 @@ DATA.topics.push(
     ]
   }
 );
+
+// =====================================================================
+// ДОПОЛНЕНИЕ «Этап 2»: 3 темы B1 и 12 тем B2 (9 грамматических, 3 лексические).
+// =====================================================================
+DATA.topics.push(
+  {
+    id: "indirect-questions", level: "B1", category: "grammar",
+    title: "Косвенные (вежливые) вопросы",
+    summary: "Could you tell me where the station is? — порядок слов как в утверждении.",
+    explanation: [
+      "Косвенный вопрос — это вопрос, «спрятанный» внутри другой фразы: **Could you tell me…**, **Do you know…**, **I wonder…**, **I'd like to know…**, **I have no idea…**. Так звучит вежливее, чем прямой вопрос.",
+      "**Главное правило:** после вводной фразы порядок слов как в обычном утверждении — **подлежащее + глагол**. Where **is the station**? → Could you tell me where **the station is**?",
+      "**Do / does / did исчезают**, а время и окончание переходят на сам глагол. What time **does** the shop **close**? → Do you know what time the shop **closes**? Where **did** she **go**? → I wonder where she **went**.",
+      "**Вопрос «да / нет»** вводится словом **if** или **whether** («ли»): Is there a bank near here? → Can you tell me **if** there is a bank near here?",
+      "**Знак вопроса** ставится, только если сама вводная фраза — вопрос: Do you know where he is**?** Но: I wonder where he is**.**",
+      "**Типичные ошибки.** ✗ Could you tell me where is the bus stop? → ✓ …where the bus stop **is**? ✗ Do you know what time does it start? → ✓ …what time it **starts**? ✗ I wonder where did she go. → ✓ …where she **went**.",
+      "**Сравните с косвенной речью:** порядок слов тот же (He asked where I lived), но в косвенных вопросах о настоящем время НЕ сдвигается: Do you know where she **lives**?"
+    ],
+    examples: [
+      { en: "Could you tell me where the station is?", ru: "Не подскажете, где находится вокзал?" },
+      { en: "Do you know what time the film starts?", ru: "Вы не знаете, во сколько начинается фильм?" },
+      { en: "I wonder if she is at home.", ru: "Интересно, дома ли она." },
+      { en: "I have no idea where he went.", ru: "Понятия не имею, куда он ушёл." }
+    ]
+  },
+  {
+    id: "subject-questions", level: "B1", category: "grammar",
+    title: "Вопросы к подлежащему: Who called? / Who did you call?",
+    summary: "Если спрашиваем «кто / что сделал» — без do, does, did.",
+    explanation: [
+      "В английском два разных вопроса со словами **who** и **what**, и строятся они по-разному.",
+      "**Вопрос к подлежащему** — мы не знаем, КТО или ЧТО совершает действие. Вспомогательный глагол do / does / did **не нужен**, порядок слов как в утверждении: **Who called** you? (Кто тебе звонил?) **What happened**? (Что случилось?)",
+      "**Вопрос к дополнению** — подлежащее известно (you, she, Tom), спрашиваем, кого / что / кому. Здесь нужен обычный вопросительный порядок с do / does / did: **Who did you call**? (Кому ты звонил?) **What did she say**?",
+      "**Как проверить:** ответьте на вопрос. Если ответ — подлежащее (**Tom** called me), то did не нужен. Если ответ — дополнение (I called **Tom**), то нужен.",
+      "**В Present Simple** глагол в вопросе к подлежащему стоит с -s: Who **lives** here? Who **knows** the answer? (как будто вместо who стоит he).",
+      "**То же правило** для which + существительное, how many + существительное, whose + существительное, когда они являются подлежащим: Which team **won**? How many people **came**?",
+      "**Типичные ошибки.** ✗ Who did break the window? → ✓ Who **broke** the window? ✗ What did happen? → ✓ What **happened**? ✗ Who you invited? → ✓ Who **did** you invite?"
+    ],
+    examples: [
+      { en: "Who called you? — Tom called me.", ru: "Кто тебе звонил? — Мне звонил Том." },
+      { en: "Who did you call? — I called Tom.", ru: "Кому ты звонил? — Я звонил Тому." },
+      { en: "What happened to your car?", ru: "Что случилось с твоей машиной?" },
+      { en: "Who lives in this house?", ru: "Кто живёт в этом доме?" }
+    ]
+  },
+  {
+    id: "both-either-neither", level: "B1", category: "grammar",
+    title: "Both, either, neither, all, none, every",
+    summary: "Оба, любой из двух, ни один из двух; все, ни один, каждый.",
+    explanation: [
+      "**О двух предметах или людях:** **both** — оба (глагол во множественном числе: Both **are** ready); **either** — любой из двух (Either day **is** fine); **neither** — ни один из двух (Neither answer **is** correct).",
+      "**О трёх и более:** **all** — все; **none** — ни один; **every / each** — каждый. Ошибка — говорить neither или both о трёх: ✗ Neither of my three sisters → ✓ **None** of my three sisters.",
+      "**Парные союзы:** both … **and** … (и … и …), either … **or** … (или … или …), neither … **nor** … (ни … ни …). Both Tom **and** Anna speak French. Neither Tom **nor** Anna speaks German.",
+      "**С of:** both / either / neither / all / none **of** + the / my / these + существительное или местоимение: both of them, neither of my friends, all of us. После both и all слово of можно опустить перед существительным: both (of) my parents.",
+      "**Одно отрицание.** Neither и none уже отрицательные: ✗ Neither of them doesn't know → ✓ Neither of them **knows**. С глаголом в отрицании используется either: I do**n't** like **either** film (= I like neither film). ✗ I don't like both films.",
+      "**Every + единственное число:** every student **has**, every child **needs**. All + множественное: all students **have**.",
+      "**Место в предложении:** both и all стоят после be и перед смысловым глаголом: We **are both** tired. They **all live** here."
+    ],
+    examples: [
+      { en: "Both of my parents are doctors.", ru: "Оба моих родителя — врачи." },
+      { en: "You can take either bus.", ru: "Можно сесть на любой из двух автобусов." },
+      { en: "Neither of us speaks German.", ru: "Ни один из нас двоих не говорит по-немецки." },
+      { en: "None of my friends smoke.", ru: "Никто из моих друзей не курит." }
+    ]
+  },
+  {
+    id: "be-get-used-to", level: "B2", category: "grammar",
+    title: "Used to, be used to, get used to",
+    summary: "Раньше делал — привык — привыкаю: три разные конструкции.",
+    explanation: [
+      "Эти три конструкции похожи внешне, но значат разное и строятся по-разному.",
+      "**used to + глагол** — прошлая привычка или состояние, которых больше нет: I **used to live** in a village. В вопросе и отрицании — use to: **Did** you **use to** play? I **didn't use to** like coffee.",
+      "**be used to + существительное / -ing** — «быть привыкшим»: это уже привычно, не кажется странным. I **am used to getting** up early. She **is used to** the noise. Здесь **to — предлог**, поэтому после него -ing, а не начальная форма.",
+      "**get used to + существительное / -ing** — «привыкать», процесс: You will **get used to driving** on the left. I'm **getting used to** my new job.",
+      "**Как различить:** если перед used стоит be (am, is, was) или get — после to нужен -ing. Если be нет — после to идёт простой глагол.",
+      "**Времена.** be used to и get used to бывают в любом времени: I **wasn't used to** it. I **have got used to** it. I'll never **get used to** it. А used to существует только в прошедшем.",
+      "**Типичные ошибки.** ✗ I am used to get up early → ✓ I am used to **getting** up early. ✗ I used to living there → ✓ I used to **live** there. ✗ Did you used to…? → ✓ Did you **use** to…?"
+    ],
+    examples: [
+      { en: "I used to smoke, but I gave up.", ru: "Раньше я курил, но бросил." },
+      { en: "I'm used to working at night.", ru: "Я привык работать по ночам." },
+      { en: "You'll soon get used to the cold.", ru: "Ты скоро привыкнешь к холоду." },
+      { en: "She couldn't get used to living alone.", ru: "Она не могла привыкнуть жить одна." }
+    ]
+  },
+  {
+    id: "gerund-infinitive-meaning", level: "B2", category: "grammar",
+    title: "Remember, forget, stop, try, regret: to или -ing",
+    summary: "После этих глаголов возможны обе формы, но смысл меняется.",
+    explanation: [
+      "После большинства глаголов форма одна (enjoy doing, want to do). Но после пяти частых глаголов возможны обе, и **значение разное**.",
+      "**remember / forget + to** — (не) забыть сделать дело, которое впереди: **Remember to lock** the door. I **forgot to call** her. **remember / forget + -ing** — воспоминание о том, что уже было: I **remember locking** the door. I'll never **forget seeing** the sea.",
+      "**stop + -ing** — прекратить действие: He **stopped smoking**. **stop + to** — остановиться, чтобы сделать другое: We **stopped to have** a coffee.",
+      "**try + to** — пытаться, прилагать усилие (часто не получилось): I **tried to open** the window, but it was stuck. **try + -ing** — попробовать как способ решить проблему: **Try drinking** warm milk.",
+      "**regret + -ing** — жалеть о сделанном: I **regret saying** that. **regret + to** — с сожалением сообщать (формально): We **regret to inform** you…",
+      "**Подсказка.** Инфинитив с to смотрит вперёд (дело ещё предстоит), -ing смотрит назад (действие уже было) или на само действие.",
+      "**Типичные ошибки.** ✗ Don't forget locking the door → ✓ Don't forget **to lock** the door. ✗ I remember to meet her years ago → ✓ I remember **meeting** her. ✗ I stopped to smoke (когда бросил) → ✓ I stopped **smoking**."
+    ],
+    examples: [
+      { en: "Remember to buy some bread.", ru: "Не забудь купить хлеба." },
+      { en: "I remember buying this bread yesterday.", ru: "Я помню, что купил этот хлеб вчера." },
+      { en: "She stopped to answer the phone.", ru: "Она остановилась, чтобы ответить на звонок." },
+      { en: "Try turning it off and on again.", ru: "Попробуй выключить и снова включить." }
+    ]
+  },
+  {
+    id: "causative-have", level: "B2", category: "grammar",
+    title: "Have / get something done",
+    summary: "I had my hair cut — мне сделали (услуга, которую выполнил другой).",
+    explanation: [
+      "Конструкция **have + предмет + третья форма (V3)** показывает, что действие выполнил не сам человек, а кто-то для него (обычно за деньги): I **had my hair cut**. — Меня постригли (я сходил в парикмахерскую).",
+      "**Сравните:** I **cut** my hair. — Я сам себя постриг. I **had** my hair **cut**. — Меня постригли. По-русски в обоих случаях часто говорят «я постригся», в английском различие обязательно.",
+      "**Порядок слов** строгий: have → предмет → V3. ✗ I had cut my hair (это Past Perfect: «я постриг раньше») → ✓ I had **my hair cut**.",
+      "**Любое время** образуется изменением have: I **have** my car serviced every year. I'm **having** the flat painted. I **had** my eyes tested. I'm **going to have** my phone repaired. В вопросе и отрицании — do / did: Where **do** you **have** your hair cut?",
+      "**get + предмет + V3** — то же самое, но разговорнее: I need to **get my watch repaired**.",
+      "**Неприятные события.** Та же форма описывает то, что случилось с человеком против его воли: He **had his wallet stolen**. — У него украли бумажник.",
+      "**Типичные ошибки.** ✗ I'm going to have my car wash → ✓ **washed**. ✗ We had the windows to clean → ✓ We had the windows **cleaned**."
+    ],
+    examples: [
+      { en: "I had my hair cut yesterday.", ru: "Я вчера постригся (в парикмахерской)." },
+      { en: "We're having the kitchen painted.", ru: "Нам сейчас красят кухню." },
+      { en: "You should get your eyes tested.", ru: "Тебе стоит проверить зрение." },
+      { en: "She had her bag stolen on the train.", ru: "У неё в поезде украли сумку." }
+    ]
+  },
+  {
+    id: "unless-as-long-as", level: "B2", category: "grammar",
+    title: "Unless, as long as, provided that, in case",
+    summary: "Условия без if: если не; при условии, что; на случай, если.",
+    explanation: [
+      "Кроме if есть ещё четыре частых способа выразить условие.",
+      "**unless = if … not** («если не»): I won't go **unless** you come. = I won't go **if** you **don't** come. После unless глагол утвердительный — второе отрицание не нужно.",
+      "**as long as / provided (that) / providing (that)** — «при условии, что», «только если»: You can borrow my car **as long as** you drive carefully. Provided that звучит официальнее.",
+      "**in case** — «на случай, если»: действие совершают заранее, как предосторожность. I'll take an umbrella **in case** it rains. (Беру сейчас, дождь может пойти потом.) Сравните: I'll take an umbrella **if** it rains. (Возьму, только когда пойдёт.)",
+      "**Время после этих слов.** Как и после if, о будущем говорят в **Present Simple**, без will: unless you **hurry**, as long as you **pay**, in case it **rains**.",
+      "**in case of + существительное** — в объявлениях: **In case of** fire, use the stairs.",
+      "**Типичные ошибки.** ✗ Unless you don't hurry → ✓ Unless you **hurry**. ✗ in case it will rain → ✓ in case it **rains**. ✗ as long as you will behave → ✓ as long as you **behave**."
+    ],
+    examples: [
+      { en: "I won't tell anyone unless you want me to.", ru: "Я никому не скажу, если только ты сам не захочешь." },
+      { en: "You can stay as long as you keep quiet.", ru: "Можешь остаться при условии, что будешь вести себя тихо." },
+      { en: "Take a jacket in case it gets cold.", ru: "Возьми куртку на случай, если похолодает." },
+      { en: "Provided that you pay on time, there will be no problem.", ru: "При условии, что вы платите вовремя, проблем не будет." }
+    ]
+  },
+  {
+    id: "would-rather-had-better", level: "B2", category: "grammar",
+    title: "Would rather, had better, it's time",
+    summary: "Предпочёл бы; лучше бы (а то…); пора бы.",
+    explanation: [
+      "**would rather + глагол без to** — «предпочёл бы»: I**'d rather stay** at home. Сравнение — через than: I'd rather walk **than** take a taxi. Отрицание: I'd rather **not** go.",
+      "**would rather + другой человек + Past Simple** — хочу, чтобы кто-то другой сделал (или не делал): I'd rather **you didn't** smoke here. I'd rather **you told** me the truth. Прошедшее время здесь не о прошлом, а о желаемом.",
+      "**had better + глагол без to** — настойчивый совет или предупреждение о конкретной ситуации (иначе будут последствия): You**'d better hurry** — the train leaves in five minutes. Отрицание: You'd better **not** be late.",
+      "**'d** — это would в 'd rather и had в 'd better. Несмотря на had, речь о настоящем или будущем.",
+      "**should или had better?** Should — общий совет (You should eat more fruit). Had better — срочно и с намёком на неприятности (You'd better see a doctor).",
+      "**It's time + to + глагол** — пора: It's time **to go**. **It's time + подлежащее + Past Simple** — пора бы уже (с оттенком упрёка): It's time **you found** a job.",
+      "**Типичные ошибки.** ✗ You had better to leave → ✓ You had better **leave**. ✗ I'd rather to stay → ✓ I'd rather **stay**. ✗ You hadn't better → ✓ You had better **not**. ✗ It's time we go → ✓ It's time we **went**."
+    ],
+    examples: [
+      { en: "I'd rather have tea than coffee.", ru: "Я бы предпочёл чай, а не кофе." },
+      { en: "You'd better take an umbrella.", ru: "Тебе лучше взять зонт." },
+      { en: "I'd rather you didn't tell anyone.", ru: "Я бы предпочёл, чтобы ты никому не говорил." },
+      { en: "It's time we went home.", ru: "Нам пора бы домой." }
+    ]
+  },
+  {
+    id: "articles-advanced", level: "B2", category: "grammar",
+    title: "Артикли: трудные случаи",
+    summary: "Общее и конкретное, география, устойчивые выражения без артикля.",
+    explanation: [
+      "**Общее или конкретное.** Неисчисляемые и абстрактные слова в общем смысле — **без артикля**: **Life** is short. I love **music**. Если имеется в виду что-то конкретное — **the**: **the life** of a soldier, **the music** at the party.",
+      "**Множественное число в общем смысле** — тоже без артикля: **Dogs** are friendly. Но **the dogs** next door (конкретные).",
+      "**the + прилагательное** = группа людей: **the rich**, **the poor**, **the young**, **the unemployed** (глагол во множественном числе).",
+      "**География.** Без артикля: континенты, большинство стран и городов, отдельные озёра и горы (Europe, France, Lake Baikal, Mount Everest). С the: реки, моря, океаны, горные цепи, группы островов, пустыни (**the** Thames, **the** Alps, **the** Sahara) и страны со словами States, Kingdom, Republic или во множественном числе (**the** USA, **the** UK, **the** Netherlands).",
+      "**Без артикля — места по прямому назначению:** go to **school / work / bed / hospital / prison / church**, be at **home / work**. Но: I went to **the** school to meet the teacher (как посетитель).",
+      "**Ещё без артикля:** приёмы пищи (have **lunch**), виды транспорта с by (by **bus**), языки и предметы (**English**, **maths**), виды спорта (play **football**). С the: музыкальные инструменты (play **the** piano), единственные в своём роде (**the** sun, **the** internet), превосходная степень (**the** best).",
+      "**a / an по звуку, а не по букве:** **an** hour, **an** honest man, **a** university, **a** European country. Профессии — всегда с a / an: She is **a** doctor.",
+      "**Типичные ошибки.** ✗ The life is hard → ✓ **Life** is hard. ✗ I go to the work → ✓ I go to **work**. ✗ She is best student → ✓ She is **the** best student. ✗ We had a lunch → ✓ We had **lunch**."
+    ],
+    examples: [
+      { en: "Life is hard for the poor.", ru: "Жизнь трудна для бедных." },
+      { en: "The Thames flows through London.", ru: "Темза течёт через Лондон." },
+      { en: "She went to hospital for an operation.", ru: "Она легла в больницу на операцию." },
+      { en: "He plays the guitar and speaks French.", ru: "Он играет на гитаре и говорит по-французски." }
+    ]
+  },
+  {
+    id: "non-defining-relative", level: "B2", category: "grammar",
+    title: "Придаточные с запятыми: , who … , which …",
+    summary: "Дополнительная информация в запятых; which о целой ситуации; of whom, to whom.",
+    explanation: [
+      "Есть два вида придаточных. **Определяющее** говорит, о ком или о чём речь, без него непонятно: The man **who lives next door** is a pilot. **Неопределяющее** только добавляет информацию о том, что уже понятно: My father**, who is 70,** still works.",
+      "**Правила для придаточных с запятыми:** 1) выделяются запятыми с двух сторон; 2) **that использовать нельзя** — только who (люди) и which (вещи); 3) союзное слово **нельзя опустить**.",
+      "**, which о целой ситуации.** Which может относиться не к одному слову, а ко всему предыдущему предложению: He was late again**, which** made the boss angry. (= и это разозлило начальника). ✗ what здесь нельзя.",
+      "**whose, where, when** работают так же: Anna**, whose** brother is a pilot, … London**, where** I was born, … In 2010**, when** I was a student, …",
+      "**Предлог + whom / which** (формальный стиль): the man **to whom** I spoke; the house **in which** I grew up. В разговорной речи предлог уходит в конец: the man I spoke **to**.",
+      "**Количество + of whom / of which:** She has two sons, **both of whom** are doctors. I bought three books, **one of which** was a present. ✗ both of them are (в одном предложении через запятую так нельзя).",
+      "**Типичные ошибки.** ✗ My car, that is old, … → ✓ My car, **which** is old, … ✗ He failed, what surprised me → ✓ …**, which** surprised me. ✗ London, where I was born in → ✓ London, where I was born."
+    ],
+    examples: [
+      { en: "My sister, who lives in Rome, is a doctor.", ru: "Моя сестра, которая живёт в Риме, врач." },
+      { en: "He passed the exam, which surprised everyone.", ru: "Он сдал экзамен, что всех удивило." },
+      { en: "She has two sons, both of whom are engineers.", ru: "У неё два сына, оба инженеры." },
+      { en: "The hotel, where we stayed for a week, was excellent.", ru: "Отель, в котором мы прожили неделю, был отличный." }
+    ]
+  },
+  {
+    id: "reporting-verbs", level: "B2", category: "grammar",
+    title: "Глаголы передачи речи: suggest, advise, promise, deny…",
+    summary: "Вместо said и told — точный глагол и своя конструкция после него.",
+    explanation: [
+      "На уровне B2 чужие слова передают не только через said / told, а глаголом, который сразу называет смысл: посоветовал, пообещал, отказался, извинился. После каждого — своя форма.",
+      "**Глагол + to + глагол:** **promise, offer, refuse, agree, threaten**. She **promised to call**. He **refused to help**.",
+      "**Глагол + кого + to + глагол:** **advise, ask, tell, warn, remind, invite, encourage, persuade**. He **advised me to see** a doctor. Отрицание — not to: She **warned us not to be** late.",
+      "**Глагол + -ing:** **suggest, deny, admit, recommend**. He **denied taking** the money. She **suggested going** to the cinema.",
+      "**Глагол + предлог + -ing:** **apologise for**, **insist on**, **accuse** somebody **of**, **blame** somebody **for**, **congratulate** somebody **on**, **thank** somebody **for**. She **apologised for being** late. They **accused him of stealing**.",
+      "**Особый случай — suggest.** После него нельзя ставить «кого + to»: ✗ He suggested me to go. Правильно: He suggested **going** или He suggested **(that) I go / I should go**.",
+      "**Типичные ошибки.** ✗ She apologised to be late → ✓ apologised **for being** late. ✗ He denied to steal → ✓ denied **stealing**. ✗ He suggested me to take a taxi → ✓ He suggested **taking** a taxi."
+    ],
+    examples: [
+      { en: "She suggested going to the cinema.", ru: "Она предложила пойти в кино." },
+      { en: "He advised me to see a lawyer.", ru: "Он посоветовал мне обратиться к юристу." },
+      { en: "They accused him of stealing the car.", ru: "Его обвинили в угоне машины." },
+      { en: "She apologised for being late.", ru: "Она извинилась за опоздание." }
+    ]
+  },
+  {
+    id: "phrasal-verbs-b2", level: "B2", category: "grammar",
+    title: "Фразовые глаголы уровня B2",
+    summary: "put up with, turn out, come across, call off, look into, let down…",
+    explanation: [
+      "Фразовые глаголы этого уровня часто нельзя понять по частям — их запоминают целиком, лучше всего с примером.",
+      "**Отношения и поведение:** **put up with** — терпеть, мириться; **let down** — подвести; **take after** — быть похожим на родственника; **get away with** — остаться безнаказанным; **run into** — случайно встретить.",
+      "**События и результаты:** **turn out** — оказаться (It turned out that…); **break down** — сломаться (о машине, технике); **call off** — отменить; **put off** — отложить; **break out** — вспыхнуть (о войне, пожаре, эпидемии).",
+      "**Работа и исследования:** **carry out** — проводить (эксперимент, опрос); **look into** — расследовать, изучать; **figure out** — разобраться, понять; **come across** — случайно найти; **turn down** — отклонить (предложение); **run out of** — израсходовать, закончиться.",
+      "**Три слова.** В глаголах из трёх частей (put up with, get away with, run out of) дополнение всегда стоит в конце: I can't put up with **it**. ✗ put it up with.",
+      "**Разделяемые.** У call off, let down, turn down, figure out, carry out дополнение-местоимение ставится в середину: They **called it off**. Don't **let me down**. I can't **figure it out**.",
+      "**Не путайте частицы:** turn **up** (появиться, сделать громче) — turn **down** (отклонить, сделать тише) — turn **out** (оказаться); break **down** (сломаться) — break **up** (расстаться) — break **out** (вспыхнуть)."
+    ],
+    examples: [
+      { en: "I can't put up with this noise.", ru: "Я не могу мириться с этим шумом." },
+      { en: "It turned out that he was right.", ru: "Оказалось, что он был прав." },
+      { en: "The match was called off because of the rain.", ru: "Матч отменили из-за дождя." },
+      { en: "I came across an old photo of us.", ru: "Я наткнулся на нашу старую фотографию." },
+      { en: "Don't let me down.", ru: "Не подведи меня." }
+    ]
+  },
+  {
+    id: "collocations-b2", level: "B2", category: "vocabulary",
+    title: "Лексика: устойчивые сочетания (collocations)",
+    summary: "make a decision, heavy rain, strongly recommend, pay attention.",
+    explanation: [
+      "Сочетание — это слова, которые носители языка привычно ставят вместе. Грамматически «strong rain» возможно, но так не говорят: правильно **heavy rain**. На уровне B2 именно сочетания отличают естественную речь от «переведённой с русского».",
+      "**make** (создать, получить результат): make **a decision, a mistake, an effort, progress, a suggestion, an appointment, money, a noise, sense**.",
+      "**do** (выполнять деятельность): do **homework, housework, research, business, a course, your best, the shopping, someone a favour**.",
+      "**take / have:** take **a break, a photo, a risk, notes, part in, responsibility, advantage of**; have **a rest, a look, a chat, an argument, fun, a good time**.",
+      "**Прилагательное + существительное:** **heavy** rain / traffic / smoker; **strong** wind / coffee / accent; **high** price / quality / temperature; **deep** sleep; **serious** mistake / problem; **close** friend.",
+      "**Наречие + глагол / прилагательное:** **strongly** recommend / disagree; **highly** unlikely / successful; **deeply** sorry / worried; **completely** different; **rain heavily**.",
+      "**Глагол + существительное:** **commit** a crime; **lose** your temper; **pay** attention; **catch** a cold; **keep** a promise; **tell** the truth / a lie; **come into** effect; **meet** a deadline.",
+      "**Типичные ошибки.** ✗ do a mistake → ✓ **make** a mistake. ✗ make homework → ✓ **do** homework. ✗ strong rain → ✓ **heavy** rain. ✗ make a photo → ✓ **take** a photo."
+    ],
+    examples: [
+      { en: "We need to make a decision today.", ru: "Нам нужно принять решение сегодня." },
+      { en: "There was heavy traffic on the way home.", ru: "По дороге домой было плотное движение." },
+      { en: "I strongly recommend this film.", ru: "Я настоятельно рекомендую этот фильм." },
+      { en: "Pay attention to the last sentence.", ru: "Обратите внимание на последнее предложение." }
+    ]
+  },
+  {
+    id: "vocab-technology-media", level: "B2", category: "vocabulary",
+    title: "Лексика: технологии и медиа",
+    summary: "update, back up, go viral, streaming, fake news, on the internet.",
+    explanation: [
+      "**Устройства и программы:** **device** — устройство; **software** — программы; **app** — приложение; **update / upgrade** — обновить; **install** — установить; **crash** — «зависнуть», выйти из строя; **back up** — сделать резервную копию; **set up** — настроить.",
+      "**Интернет:** **log in / sign in** — войти; **log out** — выйти; **download / upload** — скачать / загрузить; **link** — ссылка; **search engine** — поисковик; **the server is down** — сервер не работает; **connection** — соединение.",
+      "**Медиа:** **streaming service** — стриминговый сервис; **subscribe to** — подписаться на; **go viral** — стать вирусным; **fake news** — ложные новости; **headline** — заголовок; **source** — источник; **influencer** — блогер с большой аудиторией; **content** — контент (неисчисляемое).",
+      "**Оценка техники:** **user-friendly** — удобный; **reliable** — надёжный; **outdated** — устаревший; **cutting-edge / state-of-the-art** — новейший; **up-to-date** — современный, актуальный; **time-consuming** — отнимающий много времени.",
+      "**Предлоги.** **on** the internet, **on** social media, **on** YouTube, **on** TV, **on** my phone; **by** email, **by** phone; **in** an email (в тексте письма); subscribe **to**, log **in to**.",
+      "**Типичные ошибки.** ✗ in the internet → ✓ **on** the internet. ✗ in social media → ✓ **on** social media. ✗ by the email → ✓ **by email**. ✗ an information / a news → ✓ **information / news** (неисчисляемые: a piece of news)."
+    ],
+    examples: [
+      { en: "Back up your files before you update the system.", ru: "Сделай резервную копию файлов перед обновлением системы." },
+      { en: "The video went viral in two days.", ru: "Видео стало вирусным за два дня." },
+      { en: "I read it on social media, but the source was unreliable.", ru: "Я прочитал это в соцсетях, но источник был ненадёжный." },
+      { en: "The app is user-friendly and works offline.", ru: "Приложение удобное и работает без интернета." }
+    ]
+  },
+  {
+    id: "vocab-environment-society", level: "B2", category: "vocabulary",
+    title: "Лексика: окружающая среда и общество",
+    summary: "pollution, renewable energy, climate change, unemployment, the cost of living.",
+    explanation: [
+      "**Окружающая среда:** **the environment** — окружающая среда (всегда с the); **pollution** — загрязнение; **climate change** — изменение климата; **global warming** — глобальное потепление; **renewable energy** — возобновляемая энергия; **solar / wind power** — солнечная / ветровая энергия; **fossil fuels** — ископаемое топливо.",
+      "**Что с этим делают:** **reduce** — сокращать; **recycle** — перерабатывать; **protect** — защищать; **waste** — тратить впустую, отходы; **throw away** — выбрасывать; **run out of** — исчерпать; **ban** — запретить.",
+      "**Природа:** **species** — вид (форма одна в ед. и мн. числе); **endangered** — под угрозой исчезновения; **extinction** — вымирание; **wildlife** — дикая природа; **habitat** — среда обитания.",
+      "**Общество:** **unemployment** — безработица; **poverty** — бедность; **the cost of living** — стоимость жизни; **crime rate** — уровень преступности; **inequality** — неравенство; **the gap between rich and poor**; **social issue** — общественная проблема; **the right to vote** — право голоса.",
+      "**Государство:** **government** — правительство; **law** — закон; **tax** — налог; **raise taxes** — повышать налоги (но prices **rise** — цены растут сами); **policy** — политика, курс; **election** — выборы.",
+      "**affect / effect.** **affect** — глагол (влиять): Pollution **affects** our health. **effect** — существительное (влияние): Pollution **has an effect on** our health.",
+      "**Типичные ошибки.** ✗ The unemployment is rising → ✓ **Unemployment** is rising (общее понятие без the). ✗ the pollution of air → ✓ **air pollution**. ✗ protect environment → ✓ protect **the** environment."
+    ],
+    examples: [
+      { en: "Air pollution affects millions of people.", ru: "Загрязнение воздуха влияет на миллионы людей." },
+      { en: "We should invest more in renewable energy.", ru: "Нам следует больше вкладывать в возобновляемую энергию." },
+      { en: "The cost of living has risen sharply.", ru: "Стоимость жизни резко выросла." },
+      { en: "Many species are in danger of extinction.", ru: "Многие виды находятся под угрозой вымирания." }
+    ]
+  }
+);
