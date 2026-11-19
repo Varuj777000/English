@@ -19,7 +19,10 @@ const optionOrder = {}; // перемешанные варианты: чтобы
 
 // Быстрый поиск вопроса по ID
 const QUESTION_BY_ID = {};
+// Знает вопросы обоих банков: при повторе теста часть вопросов берётся
+// из банка контрольных (data/checkpoints.js).
 DATA.placement.forEach(function (q) { QUESTION_BY_ID[q.id] = q; });
+DATA.checkpoints.forEach(function (q) { QUESTION_BY_ID[q.id] = q; });
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("next-btn").addEventListener("click", function () {
@@ -95,6 +98,11 @@ function showIntro() {
 // внутри раздела — от A1 к C1. Внутри одного уровня вопросы перемешиваются
 // (кроме чтения: там вопросы к одному тексту идут подряд).
 function buildFlow() {
+  const progress = loadProgress();
+  // Повтор: те же 58 вопросов запоминаются и завышают уровень,
+  // поэтому берём свежие из объединённого банка.
+  if (progress.placement) return buildRepeatFlow(progress);
+
   const flow = [];
   Object.keys(TEST_SECTIONS).forEach(function (section) {
     LEVELS.forEach(function (level) {
@@ -106,6 +114,47 @@ function buildFlow() {
     });
   });
   return flow;
+}
+
+// Повторный тест: столько же вопросов на раздел и уровень, сколько в обычном
+// стартовом тесте, но из DATA.placement + DATA.checkpoints, и в первую очередь
+// те, которых вы ещё не видели ни в прошлых тестах, ни в контрольных.
+// Чтение выбирается целыми текстами.
+function buildRepeatFlow(progress) {
+  const seenIds = new Set();
+  // У старых результатов нет askedIds: тогда считаем, что был задан весь исходный банк.
+  const prevAsked = progress.placement.askedIds || DATA.placement.map(function (q) { return q.id; });
+  prevAsked.forEach(function (id) { seenIds.add(id); });
+  (progress.checkpoints || []).forEach(function (c) { (c.askedIds || []).forEach(function (id) { seenIds.add(id); }); });
+
+  const pool = DATA.placement.concat(DATA.checkpoints);
+  const flow = [];
+  Object.keys(TEST_SECTIONS).forEach(function (section) {
+    LEVELS.forEach(function (level) {
+      const inBlock = function (q) { return q.section === section && q.level === level; };
+      if (section === "reading") {
+        const wanted = new Set(DATA.placement.filter(inBlock).map(function (q) { return q.passage; })).size;
+        const byPassage = {};
+        pool.filter(inBlock).forEach(function (q) { (byPassage[q.passage] = byPassage[q.passage] || []).push(q); });
+        const isUnseen = function (pid) { return byPassage[pid].every(function (q) { return !seenIds.has(q.id); }); };
+        pickPreferUnseen(Object.keys(byPassage), wanted, isUnseen)
+          .forEach(function (pid) { byPassage[pid].forEach(function (q) { flow.push(q.id); }); });
+      } else {
+        const wanted = DATA.placement.filter(inBlock).length;
+        const ids = pool.filter(inBlock).map(function (q) { return q.id; });
+        pickPreferUnseen(ids, wanted, function (id) { return !seenIds.has(id); })
+          .forEach(function (id) { flow.push(id); });
+      }
+    });
+  });
+  return flow;
+}
+
+// Выбрать count элементов: сначала случайные «невиденные», потом «виденные».
+function pickPreferUnseen(items, count, isUnseen) {
+  const unseen = shuffle(items.filter(isUnseen));
+  const seen = shuffle(items.filter(function (i) { return !isUnseen(i); }));
+  return unseen.concat(seen).slice(0, count);
 }
 
 function startNewRun() {
@@ -210,8 +259,10 @@ function checkBlockStop(q) {
 }
 
 function finishRun() {
-  const result = evaluateTest(DATA.placement, run.answers);
+  const result = evaluateTest(DATA.placement.concat(DATA.checkpoints), run.answers);
   result.minutes = Math.max(1, Math.round((Date.now() - Date.parse(run.startedAt)) / 60000));
+  // Вопросы, на которые вы реально ответили (без пропущенных по адаптивности)
+  result.askedIds = Object.keys(run.answers).filter(function (id) { return !run.answers[id].skipped; });
 
   const progress = loadProgress();
   applyPlacementResult(progress, result);

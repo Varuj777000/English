@@ -147,10 +147,19 @@ function determineLevel(byLevel) {
 
 // Записать результат стартового теста в прогресс и задать начальные приоритеты тем.
 function applyPlacementResult(progress, result) {
+  const isRepeat = !!progress.placement; // повторный тест: статистика тем уже накоплена
   progress.level = result.level;
   if (result.vocabLevel) progress.vocabLevel = result.vocabLevel;
   progress.placement = result;
-  applyTestedTopicPriorities(progress, result, true);
+  if (isRepeat) {
+    // Как в контрольной: каждый ответ — обычный ответ в занятии (+15/−6),
+    // темы, которых в тесте не было, не трогаем.
+    result.testedTopics.forEach(function (t) {
+      applyAnswerToTopic(getTopicStats(progress, t.topic), t.correct);
+    });
+  } else {
+    applyTestedTopicPriorities(progress, result, true);
+  }
 }
 
 // Записать результат контрольной: обновить уровень, сохранить историю

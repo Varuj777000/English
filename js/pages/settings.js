@@ -22,6 +22,7 @@ function findExercise(id) {
 
 document.addEventListener("DOMContentLoaded", function () {
   renderDuration();
+  renderMyLevel();
   renderVocabLevel();
   renderTts();
   renderPause();
@@ -63,6 +64,33 @@ function renderDuration() {
       box.querySelectorAll(".chip").forEach(function (c) { c.classList.toggle("active", c === chip); });
     });
   });
+}
+
+// ---------------------------------------------------------------------
+// Общий уровень (progress.level) — ручной выбор. Меняется только он:
+// история контрольных и результат стартового теста остаются как есть.
+// ---------------------------------------------------------------------
+
+function renderMyLevel() {
+  const progress = loadProgress();
+  const box = document.getElementById("my-level");
+  box.innerHTML = LEVELS.map(function (l) {
+    return '<button class="chip' + (progress.level === l ? " active" : "") + '" data-key="' + l + '">' + l + "</button>";
+  }).join("");
+
+  box.querySelectorAll(".chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      const p = loadProgress();
+      p.level = chip.dataset.key;
+      saveProgress(p);
+      renderMyLevel();
+      renderVocabLevel(); // подпись про уровень слов зависит от общего уровня
+    });
+  });
+
+  document.getElementById("my-level-note").textContent = progress.level
+    ? "Сейчас уровень: " + progress.level + "."
+    : "Уровень пока не определён: пройдите стартовый тест или выберите его здесь.";
 }
 
 // ---------------------------------------------------------------------
