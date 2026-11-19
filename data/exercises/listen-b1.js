@@ -104,5 +104,7 @@ DATA.exercises.push(
   { id: "listen-b1-075", topic: "passive-simple", type: "listen", q: "The new library will be opened next spring.", ru: "Новую библиотеку откроют следующей весной.", answers: ["The new library will be opened next spring."] },
   { id: "listen-b1-076", topic: "passive-simple", type: "listen", q: "The windows weren't cleaned last week.", ru: "Окна не мыли на прошлой неделе.", answers: ["The windows weren't cleaned last week.", "The windows were not cleaned last week."] },
   { id: "listen-b1-077", topic: "passive-simple", type: "listen", q: "The prizes will be given out after lunch.", ru: "Призы вручат после обеда.", answers: ["The prizes will be given out after lunch."] },
-  { id: "listen-b1-078", topic: "passive-simple", type: "listen", q: "Dinner is served at seven o'clock.", ru: "Ужин подают в семь часов.", answers: ["Dinner is served at seven o'clock.", "Dinner is served at 7 o'clock.", "Dinner is served at seven.", "Dinner is served at 7."] }
+  { id: "listen-b1-078", topic: "passive-simple", type: "listen", q: "Dinner is served at seven o'clock.", ru: "Ужин подают в семь часов.", answers: ["Dinner is served at seven o'clock.", "Dinner is served at 7 o'clock.", "Dinner is served at seven.", "Dinner is served at 7."] },
+  { id: "listen-b1-079", topic: "question-tags", type: "listen", q: "You never smoke, do you?", ru: "Ты ведь никогда не куришь, да?", answers: ["You never smoke, do you?"] },
+  { id: "listen-b1-080", topic: "so-such", type: "listen", q: "We had so many guests that we ran out of chairs.", ru: "У нас было так много гостей, что стулья закончились.", answers: ["We had so many guests that we ran out of chairs."] }
 );

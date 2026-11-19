@@ -1055,6 +1055,8 @@ DATA.topics.push(
       "**for и since:** **for** + период (for two hours), **since** + момент (since nine o'clock). **How long…?** — главный вопрос к Continuous.",
       "**all day / lately / recently** подчёркивают длительность или недавний период: I've been feeling tired **lately**.",
       "**Continuous или Simple:** называем число или результат — Simple (I've read three books). Длительность или повторение — Continuous (I've been reading all day). С live, work, teach допустимы оба: I've lived / been living here for years.",
+      "**since, а не from; Perfect, а не Present:** по-русски «работаю с 2020» — настоящее время, но в английском такое «с … до сих пор» требует Perfect. ✗ I work here since 2020 → ✓ I **have been working** here since 2020. ✗ She has been working here from 2018 → ✓ **since** 2018. How long: ✗ How long are you waiting? → ✓ How long **have you been waiting**?",
+      "**Нет Continuous у глаголов состояния:** know, like, love, want, need, own, belong, understand. Даже с for и since: ✗ I have been knowing Tom for ten years → ✓ I have **known** Tom for ten years. ✗ She has been owning this house → ✓ She has **owned** it since 2015.",
       "**Типичные ошибки:** ✗ I am waiting for two hours → ✓ I **have been waiting** for two hours. ✗ I have been knowing him → ✓ I have **known** him."
     ],
     examples: [
@@ -1465,6 +1467,8 @@ DATA.topics.push(
       "**Интонация:** интонация вниз — мы почти уверены и ждём согласия: It's cold, isn't it? Интонация вверх — спрашиваем по-настоящему.",
       "**Особые случаи:** I am → **aren't I?**; Let's → **shall we?**; повелительное → **will you?**: Open the door, will you?; there is → **isn't there?**; **nobody / nothing** → положительный хвост с they: Nobody called, **did they**?",
       "**Ответ:** You like tea, don't you? — Yes, I do. / No, I don't. Отвечаем на сам факт, а не на форму вопроса.",
+      "**everyone, someone, nobody → they; never, hardly → положительный хвост.** В хвостике everybody/everyone/somebody/someone/nobody заменяются на **they**: Everyone enjoyed it, **didn't they**? Never, hardly, rarely, seldom по смыслу отрицательные, поэтому хвост положительный: You never smoke, **do you**? She hardly ever calls, **does she**? ✗ You never smoke, don't you?",
+      "**Повелительное и had better:** Don't be late, **will you**? (и после обычного Open the door, will you?). You'd better hurry, **hadn't you**? — 'd здесь = had, не would. There are some apples, **aren't there**? — после there is/are в хвосте снова there, не they.",
       "**Типичные ошибки:** ✗ You like tea, don't it? → ✓ don't **you**? ✗ He isn't coming, isn't he? → ✓ **is** he?"
     ],
     examples: [
@@ -1488,6 +1492,8 @@ DATA.topics.push(
       "**Результат (so / such … that):** It was **so** hot **that** we stayed inside. It was **such** a hot day **that** we stayed inside.",
       "**Восклицания:** What **a** lovely day! **Such** a pity! **So** kind of you!",
       "**Множественное число:** **such** nice people (нет a); **so many** people; **so much** noise.",
+      "**so little / so few и неисчисляемые.** Так мало: **so little** + неисчисляемое (so little time, so little money), **so few** + исчисляемое во мн. числе (so few friends). Много: so **much** + неисчисляемое, so **many** + исчисляемое: ✗ so much people → ✓ so **many** people. Если существительное неисчисляемое, у such нет артикля: **such** nice weather, **such** good advice (✗ such a weather).",
+      "**«So … that» и «such … that»** выражают результат: She was **so** tired **that** she fell asleep. It was **such** a boring lecture **that** I fell asleep. Нельзя оставлять such a без существительного: ✗ It was such a hot that… → ✓ so hot / such a hot day. Нельзя ставить so перед существительным: ✗ so good time → ✓ **such a** good time.",
       "**Типичные ошибки:** ✗ It is so a nice day → ✓ **such** a nice day. ✗ such nice (без существительного) → ✓ **so** nice."
     ],
     examples: [
