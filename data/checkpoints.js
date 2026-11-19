@@ -453,3 +453,152 @@ DATA.checkpoints.push(
     q: "Wind and solar power are examples of ___ energy.", options: ["renewable", "disposable", "available"], answer: "renewable",
     explain: "renewable energy — возобновляемая энергия." }
 );
+
+// =====================================================================
+// ДОПОЛНЕНИЕ «Чтение A1 / B2 / C1»: до этого в банке контрольной были тексты
+// только для A2 и B1, поэтому на A1, B2 и C1 контрольная (и повторный
+// стартовый тест) показывала одни и те же тексты из data/placement-test.js.
+// По 3 текста на уровень, по 2 вопроса к каждому (темы: работа, поездки,
+// фильмы и игры). На B2/C1 один вопрос из двух — на отношение автора или
+// значение выражения в контексте, а не на поиск факта.
+// =====================================================================
+DATA.checkpoints.push(
+  // ---- A1 ----
+  { id: "cp-r-a1-1", section: "reading", level: "A1", topic: "reading", type: "choice", passage: "cp-tp-a1",
+    q: "What does Dima do at the hotel?", options: ["He takes guests' bags", "He cooks breakfast", "He drives guests home", "He cleans the rooms"], answer: "He takes guests' bags",
+    explain: "В тексте: «I help them with their bags» — он помогает гостям с сумками. Готовить и убирать он не упоминает." },
+  { id: "cp-r-a1-2", section: "reading", level: "A1", topic: "reading", type: "choice", passage: "cp-tp-a1",
+    q: "When does Dima finish work?", options: ["At five o'clock", "At eight o'clock", "At three o'clock", "At seven o'clock"], answer: "At five o'clock",
+    explain: "«I start work at eight … and finish at five». Восемь часов — это начало работы, а не конец." },
+  { id: "cp-r-a1-3", section: "reading", level: "A1", topic: "reading", type: "choice", passage: "cp-tp-a1-2",
+    q: "Why are Anna and her sister at the airport?", options: ["They are waiting for a plane", "They are looking for work", "They are meeting their mother", "They are buying new bags"], answer: "They are waiting for a plane",
+    explain: "Они хотят лететь в Рим, самолёт в 10:30, а сейчас 9:00 — поэтому ждут. Про работу, маму и покупку сумок в тексте ничего нет." },
+  { id: "cp-r-a1-4", section: "reading", level: "A1", topic: "reading", type: "choice", passage: "cp-tp-a1-2",
+    q: "What do they do before the plane leaves?", options: ["They drink coffee", "They buy tickets", "They walk in the city", "They sleep on a bench"], answer: "They drink coffee",
+    explain: "«They have a coffee and wait» — они пьют кофе и ждут. Билеты у них, видимо, уже есть, а город они ещё не видели." },
+  { id: "cp-r-a1-5", section: "reading", level: "A1", topic: "reading", type: "choice", passage: "cp-tp-a1-3",
+    q: "When does Max play games on weekdays?", options: ["After his homework", "Before school starts", "Together with his father", "Only on Friday evening"], answer: "After his homework",
+    explain: "«He does his homework first and then plays a game» — сначала уроки, потом игра. С отцом он смотрит фильм, и только в пятницу вечером." },
+  { id: "cp-r-a1-6", section: "reading", level: "A1", topic: "reading", type: "choice", passage: "cp-tp-a1-3",
+    q: "Why doesn't Max like scary films?", options: ["He sleeps badly after them", "They are too long for him", "His father doesn't like them", "They cost too much money"], answer: "He sleeps badly after them",
+    explain: "«He can't sleep after them» — после страшных фильмов он не может уснуть. Про длину, отца и цену в тексте нет." },
+
+  // ---- B2 ----
+  { id: "cp-r-b2-1", section: "reading", level: "B2", topic: "reading", type: "choice", passage: "cp-tp-b2",
+    q: "What is the writer's attitude to the results of the trial?", options: ["Interested, but unsure that every industry could copy it", "Certain that every employer should make the change at once", "Disappointed that output fell a great deal during the experiment", "Dismissive, because too few firms took part in the experiment"], answer: "Interested, but unsure that every industry could copy it",
+    explain: "Автор признаёт, что результаты впечатляют, но в 3-м абзаце сомневается, что больницы или заводы смогут так же. Выпуск в эксперименте не упал, а малое число фирм — лишь одна из оговорок критиков, а не позиция автора." },
+  { id: "cp-r-b2-2", section: "reading", level: "B2", topic: "reading", type: "choice", passage: "cp-tp-b2",
+    q: "In paragraph 2, what does \"cut the waste\" mean?", options: ["Remove activities that add little value", "Reduce the number of people on the team", "Spend less money on office equipment", "Finish the working day a few hours earlier"], answer: "Remove activities that add little value",
+    explain: "Контекст: лишние совещания и проверка почты — это и есть «waste». Команда заменила двухчасовую планёрку короткой запиской. Речь о действиях, а не о людях или деньгах." },
+  { id: "cp-r-b2-3", section: "reading", level: "B2", topic: "reading", type: "choice", passage: "cp-tp-b2-2",
+    q: "What is the writer's main point?", options: ["Planning too strictly can spoil what makes a trip memorable", "Famous monuments have become too crowded to be worth visiting", "Staying in one region is the cheapest way to see a country", "Booking apps often give travellers unreliable information"], answer: "Planning too strictly can spoil what makes a trip memorable",
+    explain: "Вывод в последнем абзаце: никакой список не заменит любопытство, часть плана лучше оставить случаю. Автор прямо говорит, что знаменитые места отвергать несправедливо, и что «slow travel» не дешевле." },
+  { id: "cp-r-b2-4", section: "reading", level: "B2", topic: "reading", type: "choice", passage: "cp-tp-b2-2",
+    q: "In paragraph 3, what does \"pushing back\" mean?", options: ["Resisting a popular habit", "Going back to places they know", "Complaining about rising prices", "Travelling over a longer period"], answer: "Resisting a popular habit",
+    explain: "Группа путешественников действует против общепринятого подхода (списки «must-see»). «Push back» здесь — сопротивляться тенденции, а не возвращаться или жаловаться на цены." },
+  { id: "cp-r-b2-5", section: "reading", level: "B2", topic: "reading", type: "choice", passage: "cp-tp-b2-3",
+    q: "What does the writer suggest about people who criticise remakes?", options: ["Their choices do not always match their complaints", "They know little about how film studios make money", "They prefer playing video games to going to the cinema", "They enjoy original films far more than any remake"], answer: "Their choices do not always match their complaints",
+    explain: "Последняя фраза: индустрия даёт зрителям то, что они «говорят, что не любят, и всё равно выбирают». Критикуют одно, покупают другое. Остальные варианты в тексте не утверждаются." },
+  { id: "cp-r-b2-6", section: "reading", level: "B2", topic: "reading", type: "choice", passage: "cp-tp-b2-3",
+    q: "In paragraph 2, what does \"a gamble\" mean?", options: ["Something with an uncertain result", "An activity that is against the rules", "A project that needs a very large team", "A decision made by the audience"], answer: "Something with an uncertain result",
+    explain: "Студия тратит огромные деньги и «не может знать, понравится ли зрителям» — это риск с непредсказуемым исходом. Дальше ремейк описан как способ снизить эту неопределённость." },
+
+  // ---- C1 ----
+  { id: "cp-r-c1-1", section: "reading", level: "C1", topic: "reading", type: "choice", passage: "cp-tp-c1",
+    q: "What is the writer's view of the measures some employers have introduced?", options: ["They are unexciting but aimed at the right problem", "They are too complicated to have any real effect", "They are exciting enough to remove the bias completely", "They are unnecessary because performance is judged fairly"], answer: "They are unexciting but aimed at the right problem",
+    explain: "Автор называет меры скромными и даже немного бюрократичными, но говорит, что они затрагивают «настоящий источник проблемы». В последнем абзаце он также не ждёт, что предвзятость исчезнет полностью." },
+  { id: "cp-r-c1-2", section: "reading", level: "C1", topic: "reading", type: "choice", passage: "cp-tp-c1",
+    q: "The phrase \"operates beneath conscious intention\" suggests that proximity bias is", options: ["something managers are usually unaware of", "a deliberate policy in a few large firms", "a problem found only in very big companies", "an effect that proper training would remove"], answer: "something managers are usually unaware of",
+    explain: "Сразу перед этим: «Nobody decides to discriminate». Предпочтение действует ниже уровня осознанного намерения — значит, руководители его обычно не замечают, и поэтому его трудно оспорить." },
+  { id: "cp-r-c1-3", section: "reading", level: "C1", topic: "reading", type: "choice", passage: "cp-tp-c1-2",
+    q: "What does the writer suggest about the claim that visiting fragile places encourages people to protect them?", options: ["It is partly true but exaggerated by tour companies", "It is false, as visitors never change their habits afterwards", "It is true and justifies the growth of such trips", "It cannot be tested because surveys are unreliable"], answer: "It is partly true but exaggerated by tour companies",
+    explain: "Автор признаёт, что некоторые посетители становятся активистами, но «доказательств меньше, чем подразумевают брошюры», а большинство быстро возвращается к прежним привычкам. Значит: отчасти верно и преувеличено рекламой." },
+  { id: "cp-r-c1-4", section: "reading", level: "C1", topic: "reading", type: "choice", passage: "cp-tp-c1-2",
+    q: "In paragraph 3, \"a boycott would hardly be a gift\" means a boycott would be", options: ["of little help to the people it is meant to support", "an unexpected but welcome present for the islanders", "too expensive for travel companies to organise properly", "a way of rewarding the more responsible tour operators"], answer: "of little help to the people it is meant to support",
+    explain: "«Hardly a gift» — вряд ли подарок. Дальше объяснено почему: бойкот лишит островитян единственного дохода, ради которого им вообще выгодно сохранять риф." },
+  { id: "cp-r-c1-5", section: "reading", level: "C1", topic: "reading", type: "choice", passage: "cp-tp-c1-3",
+    q: "How does the writer seem to feel about the way many games handle player choice?", options: ["Partly sympathetic, though aware of its weaknesses", "Angry that studios cheat their customers on purpose", "Sure that more choices always make better games", "Uninterested in whether the choices really matter"], answer: "Partly sympathetic, though aware of its weaknesses",
+    explain: "Автор объясняет практические причины, приводит «снисходительное» сравнение с фокусником, но в конце отмечает предел этой терпимости: эффект слабеет. Ни гнева, ни безразличия, ни веры в «больше выбора» нет." },
+  { id: "cp-r-c1-6", section: "reading", level: "C1", topic: "reading", type: "choice", passage: "cp-tp-c1-3",
+    q: "What is the purpose of the comparison with a magician?", options: ["To suggest that players accept the illusion willingly", "To show that game designers are dishonest by nature", "To explain why games need less writing and animation", "To argue that magic is more engaging than games are"], answer: "To suggest that players accept the illusion willingly",
+    explain: "Фокус работает, только если зритель согласен, что его обманут. Так «снисходительные» критики объясняют выбор в играх: игрок отчасти сам принимает иллюзию. Это не обвинение в нечестности." }
+);
+
+DATA.testPassages.push(
+  // ---- A1 ----
+  {
+    id: "cp-tp-a1", level: "A1",
+    text: [
+      "My name is Dima. I work in a small hotel. I start work at eight o'clock in the morning and finish at five. I meet new people every day and I help them with their bags. My job is not easy, but I like it. In the evening I go home by bus. On Saturdays and Sundays I don't work. I play football with my friends."
+    ]
+  },
+  {
+    id: "cp-tp-a1-2", level: "A1",
+    text: [
+      "Anna is at the airport with her sister. They want to fly to Rome. Their plane leaves at 10:30, but it is only 9:00 now, so they have a coffee and wait. Anna is a little nervous because she doesn't like planes. Anna has a small red bag and her sister has a big blue bag. They are very happy because Rome is a beautiful city and they want to see it."
+    ]
+  },
+  {
+    id: "cp-tp-a1-3", level: "A1",
+    text: [
+      "Max is fourteen. He likes games and films. His favourite game is about football. He plays it with his friend Ivan. On weekdays he does his homework first and then plays a game for one hour. On Friday evening he watches a film with his father. They like funny films, but his mother likes scary films. Max thinks scary films are bad because he can't sleep after them."
+    ]
+  },
+  // ---- B2 ----
+  {
+    id: "cp-tp-b2", level: "B2",
+    text: [
+      "A growing number of companies are experimenting with a four-day working week, and the early results have surprised even the sceptics. In one trial involving several dozen firms, employees kept their full salaries but worked Monday to Thursday. Most managers expected output to fall. Instead, revenue stayed broadly the same, and sick leave dropped noticeably.",
+      "Supporters argue that the results are hardly surprising. A great deal of the typical working day, they say, is lost to unnecessary meetings and constant email checking. When the time available shrinks, people simply cut the waste. One participant described how her team replaced a weekly two-hour briefing with a short written update, and nobody missed it.",
+      "Critics, however, urge caution. The firms that volunteered for the trial were mostly small, office-based businesses, where tasks are easy to rearrange. It is far less obvious that a hospital or a factory could squeeze the same work into four days without hiring extra staff, which would cancel out the savings. There is also a risk that employees end up working harder, not smarter, and find the longer days exhausting.",
+      "What the experiment does show is that the five-day week is a habit rather than a law of nature. Whether it can become the norm will depend less on productivity figures than on whether employers are willing to trust their staff to manage their own time."
+    ]
+  },
+  {
+    id: "cp-tp-b2-2", level: "B2",
+    text: [
+      "Ask most people what they remember from a holiday, and the answer is rarely the famous monument. It is usually something unplanned: a conversation with a taxi driver, a meal in a street nobody had recommended, a train that took the wrong turn. Yet the way we plan trips increasingly works against such accidents.",
+      "Booking apps rank everything from restaurants to viewpoints, and thousands of visitors follow the same top-ten lists. The result is a curious sameness: the queue for the 'must-see' photograph in one city looks remarkably like the queue in another. Some travel writers have begun to call this 'checklist tourism', and they argue that it turns a place into a task to be completed.",
+      "A small but growing group of travellers is pushing back. They choose one region and stay for weeks, rent a flat instead of a hotel room, and deliberately leave afternoons empty. Their approach, sometimes called slow travel, is not cheaper, since a long stay can cost as much as several short ones, but they claim it gives them something the lists cannot: the feeling of having actually been somewhere.",
+      "It would be unfair to dismiss the famous sights; they are popular for good reasons. The real point is that no list, however carefully compiled, can replace curiosity. The best trips are probably those in which a little of the plan is left to chance."
+    ]
+  },
+  {
+    id: "cp-tp-b2-3", level: "B2",
+    text: [
+      "Every year, studios release a new batch of remakes, reboots and sequels, and every year critics complain that the film industry has run out of ideas. The explanation, however, has less to do with creativity than with money. A film based on a familiar title arrives with a ready-made audience, and in an expensive business, that is worth a great deal.",
+      "Making an original film is a gamble. A studio may spend two hundred million dollars on a story nobody has heard of and have no way of knowing whether viewers will care. A remake reduces that uncertainty. Marketing departments can promise 'the story you loved, brought up to date', and many viewers, curious or nostalgic, buy a ticket.",
+      "This does not mean that remakes are always lazy. A few have been clearly better than the originals, usually when the director had a genuine reason to retell the story: a new setting, a different point of view, or technology that finally made the original idea possible. The worst examples tend to be those where the only reason is the title itself.",
+      "Interestingly, the same logic has taken over video games, where successful series are released again with improved graphics. Players complain, yet they continue to buy them. Perhaps the industry is simply giving audiences what they say they dislike and still choose."
+    ]
+  },
+  // ---- C1 ----
+  {
+    id: "cp-tp-c1", level: "C1",
+    text: [
+      "When offices reopened after the pandemic, many companies announced a 'hybrid' model with great enthusiasm: two or three days at home, the rest in the building. On paper it looked like a sensible compromise. In practice, researchers have begun to identify a quiet problem that the policy documents did not anticipate, which has been termed proximity bias.",
+      "The idea is simple, though its effects are not. Managers, like everyone else, tend to form favourable impressions of people they see regularly. An employee who happens to be at the next desk when a promising project is being handed out is more likely to be remembered than a colleague whose excellent work arrives by email from another city. Nobody decides to discriminate; the preference operates beneath conscious intention, which is precisely what makes it so difficult to challenge.",
+      "The consequences are uneven. Studies suggest that staff who spend most of their time at home are less likely to be promoted, even when their measured performance is identical. Since, in many organisations, women and parents of young children are the ones who choose to work remotely, the gap threatens to reinforce inequalities that firms claim to be reducing.",
+      "Some employers have responded by changing how work is assessed rather than where it is done: clear written goals, decisions recorded in shared documents instead of corridor conversations, and meetings in which remote participants speak first. These measures are modest, even slightly bureaucratic, and few people find them exciting. Yet they address the real source of the trouble, which is not distance itself but the habit of treating visibility as a substitute for value.",
+      "It would be naive to expect the bias to disappear altogether. Human beings are social animals, and a shared coffee will always count for something. The realistic aim is not to eliminate that instinct, but to stop it from quietly deciding who gets ahead."
+    ]
+  },
+  {
+    id: "cp-tp-c1-2", level: "C1",
+    text: [
+      "There is a particular kind of holiday that has become fashionable in the last decade: the trip to see something before it vanishes. Travel companies market glaciers, coral reefs and low-lying islands as places that must be visited 'while they still exist', and the advertising works. Demand for such journeys has risen sharply, and so, unavoidably, have the emissions that come with them.",
+      "The logic of last-chance tourism rests on a comfortable assumption: that witnessing a fragile place will make us care enough to protect it. There is some evidence for this. Visitors who have stood beside a retreating glacier often return home with a sharper sense of what is at stake, and a few become active campaigners. But the evidence is thinner than the brochures imply. Most travellers, according to surveys, report feeling moved, then go back to their previous habits within weeks.",
+      "The paradox is hard to escape. Flying thousands of kilometres to admire a landscape threatened by warming is, in a modest way, a contribution to the very process being mourned. Local communities complicate the picture further. For islanders whose economies depend on visitors, a boycott would hardly be a gift; it would remove the only income that makes preserving the reef worthwhile to them.",
+      "The most defensible position, perhaps, is an uncomfortable middle one. Travel less often, stay longer, choose operators that invest in conservation and are honest about their footprint, and accept that no choice in this area will be entirely free of contradiction. What we should resist is the self-congratulation that so often accompanies such trips, the notion that looking is the same as helping."
+    ]
+  },
+  {
+    id: "cp-tp-c1-3", level: "C1",
+    text: [
+      "Video games have long promised something that no other medium can offer: a story that responds to you. In recent years, major titles have advertised hundreds of decisions, multiple endings and consequences that 'change everything'. Yet anyone who has played several of these games to the end will have noticed a certain flatness behind the promise. The choices rarely alter the story as radically as the marketing suggests.",
+      "The reason is largely practical. Every genuine branch in a narrative multiplies the amount of writing, animation and voice recording required. A game with ten truly independent choices would, in theory, need over a thousand different paths, an impossible task for any studio. Designers therefore rely on a quieter craft: they let players make decisions that feel weighty, then steer the story back to a small number of fixed points. The choice affects a line of dialogue or a character's mood, while the plot moves on largely unchanged.",
+      "Some critics regard this as a kind of deception. Others, more charitably, compare it to a good magician: the trick works only if the audience agrees, at some level, to be fooled. What matters, they argue, is not whether the choice changes the world but whether it changes the player. A decision that leaves you uneasy for the rest of the game has done its job, regardless of what happens in the code.",
+      "There is, however, a limit to this generosity. Once players discover the pattern, the effect weakens, and the next 'life-changing' decision is met with a shrug. The studios that have avoided this trap tend to be those that promise less: games with fewer choices, each of which visibly matters. Restraint, it seems, is more convincing than abundance."
+    ]
+  }
+);
