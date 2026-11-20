@@ -75,7 +75,7 @@ DATA.texts.push(
     questions: [
       { type: "choice", q: "Where did Sara work before?", options: ["In a shop", "In an IT company", "In a school", "At home"], answer: "In a shop" },
       { type: "choice", q: "Why was Sara nervous at first?", options: ["Her English wasn't very good", "Her colleagues weren't friendly", "The job was boring", "She had to work at weekends"], answer: "Her English wasn't very good" },
-      { type: "choice", q: "How often does Sara have English lessons?", options: ["Twice a week", "Every day", "Once a month", "Only on Fridays"], answer: "Twice a week" },
+      { type: "choice", q: "How often does Sara have English lessons?", options: ["Twice a week", "Every day", "Once or twice a month", "Only on Fridays"], answer: "Twice a week" },
       { type: "choice", q: "What happened last Friday?", options: ["She had a meeting in English without help", "She left the company", "She met her new colleagues", "She had her first English lesson"], answer: "She had a meeting in English without help" }
     ]
   },
@@ -1206,6 +1206,344 @@ DATA.texts.push(
       { type: "choice", q: "Why do perfectionists often start late?", options: ["A late start gives them an excuse if the result is poor", "They have more work than other people", "They do not care about quality", "They work faster under pressure"], answer: "A late start gives them an excuse if the result is poor", explain: "Можно сказать себе, что просто не хватило времени, — способности «не проверялись»." },
       { type: "choice", q: "What did the study of students show?", options: ["Those who forgave themselves procrastinated less next time", "Students who felt guilty got better marks", "Strict students never procrastinate", "Revision does not help in exams"], answer: "Those who forgave themselves procrastinated less next time", explain: "Меньше вины — меньше того, от чего хочется убежать." },
       { type: "choice", q: "In the last paragraph, 'carry on' is closest in meaning to:", options: ["continue", "give up", "start again", "take a break"], answer: "continue", explain: "carry on — продолжать." }
+    ]
+  }
+);
+
+// =====================================================================
+// ДОПОЛНЕНИЕ «Длинное аудирование»: 4 диалога B2 (dlg-b2-009…012) и 4 диалога C1
+// (dlg-c1-001…004) — 16–26 реплик, ровно два говорящих, по 5 вопросов с explain
+// (минимум 2 вопроса из 5 — на вывод, намерение или отношение говорящего).
+// Темы: собеседование по видео, сроки проекта, отпуск-компромисс, спор о сериале;
+// повышение и переезд, неудачный запуск продукта, подкаст об играх, выгорание.
+// =====================================================================
+DATA.texts.push(
+  {
+    id: "dlg-b2-009",
+    level: "B2",
+    title: "A Video Interview",
+    listen: true,
+    text: [
+      "Helen: Good morning, Daniel. Can you hear me clearly? Sometimes the connection on this platform is a bit unreliable.",
+      "Daniel: Yes, loud and clear, thanks. And I can see you fine, so I think we're all set.",
+      "Helen: Great. Let's start with a quick introduction. I've read your CV, but I'd like to hear in your own words what attracted you to this role.",
+      "Daniel: Well, I've spent the last four years in customer support for a software company, and to be honest, I've reached the point where I'm doing the same tasks every day. This position involves managing a small team, which is exactly the challenge I've been looking for.",
+      "Helen: That makes sense. Your CV says you trained three new colleagues last year. How did that go?",
+      "Daniel: Overall, quite well. One of them struggled at first because he was afraid of making mistakes with angry customers, so I started recording calls that we could listen to together. After two months he was handling difficult calls on his own.",
+      "Helen: That's a good example. Now, a more difficult question. Can you tell me about a time when you disagreed with your manager?",
+      "Daniel: Let me think. Last spring my manager wanted to reduce the response time target from one day to two hours. I understood the idea, but I was worried the team would burn out, so I asked for a trial period and brought some data to the meeting.",
+      "Helen: And did she agree?",
+      "Daniel: Partly. We settled on four hours, and honestly, I think that was the right compromise. Complaints went down, and nobody quit.",
+      "Helen: Interesting. One thing I should mention is that this role sometimes requires working a few evenings when we launch new products. Would that be a problem?",
+      "Daniel: Not at all, as long as I know the schedule a couple of weeks in advance. I have a young daughter, so I need to organise childcare.",
+      "Helen: That's perfectly reasonable. Do you have any questions for me?",
+      "Daniel: Yes, two. How big is the team I'd be managing, and what does success look like in the first six months?",
+      "Helen: Six people at the moment, and we'd expect you to reduce the average waiting time and to hold regular one-to-one meetings with each person. I'll be honest, we have a few more candidates to see this week, but I'm impressed so far.",
+      "Daniel: Thank you. I'd really appreciate the opportunity.",
+      "Helen: We'll let you know by Friday. Thanks for your time, Daniel, and good luck.",
+      "Daniel: Thank you very much. Have a good day."
+    ],
+    questions: [
+      { type: "choice", q: "Why does Daniel want this job?", options: ["He is looking for a new challenge in managing people", "He is unhappy about his current salary", "His present company is losing staff", "He hopes to work from home more often"], answer: "He is looking for a new challenge in managing people",
+        explain: "Даниэль говорит, что делает одно и то же каждый день, а эта должность связана с руководством небольшой командой — «exactly the challenge I've been looking for». Про зарплату и увольнения он не говорит." },
+      { type: "choice", q: "How did Daniel help the colleague who was afraid of making mistakes?", options: ["He took over the most difficult calls himself for two months", "He made recordings to review together", "He asked the manager to lower the targets", "He moved the colleague to a different team"], answer: "He made recordings to review together",
+        explain: "«I started recording calls that we could listen to together» — они вместе разбирали записи звонков, и через два месяца коллега справлялся сам." },
+      { type: "choice", q: "What does Daniel's story about the response-time target suggest about him?", options: ["He avoids any conflict with his manager", "He prefers to follow instructions without ever questioning them", "He believes that every target is unrealistic", "He will disagree, but he backs his view with data"], answer: "He will disagree, but he backs his view with data",
+        explain: "Он не согласился с менеджером, но попросил пробный период и принёс данные — то есть спорит аргументированно. Это вывод из рассказа, прямо он этого не говорит." },
+      { type: "choice", q: "What condition does Daniel set for working in the evenings?", options: ["He wants extra pay for those hours", "He can only stay until seven o'clock", "He needs the schedule beforehand", "He needs to work from home on those days"], answer: "He needs the schedule beforehand",
+        explain: "«As long as I know the schedule a couple of weeks in advance» — ему нужно заранее знать график, чтобы организовать присмотр за дочерью." },
+      { type: "choice", q: "Why does Helen mention that other candidates will be interviewed?", options: ["She is warning him that he will not get the job", "She wants to make him answer the remaining questions more quickly", "She is being open that no decision has been made yet", "She hopes that he will withdraw his application"], answer: "She is being open that no decision has been made yet",
+        explain: "Хелен честна («I'll be honest»): решение ещё не принято, но пока кандидат её впечатлил — «I'm impressed so far». Это не предупреждение об отказе и не давление." }
+    ]
+  },
+
+  {
+    id: "dlg-b2-010",
+    level: "B2",
+    title: "Moving the Project Deadline",
+    listen: true,
+    text: [
+      "Marcus: Priya, thanks for making time. I'll get straight to the point. We were told the new booking app would be ready on the first of March, and now your email says April. What's going on?",
+      "Priya: I understand your frustration, Marcus, and I'd like to be completely open with you. The delay is mainly because the payment system we were planning to use changed its security rules in January, so we had to rebuild a whole section.",
+      "Marcus: But surely that's something your team should have anticipated. We've already told our customers about the launch.",
+      "Priya: To be fair, the announcement came after we signed the contract, and nobody could have predicted that change. That said, I accept that we should have warned you earlier, and I apologise for that.",
+      "Marcus: Apology accepted, but it doesn't solve my problem. A launch in April means we miss the spring holiday season, which is when most of our bookings happen.",
+      "Priya: I see. What if we split the launch into two stages? We could release the basic version, with searching and booking, by the middle of March, and add the new payment options a few weeks later.",
+      "Marcus: Hmm, that's a possibility. But would customers be able to pay at all in the first version?",
+      "Priya: Yes, through the old system, which still works. It's just less convenient, because people would have to enter their card details manually every time.",
+      "Marcus: I suppose we could live with that for a few weeks. What about the cost? Splitting the work must be more expensive.",
+      "Priya: Slightly, yes, but I've spoken to my director, and we're prepared to cover the extra cost ourselves, given the circumstances.",
+      "Marcus: That's generous. Honestly, I wasn't expecting that. Still, I'd want something in writing, with firm dates this time.",
+      "Priya: Of course. I'll send a revised plan by tomorrow afternoon, with the key dates marked, and we can set up a short call every Monday to check progress.",
+      "Marcus: Every Monday might be a bit much. Let's say every second Monday, unless something goes wrong.",
+      "Priya: That works for me. And if we see any new risk, I'll tell you immediately rather than waiting for the call.",
+      "Marcus: Fine. If you deliver the first stage by the fifteenth, I'll tell my team we're back on track.",
+      "Priya: You have my word. Thanks for being so patient, Marcus.",
+      "Marcus: Let's see how it goes. I'll be waiting for that plan."
+    ],
+    questions: [
+      { type: "choice", q: "What caused the delay?", options: ["The client changed the design of the app", "Two of the senior developers left the team in January", "A payment provider changed its rules", "The office was closed for a holiday"], answer: "A payment provider changed its rules",
+        explain: "Прия объясняет, что платёжная система в январе изменила правила безопасности, и пришлось переделывать целый раздел." },
+      { type: "choice", q: "Why is an April launch a problem for Marcus?", options: ["His customers would lose interest in the app", "It would miss the busiest booking season", "He has already paid for the app in full", "His own team will be on holiday"], answer: "It would miss the busiest booking season",
+        explain: "Марк говорит, что в апреле они упустят весенний праздничный сезон — «when most of our bookings happen»." },
+      { type: "choice", q: "How does Marcus react to Priya's offer to pay the extra cost?", options: ["He is pleasantly surprised but still wants firm guarantees", "He is insulted that money is mentioned at all", "He is completely satisfied and stops worrying", "He is angry that she did not offer more"], answer: "He is pleasantly surprised but still wants firm guarantees",
+        explain: "«That's generous. I wasn't expecting that» — приятно удивлён, но сразу добавляет «Still, I'd want something in writing» — гарантий всё равно требует. Это тон, а не факт." },
+      { type: "choice", q: "Why does Marcus ask for a written plan with firm dates?", options: ["He plans to take legal action against her company later", "He wants proof the new dates are firm", "He has forgotten the details of the call", "His director needs it for the tax office"], answer: "He wants proof the new dates are firm",
+        explain: "После первого срыва сроков Марк хочет подтверждение на бумаге — «with firm dates this time». Про суд и налоговую речи нет." },
+      { type: "choice", q: "How often will Priya and Marcus speak about progress?", options: ["Every Monday and Friday", "Once or twice a month", "Every second Monday", "Only when a problem appears"], answer: "Every second Monday",
+        explain: "Марк отказывается от звонков каждый понедельник и предлагает «every second Monday, unless something goes wrong» — через понедельник." }
+    ]
+  },
+
+  {
+    id: "dlg-b2-011",
+    level: "B2",
+    title: "A Holiday Compromise",
+    listen: true,
+    text: [
+      "Nina: Right, we really need to decide about this summer. I've been looking at that mountain village in Slovenia, and the photos look incredible.",
+      "Tom: They do, but I'll be honest, I was hoping for a beach. After the year I've had, I just want to lie in the sun and do absolutely nothing.",
+      "Nina: Nothing for ten days? I'd go crazy after two. I need to do something, you know, walk, explore a bit.",
+      "Tom: I know, I know. That's why I thought of Croatia. There's a coastal town with a nice beach, and we could take day trips to the islands.",
+      "Nina: Hmm, the problem is that August there is packed. I read that the old town gets so crowded you can hardly walk down the street.",
+      "Tom: That's a fair point. What if we went in late June instead? It's cheaper, quieter, and the sea is warm enough for me.",
+      "Nina: Early June is tricky for me because of the conference at work, but I could manage the last week of the month.",
+      "Tom: Late June would be fine. Would you be willing to spend half the time on the coast and half in the hills? There are some beautiful national parks about two hours inland.",
+      "Nina: That's not a bad idea, actually. Four days by the sea for you, then four days of hiking for me.",
+      "Tom: Eight days in total, then. I'd rather keep a couple of spare days at home so I don't have to go back to work straight off the plane.",
+      "Nina: Good thinking. But the logistics worry me a little. Moving between two places means a lot of packing and probably a rental car, which isn't cheap.",
+      "Tom: True, but if we skip the expensive hotels and stay in small guesthouses, we'd save more than enough to cover the car.",
+      "Nina: Okay, you've convinced me. Although I'm not sure about the guesthouses. Last time the walls were so thin that we heard our neighbours all night.",
+      "Tom: I promise I'll read the reviews carefully this time. And if there's any complaint about noise, we'll cross that place off the list.",
+      "Nina: Deal. Shall I look at flights while you check the accommodation?",
+      "Tom: Sounds good. Let's compare notes on Sunday and book everything before the prices go up."
+    ],
+    questions: [
+      { type: "choice", q: "Why does Nina not want to go to the Croatian town in August?", options: ["The hotels there are too expensive", "The old town would be too crowded", "The sea is still too cold in August", "She has a conference at work"], answer: "The old town would be too crowded",
+        explain: "Нина читала, что в августе старый город так переполнен, что трудно пройти по улице. Конференция мешает ей в начале июня, а не в августе." },
+      { type: "choice", q: "What does Tom mainly want from the holiday?", options: ["To explore national parks", "To rest and do very little", "To learn a completely new sport", "To visit as many islands as possible"], answer: "To rest and do very little",
+        explain: "Том говорит, что после тяжёлого года хочет лежать на солнце и ничего не делать." },
+      { type: "choice", q: "What does Nina's reaction to the two-part trip show?", options: ["She is happy to compromise as long as she can stay active", "She secretly prefers the beach for the whole holiday", "She does not take Tom's wishes seriously", "She wants Tom to make all the decisions"], answer: "She is happy to compromise as long as she can stay active",
+        explain: "Нина принимает идею («That's not a bad idea») и сразу делит время: четыре дня у моря для Тома, четыре дня походов для неё. Она готова на компромисс, но ей важна активность. Это вывод из её реакции." },
+      { type: "choice", q: "What is Nina worried about concerning the plan?", options: ["The cost and effort of moving between two places", "The risk of getting lost in the mountains", "The lack of flights at the end of June", "Tom's lack of interest in walking"], answer: "The cost and effort of moving between two places",
+        explain: "«The logistics worry me» — перемещение между двумя местами означает сборы и, вероятно, аренду машины, а это недёшево." },
+      { type: "choice", q: "Why does Tom suggest keeping a couple of spare days at home?", options: ["To have time to recover before returning to work", "To let Nina visit her parents who live quite close by", "To wait for cheaper flights to appear", "To repair things in the house"], answer: "To have time to recover before returning to work",
+        explain: "Том хочет не выходить на работу сразу «straight off the plane» — нужны запасные дни, чтобы прийти в себя." }
+    ]
+  },
+
+  {
+    id: "dlg-b2-012",
+    level: "B2",
+    title: "The Season Finale",
+    listen: true,
+    text: [
+      "Alex: Okay, I have to ask. What did you think of the finale? Because I'm still annoyed about it.",
+      "Jo: Honestly? I loved it. I thought the ending was brave. Killing off the main character in the last ten minutes was the only way the story could have ended.",
+      "Alex: Brave? It felt lazy to me. They spent five seasons building that character, and then he dies in a random accident, with no explanation.",
+      "Jo: It wasn't random, though. If you remember, in season two he promises his sister he'll never take another risk, and then the whole final season is about him breaking that promise.",
+      "Alex: I suppose that's true, but the way it was filmed made it look like a cheap shock rather than a meaningful choice.",
+      "Jo: Maybe, but isn't that the point? Real life doesn't give people neat endings. The writers wanted us to feel the same shock as the other characters.",
+      "Alex: That's an interesting way to look at it. Still, I'd rather have had a proper goodbye scene. I waited five years for this.",
+      "Jo: To be fair, the goodbye is there. It's just hidden in the last conversation with his sister, where she says that she finally understands him.",
+      "Alex: Hmm, I did think that scene was moving. Perhaps I was too focused on the plot twist to notice.",
+      "Jo: And the music helped. When the same song from the first episode started playing, I almost cried.",
+      "Alex: Okay, you've got me there. That moment gave me chills as well. My real complaint is about the villain, though. After all that build-up, he just disappears.",
+      "Jo: That bothered me too, I admit. I read that the actor left the show for another job, so they had to change the plot at the last minute.",
+      "Alex: Really? That would explain a lot. So the writers weren't being lazy, they were just unlucky.",
+      "Jo: Probably a bit of both. Anyway, there's going to be a spin-off next year, apparently, so maybe the villain will come back there.",
+      "Alex: Now that I'd watch. Though I'll wait for the reviews before I get my hopes up again.",
+      "Jo: Wise decision. After this finale, I think we all learned not to expect too much.",
+      "Alex: Ha, true. Right, shall we start the next series tonight?",
+      "Jo: Only if you promise not to complain about it afterwards."
+    ],
+    questions: [
+      { type: "choice", q: "What does Jo think of the main character's death?", options: ["It was an unfair surprise for the fans", "It was a brave and fitting ending", "It spoiled the fifth season", "It should have happened much earlier"], answer: "It was a brave and fitting ending",
+        explain: "Джо говорит, что концовка смелая и что история иначе просто не могла закончиться." },
+      { type: "choice", q: "What did Alex dislike about the way the death was shown?", options: ["It was too slow and too long", "It was filmed in such poor light that nothing was clear", "It felt like cheap shock value", "It happened in the middle of the episode"], answer: "It felt like cheap shock value",
+        explain: "Алекс считает, что смерть показана как дешёвый шок, а не как осмысленный выбор. Смерть происходит в последние десять минут, так что вариант про середину серии неверен." },
+      { type: "choice", q: "How does Alex's opinion of the finale change during the conversation?", options: ["He becomes angrier as Jo speaks", "He completely changes his mind and loves it", "He ignores Jo's arguments and repeats his own throughout", "He partly accepts Jo's points but keeps some complaints"], answer: "He partly accepts Jo's points but keeps some complaints",
+        explain: "Алекс постепенно соглашается («you've got me there», сцена и правда трогательная), но у него остаётся претензия к злодею. Полностью он мнение не меняет. Это вывод из динамики разговора." },
+      { type: "choice", q: "Why did the villain disappear from the story?", options: ["The writers forgot about the character", "The audience complained about him", "The studio wanted a shorter finale", "The actor left for another job"], answer: "The actor left for another job",
+        explain: "Джо читала, что актёр ушёл на другую работу, поэтому сюжет пришлось менять в последний момент." },
+      { type: "choice", q: "How does Alex feel about the planned spin-off?", options: ["Interested, but careful not to expect too much", "Sure that it will be better than the series", "Uninterested because the villain may return", "Too disappointed to watch anything else"], answer: "Interested, but careful not to expect too much",
+        explain: "«Now that I'd watch», но он подождёт отзывов, «before I get my hopes up again» — интерес с осторожностью. Это отношение говорящего." }
+    ]
+  },
+
+  {
+    id: "dlg-c1-001",
+    level: "C1",
+    title: "A Promotion and a Move",
+    listen: true,
+    text: [
+      "Laura: So, I got the email this afternoon. They've officially offered me the regional director position, and I have until Friday to give them an answer.",
+      "Mike: That's fantastic news, Laura. You must be thrilled. Although, judging by your face, there's something you haven't told me yet.",
+      "Laura: The catch is that the job is based in Lisbon. It would mean relocating by the end of the summer, and I'm honestly not sure how I feel about uprooting everything.",
+      "Mike: Well, I'd be lying if I said I wasn't a little taken aback. We've only just finished renovating the flat, and my work is here.",
+      "Laura: I know, and that's what's been keeping me awake. I don't want to be the person who gets ahead at the expense of the relationship.",
+      "Mike: Let's not frame it that way just yet. Have you thought about whether I could do my job remotely? My manager has always been fairly flexible, and half my team already works from different countries.",
+      "Laura: I'd hoped you would say that, but I didn't want to put pressure on you. Is that something you'd realistically be able to arrange?",
+      "Mike: It's not a given, but I think so. I'd need to have an honest conversation with him first. The worry is that I'd be giving up any chance of promotion myself, since people who are never in the office tend to get overlooked.",
+      "Laura: That's a fair concern. And I'd feel terrible if you ended up resenting the move in a few years.",
+      "Mike: Honestly, I doubt that would happen. What I'd resent is you turning it down because of me, and wondering for the rest of your life what might have been.",
+      "Laura: That's very generous of you, but let's be realistic. It's not just about the career. We'd leave our friends, your parents are getting older, and neither of us speaks Portuguese.",
+      "Mike: True, but we've always said we wanted to live abroad at some point. This might be as good an opportunity as we'll ever get, even if the timing isn't perfect.",
+      "Laura: Maybe. I suppose what bothers me most is the salary. It's a significant increase, but Lisbon isn't cheap anymore, and I haven't had time to work out whether we'd actually be better off.",
+      "Mike: Then that's the first thing to do. Let's sit down this weekend and go through the numbers properly, rather than relying on gut feeling.",
+      "Laura: But the deadline is Friday. I can't exactly ask them to wait until Monday.",
+      "Mike: Why not? Employers expect people to negotiate, especially for a role at that level. A short extension wouldn't make you look indecisive, it would make you look careful.",
+      "Laura: You might have a point. I could also ask whether they'd cover the relocation costs and a few months of language lessons.",
+      "Mike: Exactly. And don't forget to ask about flexibility. If you could spend a couple of days a month back here, that would change the whole picture.",
+      "Laura: I hadn't thought of that. Right, I'll write to them tonight, and then we'll make the decision together once I've heard back.",
+      "Mike: Sounds like a plan. Whatever we decide, I just want you to know I'm proud of you.",
+      "Laura: Thank you. That means more than you realise.",
+      "Mike: Now, shall we open that bottle of wine we've been saving, or is it too early to celebrate?",
+      "Laura: Let's wait until we've seen the numbers. But I won't say no to a cup of tea."
+    ],
+    questions: [
+      { type: "choice", q: "What is Laura's main worry about accepting the job?", options: ["She does not think she is qualified enough for such a role", "She fears her success could harm their relationship", "She is afraid of living alone in a foreign country for years", "She believes the company will not pay her enough money"], answer: "She fears her success could harm their relationship",
+        explain: "Лора не хочет быть человеком, который «gets ahead at the expense of the relationship» — добиваться успеха ценой отношений. Зарплата её тоже беспокоит, но позже, и это не главное." },
+      { type: "choice", q: "What is Mike's concern about working remotely?", options: ["His manager would refuse to allow it", "His team would not be able to reach him", "He would be less likely to be promoted", "He would find it difficult to speak Portuguese"], answer: "He would be less likely to be promoted",
+        explain: "Майк боится, что люди, которых никогда нет в офисе, «tend to get overlooked» — их обходят при повышении." },
+      { type: "choice", q: "What does Mike's remark about wondering what might have been show?", options: ["He would rather decide together than see her refuse for his sake", "He secretly wants to move to Lisbon more than she does", "He thinks the career is more important than their friends", "He believes she will regret it whatever she does"], answer: "He would rather decide together than see her refuse for his sake",
+        explain: "Майк говорит, что обижался бы не на переезд, а на то, что Лора отказалась из-за него и всю жизнь гадала бы, что было бы. Значит, он готов решать вместе. Это вывод об отношении, прямо он этого не формулирует." },
+      { type: "choice", q: "What does Mike advise Laura to do about Friday's deadline?", options: ["Accept the offer immediately to be on the safe side", "Reject the offer politely before Friday", "Ask her manager for advice on the matter", "Ask for a short extension first"], answer: "Ask for a short extension first",
+        explain: "Майк считает, что короткая отсрочка не покажет её нерешительной, а, наоборот, осторожной, и работодатели ожидают торга. Лора добавляет вопросы о компенсации переезда." },
+      { type: "choice", q: "How does Mike's attitude to the move develop during the conversation?", options: ["He begins by supporting it and ends up opposing it", "He is surprised at first, then cautiously supportive", "He is indifferent throughout and leaves the choice to her", "He is angry at the start and calms down after the offer of money"], answer: "He is surprised at first, then cautiously supportive",
+        explain: "Сначала Майк «a little taken aback», затем предлагает удалённую работу, пересчитать цифры и обсудить условия, а в конце говорит, что гордится ею. Поддержка осторожная, он не принимает решение за неё." }
+    ]
+  },
+
+  {
+    id: "dlg-c1-002",
+    level: "C1",
+    title: "Why the Launch Failed",
+    listen: true,
+    text: [
+      "Greg: Thanks for coming in, Ana. I thought we should talk through the launch while it's still fresh, before the board asks for an explanation.",
+      "Ana: Agreed. I've been going over the numbers all weekend, and frankly, they're worse than we feared. We expected around fifty thousand downloads in the first month, and we barely reached eight thousand.",
+      "Greg: Which is a long way off. What's your own reading of what went wrong? I'd rather hear a candid view than a polished one.",
+      "Ana: Honestly, I think we fell into the oldest trap there is. We built what we found impressive rather than what customers actually needed. The scheduling feature took six months, yet our interviews showed that people mostly wanted a simpler way to share files.",
+      "Greg: Hmm. In fairness, the interviews you're referring to were done late, weren't they? By that point we were already committed to the roadmap.",
+      "Ana: That's precisely my point. We treated research as a box to tick instead of as something that could change our minds. I take my share of the responsibility, because I signed off the timeline.",
+      "Greg: I appreciate you saying that, but I don't want this to turn into a blame game. I approved the budget on the assumption that the launch date was untouchable, and that clearly put pressure on the team.",
+      "Ana: There's some truth in that. People stopped raising concerns because they knew the date wouldn't move. One engineer told me afterwards that he'd noticed the sign-up problem two weeks before launch but assumed it was too late to mention it.",
+      "Greg: That's the part that worries me most. Not the bug itself, but the fact that nobody felt able to speak up.",
+      "Ana: Exactly. And the marketing didn't help. We spent a fortune on adverts promising features that weren't ready, so the first reviews were mostly about what was missing.",
+      "Greg: Those reviews are going to follow us for a while. Is there any chance of recovering, or should we be thinking about pulling the product altogether?",
+      "Ana: I wouldn't write it off yet. The core idea is sound, and the people who stayed are using it more than we predicted. If we pause new features for a quarter and fix the basics, I think there's a decent chance of turning things around.",
+      "Greg: A quarter is a long time to ask the board to be patient, though. What would you need from me?",
+      "Ana: Three things. Protect the team from any new demands, agree a realistic date together with them, and let me talk to customers every week, not just when something's gone wrong.",
+      "Greg: That's reasonable, and I can live with the first two. The third worries me slightly, since I don't want you spending all your time on calls.",
+      "Ana: I understand, but I'd argue that's exactly what we neglected before. An hour a day would be enough to keep us honest.",
+      "Greg: Fair enough. Let's put together a short recovery plan, and I'll present it to the board myself, so you can concentrate on the work.",
+      "Ana: I'd appreciate that. And thank you for not making this harder than it already is.",
+      "Greg: We both learned something, I think. The expensive way, unfortunately.",
+      "Ana: Well, at least it's a lesson we're unlikely to forget. Shall I draft the plan by Wednesday?",
+      "Greg: Please do. And bring the engineer you mentioned, if he's willing. I'd like to hear it from him directly.",
+      "Ana: I'll ask him tomorrow. I think he'll be relieved that someone wants to listen."
+    ],
+    questions: [
+      { type: "choice", q: "According to Ana, what was the main mistake the team made?", options: ["They launched the product without any advertising", "They built what they liked, not what users needed", "They chose a price that was too high for most customers", "They hired too few engineers for such a big project"], answer: "They built what they liked, not what users needed",
+        explain: "Ана говорит, что они сделали то, что им самим казалось впечатляющим, а не то, что нужно клиентам: шесть месяцев ушло на планирование, а людям нужен был простой обмен файлами." },
+      { type: "choice", q: "Why did the engineer say nothing about the sign-up problem?", options: ["He did not think it was a serious enough bug to report", "He believed it was too late to raise it", "He was afraid that he would lose his job", "He had not tested the feature himself"], answer: "He believed it was too late to raise it",
+        explain: "Инженер заметил проблему за две недели до запуска, но решил, что говорить уже поздно — «assumed it was too late to mention it»." },
+      { type: "choice", q: "What worries Greg most about what happened?", options: ["That staff did not feel able to raise problems", "That the product received so few downloads", "That the board will ask for an explanation", "That the marketing budget was spent far too fast on adverts"], answer: "That staff did not feel able to raise problems",
+        explain: "«Not the bug itself, but the fact that nobody felt able to speak up» — его тревожит не ошибка, а то, что сотрудники молчали. Это отношение говорящего." },
+      { type: "choice", q: "Why does Greg say he does not want a blame game?", options: ["He wants to protect Ana from criticism", "He is sure that no one is responsible", "He wants to focus on solutions and shared responsibility", "He plans to blame the marketing team for the failure instead"], answer: "He wants to focus on solutions and shared responsibility",
+        explain: "Грег тут же признаёт собственную долю (одобрил бюджет с «неприкасаемой» датой запуска), то есть хочет говорить об общей ответственности и решениях, а не искать виноватого. Это намерение." },
+      { type: "choice", q: "What does Ana propose to do to save the product?", options: ["Remove the scheduling feature completely", "Pause new features and fix the basics", "Lower the price and repeat the whole advertising campaign", "Replace the team with a new group of developers"], answer: "Pause new features and fix the basics",
+        explain: "«If we pause new features for a quarter and fix the basics» — квартал равен трём месяцам; кроме того, она просит защитить команду и еженедельно общаться с клиентами." }
+    ]
+  },
+
+  {
+    id: "dlg-c1-003",
+    level: "C1",
+    title: "A Podcast about the Games Industry",
+    listen: true,
+    text: [
+      "Dana: Welcome back to Level Up. Today's guest is Raj Patel, who has been analysing the games industry for over fifteen years. Raj, thanks for joining us.",
+      "Raj: Thanks for having me, Dana. It's always a pleasure to talk about something I genuinely love.",
+      "Dana: Let's start with the big question. Every few months we hear that the industry is in crisis, with studios closing and thousands of layoffs. Is it really that bad, or is it being exaggerated?",
+      "Raj: Well, it's both, if I'm honest. The layoffs are real, and they're painful, but they follow an unusual period. During the pandemic, everyone was at home playing, companies expected that growth to continue forever, and they hired accordingly. What we're seeing now is partly a correction.",
+      "Dana: So it's less a collapse than a hangover?",
+      "Raj: That's a neat way to put it, although I'd add that the hangover is hitting the wrong people. Executives made the forecasts, but it's the developers who lose their jobs.",
+      "Dana: Fair point. Another thing people complain about is the price of games. Big releases now cost seventy or eighty euros, and yet players feel they get less. Why is that?",
+      "Raj: The costs of making blockbuster games have exploded. A top title can take five years and hundreds of people, so publishers are terrified of risk. That's why we keep seeing sequels and remakes instead of original ideas.",
+      "Dana: Which brings me to the indie scene, where the opposite seems to be happening.",
+      "Raj: Exactly. Small teams are producing some of the most creative games right now, often for a fraction of the budget. The trouble is visibility. Thousands of games are released every year, and it's almost impossible for a small studio to be noticed, unless they get lucky with a streamer.",
+      "Dana: And is luck really that important?",
+      "Raj: More than most people in the business would care to admit. Talent is necessary, but it isn't enough. I know brilliant games that sold fewer than a thousand copies, and mediocre ones that went viral.",
+      "Dana: Do you think that will change? Is there anything that could make discovery fairer?",
+      "Raj: I'd like to think so, but the big platforms profit from the current system, so I wouldn't hold my breath. The most realistic hope is that players themselves get better at looking beyond the front page.",
+      "Dana: What about artificial intelligence? Some studios say it will transform development, others say it threatens creative jobs.",
+      "Raj: I'm cautiously sceptical. It's useful for repetitive tasks, such as testing or generating background details, but I haven't seen anything yet that can replace a good writer or designer. The real risk is that companies use it as an excuse to cut costs and call it innovation.",
+      "Dana: That's a sobering thought. And what about the players? Are they changing too?",
+      "Raj: Quite a lot, actually. People are much more vocal now. A rushed or broken release is torn apart online within hours, and studios have started to treat that as seriously as any official review.",
+      "Dana: Not always a bad thing, I suppose. Although I've seen some of that criticism get pretty nasty.",
+      "Raj: Absolutely, and that's the downside. Honest criticism is useful, but abuse isn't, and some developers have left the industry because of it.",
+      "Dana: If you had to give one piece of advice to someone hoping to get into the industry, what would it be?",
+      "Raj: Make something small and finish it. A finished tiny game shows more than ten ambitious ideas on paper. Employers want to see that you can see a project through to the end.",
+      "Dana: Great advice. Raj, thank you so much for your time.",
+      "Raj: My pleasure, Dana."
+    ],
+    questions: [
+      { type: "choice", q: "How does Raj explain the recent wave of layoffs?", options: ["Players have lost interest in video games", "Studios hired too many people expecting growth to continue", "New technology has replaced most of the developers in studios", "Prices of games have become too low"], answer: "Studios hired too many people expecting growth to continue",
+        explain: "Радж говорит, что во время пандемии компании ожидали вечного роста и наняли слишком много людей — «partly a correction». Игроки интерес не потеряли." },
+      { type: "choice", q: "Why do publishers keep producing sequels and remakes?", options: ["Players refuse to buy anything new", "Independent studios cannot make good games", "Making a big game is so expensive that they avoid risk", "Remakes are always much cheaper than completely original games"], answer: "Making a big game is so expensive that they avoid risk",
+        explain: "Блокбастер стоит огромных денег и пяти лет работы, поэтому издатели «terrified of risk» и выбирают проверенное. Ремейки не обязательно дешевле — важна именно боязнь риска." },
+      { type: "choice", q: "What is Raj's view on the role of luck for small studios?", options: ["It matters less than people in the industry think", "It matters more than the industry usually admits", "It is the only thing that matters", "It has no effect on a good game"], answer: "It matters more than the industry usually admits",
+        explain: "«More than most people in the business would care to admit» — удача важнее, чем принято признавать, хотя талант тоже нужен («necessary, but not enough»). Фраза «the only thing» — слишком сильное преувеличение." },
+      { type: "choice", q: "What is Raj's attitude to artificial intelligence?", options: ["He is wary: useful for routine work, but a cost-cutting excuse", "He is enthusiastic and expects it to replace designers soon", "He is sure it will have no effect on the industry", "He is angry that studios use it at all"], answer: "He is wary: useful for routine work, but a cost-cutting excuse",
+        explain: "Он «cautiously sceptical»: ИИ полезен для рутины, но заменить хорошего сценариста не может, а компании могут прикрываться им при сокращении расходов. Это отношение говорящего." },
+      { type: "choice", q: "What does Raj advise people who want to work in the industry?", options: ["Join a large studio as soon as possible", "Write detailed plans for ambitious games", "Learn to use the latest artificial intelligence tools", "Finish one small project completely"], answer: "Finish one small project completely",
+        explain: "«Make something small and finish it» — законченная маленькая игра показывает больше, чем десять амбициозных идей на бумаге." }
+    ]
+  },
+
+  {
+    id: "dlg-c1-004",
+    level: "C1",
+    title: "Running on Empty",
+    listen: true,
+    text: [
+      "Sophie: Ben, I hope you don't mind me saying this, but you look exhausted. When did you last take a proper day off?",
+      "Ben: Is it that obvious? Honestly, I can't remember. Probably around Easter. There's just been so much to do, and I keep telling myself it'll calm down after the next deadline.",
+      "Sophie: And does it? Because you said exactly the same thing in March, and then again in June.",
+      "Ben: Fair enough. The thing is, I can't afford to slow down right now. My team has lost two people, and if I take time off, the work simply won't get done.",
+      "Sophie: I get that, but let me ask you something. How have you been sleeping?",
+      "Ben: Terribly, to be honest. I wake up at four in the morning with my head full of emails, and then I can't get back to sleep. And during the day I seem to have lost patience with everything. Yesterday I snapped at a colleague over something completely trivial.",
+      "Sophie: That doesn't sound like you at all. It sounds a lot like what happened to me two years ago, before I ended up taking three months off.",
+      "Ben: I know it was a difficult time for you, but I wouldn't compare the two. I'm just tired. A good weekend would sort me out.",
+      "Sophie: Maybe. But tiredness goes away after rest, and what you're describing doesn't sound like that. When I was in that state, I kept saying I was fine, right up until I physically couldn't get out of bed.",
+      "Ben: Hang on, I'm not saying I'm invincible. I just don't see what I'm supposed to do. Nobody else can cover for me.",
+      "Sophie: Have you actually asked? You assume nobody can, but my guess is that your manager has no idea how bad things are, because you've been so good at hiding it.",
+      "Ben: That's possibly true. I've always been the person who copes. Admitting that I can't feels like failing.",
+      "Sophie: Except it isn't failing, it's information. Think of it like a warning light on a car. You wouldn't ignore it and keep driving for another thousand miles.",
+      "Ben: Ha, I suppose not. Though in my defence, I do tend to ignore those too.",
+      "Sophie: That doesn't surprise me at all. Look, why don't you speak to your manager this week? Even just to say that the workload isn't sustainable and you need two of the open roles filled.",
+      "Ben: I could try that. It would be easier if I knew what to say, though, without sounding as if I were complaining.",
+      "Sophie: Stick to facts. Say how many hours you've been working, what you've been unable to do, and what you need. And if you want, I'll meet you for coffee beforehand and help you plan it.",
+      "Ben: You'd do that? That would actually help a lot. Thank you, Sophie, I didn't realise how much I needed someone to say this.",
+      "Sophie: That's what friends are for. And promise me you'll take at least a long weekend soon, whatever happens at work.",
+      "Ben: I promise. Starting this Friday, if I can get my manager to agree.",
+      "Sophie: He will, once he understands the situation. And if he doesn't, we'll think of something else.",
+      "Ben: You know, I feel better already, just from having said it out loud.",
+      "Sophie: That's usually how it works. Now, finish your coffee, and let's talk about something completely different."
+    ],
+    questions: [
+      { type: "choice", q: "How does Ben first explain his tiredness?", options: ["He believes a good weekend will be enough to fix it", "He thinks it is caused only by his poor sleep at night", "He blames the lack of holidays this year", "He thinks his colleagues are making it worse"], answer: "He believes a good weekend will be enough to fix it",
+        explain: "Бен говорит: «I'm just tired. A good weekend would sort me out» — по его мнению, достаточно хороших выходных. Про сон он признаётся позже, а коллег не винит." },
+      { type: "choice", q: "Why does Sophie think the problem is more serious than ordinary tiredness?", options: ["Ben has been working for more than a year", "Ben has already spoken to his manager about it", "Rest cures tiredness, but his symptoms are different", "Ben's colleague has complained to the manager about his behaviour"], answer: "Rest cures tiredness, but his symptoms are different",
+        explain: "Софи говорит, что усталость проходит после отдыха, а то, что описывает Бен (бессонница, раздражительность), на это не похоже. Она опирается и на свой опыт двухлетней давности." },
+      { type: "choice", q: "Why does Ben hesitate to admit that he is struggling?", options: ["He believes his manager would punish him", "He is afraid of his friends' opinion", "He sees it as a personal failure", "He thinks the problem will solve itself"], answer: "He sees it as a personal failure",
+        explain: "«I've always been the person who copes. Admitting that I can't feels like failing» — признание трудностей кажется ему провалом. Это вывод о его внутренней причине." },
+      { type: "choice", q: "Why does Sophie compare the situation to a warning light on a car?", options: ["To show that ignoring warning signs is dangerous", "To suggest that Ben should buy a new car", "To prove that Ben understands machines better than people", "To explain why Ben should work fewer hours every day"], answer: "To show that ignoring warning signs is dangerous",
+        explain: "Усталость и раздражительность — как лампочка на приборной панели: её нельзя игнорировать и ехать дальше ещё тысячу миль. Сравнение нужно, чтобы подчеркнуть риск, а не ради машин." },
+      { type: "choice", q: "How does Ben feel at the end of the conversation?", options: ["Annoyed that Sophie interfered", "Relieved and grateful for her support", "Certain that his manager will refuse", "Embarrassed about their earlier disagreement"], answer: "Relieved and grateful for her support",
+        explain: "Бен благодарит Софи («I didn't realise how much I needed someone to say this») и добавляет, что ему уже лучше, просто от того, что он сказал это вслух." }
     ]
   }
 );
