@@ -281,6 +281,231 @@ DATA.writing.push(
       { text: "Есть уступка (although / despite / whereas / while)", pattern: "\\b(although|despite|whereas|while|even though)\\b" },
       { text: "Есть осторожное высказывание (may / might / could / tend to)", pattern: "\\b(may|might|could|tend to)\\b" },
       { text: "Есть вывод (In conclusion / To sum up / All in all)", pattern: "in conclusion|to sum up|all in all|overall" }
+    ] },
+
+  // ---------- B1 (добавлено позже) ----------
+  { id: "wr-b1-informal-email", level: "B1", title: "Письмо другу о поездке",
+    prompt: "Напишите другу о недавней поездке или отпуске: где были, что понравилось, что нет, и задайте ему 2–3 вопроса.",
+    minWords: 100, maxWords: 150, topics: ["past-simple", "indirect-questions", "present-perfect"],
+    steps: [
+      { title: "Приветствие и повод", hint: "Поздоровайтесь, поблагодарите за сообщение и скажите, что хотите рассказать о поездке." },
+      { title: "Где были и что делали", hint: "3–4 действия по порядку, Past Simple: we stayed, we visited, we ate." },
+      { title: "Что понравилось и что нет", hint: "Хотя бы одно «не понравилось» с because; яркие прилагательные: crowded, delicious, amazing." },
+      { title: "Вопросы другу", hint: "2–3 вопроса: Have you ever been…? Do you know when…? Could you tell me if…?" },
+      { title: "Прощание", hint: "Write back soon! / Take care, / Love, и ваше имя." }
+    ],
+    phrases: [
+      { en: "Hi Anna, thanks for your message!", ru: "Привет, Анна, спасибо за сообщение!" },
+      { en: "I'm writing to tell you about my trip to Italy.", ru: "Пишу, чтобы рассказать о моей поездке в Италию." },
+      { en: "We stayed in a small hotel near the beach.", ru: "Мы жили в небольшом отеле у пляжа." },
+      { en: "The weather was great, but the city was very crowded.", ru: "Погода была отличная, но в городе было очень людно." },
+      { en: "The best thing was the food.", ru: "Лучшее — это еда." },
+      { en: "I didn't like the museum because it was too expensive.", ru: "Музей мне не понравился, потому что был слишком дорогим." },
+      { en: "I took lots of photos.", ru: "Я сделал много фотографий." },
+      { en: "Have you ever been to Italy?", ru: "Ты когда-нибудь был в Италии?" },
+      { en: "Do you know when you are free next month?", ru: "Ты не знаешь, когда ты свободен в следующем месяце?" },
+      { en: "Could you tell me if you want to come with me next time?", ru: "Не скажешь, захочешь ли ты поехать со мной в следующий раз?" },
+      { en: "Write back soon!", ru: "Скорее пиши в ответ!" },
+      { en: "Take care,", ru: "Береги себя," }
+    ],
+    checks: [
+      { text: "Неформальное приветствие в начале (Hi / Hello / Hey / Dear + имя)", pattern: "^\\s*(hi|hello|hey|dear)\\b" },
+      { text: "Не меньше 3 глаголов в прошедшем (went, saw, stayed, was…)", pattern: "\\b(went|saw|stayed|visited|ate|had|took|bought|met|swam|walked|was|were|loved|enjoyed|liked|travelled|traveled|spent|flew|drove|got|made)\\b", min: 3 },
+      { text: "Есть хотя бы 2 вопроса другу (знак ?)", pattern: "\\?", min: 2 },
+      { text: "Есть 2 оценочных прилагательных (great, amazing, crowded…)", pattern: "\\b(great|amazing|beautiful|wonderful|delicious|boring|crowded|expensive|cheap|awful|fantastic|lovely|tired|interesting)\\b", min: 2 },
+      { text: "Есть дружеское прощание (Write back / Take care / Love, / See you)", pattern: "\\b(write back|take care|best wishes|see you|speak soon|hope to hear from you|let me know)\\b|\\blove," }
+    ] },
+
+  { id: "wr-b1-experience", level: "B1", title: "Мой опыт: что я уже делал",
+    prompt: "Расскажите об интересном опыте (путешествие, игра, работа, хобби): что вы уже делали в жизни и об одном случае — подробнее.",
+    minWords: 100, maxWords: 150, topics: ["present-perfect", "past-simple", "present-perfect-simple-vs-continuous"],
+    steps: [
+      { title: "Общий опыт", hint: "Present Perfect: I have visited…, I have never tried… — без точного времени." },
+      { title: "Один случай", hint: "Переходим в Past Simple: когда это было (last summer, two years ago), где, с кем." },
+      { title: "Чувства и итог", hint: "Что вы почувствовали и чему научились: I was nervous, but…; I have learned that…" },
+      { title: "Планы", hint: "Что хотели бы сделать ещё: I would love to… / I haven't … yet." }
+    ],
+    phrases: [
+      { en: "I have been to Turkey three times.", ru: "Я был в Турции три раза." },
+      { en: "I have never tried skiing, but I have already played hockey.", ru: "Я никогда не катался на лыжах, но уже играл в хоккей." },
+      { en: "I haven't visited Spain yet.", ru: "Я ещё не был в Испании." },
+      { en: "Last summer I went to the mountains with my friends.", ru: "Прошлым летом я ездил с друзьями в горы." },
+      { en: "It was an unforgettable experience.", ru: "Это был незабываемый опыт." },
+      { en: "I was nervous at first, but then I felt great.", ru: "Сначала я нервничал, но потом почувствовал себя отлично." },
+      { en: "Two years ago I started a new job.", ru: "Два года назад я начал новую работу." },
+      { en: "Since then I have learned a lot.", ru: "С тех пор я многому научился." },
+      { en: "I have learned that it is never too late to start.", ru: "Я понял, что начать никогда не поздно." },
+      { en: "This experience taught me to be more patient.", ru: "Этот опыт научил меня быть терпеливее." },
+      { en: "I would love to do it again.", ru: "Я бы с удовольствием повторил это." },
+      { en: "I have just booked another trip.", ru: "Я только что забронировал ещё одну поездку." }
+    ],
+    checks: [
+      { text: "Есть Present Perfect для опыта (I have been / visited / tried…) — минимум 2", pattern: "\\b(i have|i['’]ve|we have|we['’]ve) (been|visited|tried|seen|done|met|worked|lived|never|already|learned|learnt|played|travelled|traveled|had|taken|eaten|flown|made)\\b", min: 2 },
+      { text: "Есть слово времени для случая (last summer, ago, when I was…)", pattern: "\\b(last (year|summer|winter|week|month)|in \\d{4}|when i was|years? ago|months? ago|one day|the first time)\\b" },
+      { text: "Не меньше 3 глаголов в Past Simple для рассказа (went, felt, decided…)", pattern: "\\b(went|saw|met|tried|felt|decided|started|was|were|had|took|ate|learned|learnt|visited|played|made|got|bought|enjoyed|loved)\\b", min: 3 },
+      { text: "Есть never / ever / already / yet / just", pattern: "\\b(never|ever|already|yet|just|so far)\\b" },
+      { text: "Нет «have went / have saw / have ate» (после have нужна третья форма)", pattern: "\\b(have|has) (went|saw|ate|took|came|did|gave|wrote|drove|flew|ran)\\b", forbid: true }
+    ] },
+
+  // ---------- B2 (добавлено позже) ----------
+  { id: "wr-b2-formal-email", level: "B2", title: "Формальное письмо: жалоба или запрос",
+    prompt: "Вы заказали товар или онлайн-курс для работы, но получили не то, что ожидали. Напишите формальное письмо в компанию: что произошло и чего вы ждёте.",
+    minWords: 180, maxWords: 240, topics: ["passive-simple", "unless-as-long-as", "linking-words"],
+    steps: [
+      { title: "Обращение и цель", hint: "Dear Sir or Madam, / Dear Mr Brown, и сразу: I am writing to complain about… / to enquire about…" },
+      { title: "Что произошло", hint: "Факты по порядку: Past Simple и Passive (was delivered, was damaged). Без эмоций, только даты и детали." },
+      { title: "Что вы ожидаете", hint: "Вежливо, но чётко: I would be grateful if you could… / I would like to request…" },
+      { title: "Условие и срок", hint: "Unless… / If the problem is not solved within…, I will… — что будет, если ничего не изменится." },
+      { title: "Завершение", hint: "I look forward to hearing from you. Yours faithfully, (если имени нет) или Yours sincerely, (если есть)." }
+    ],
+    phrases: [
+      { en: "Dear Sir or Madam,", ru: "Уважаемые господа," },
+      { en: "I am writing to complain about the laptop I ordered on your website.", ru: "Пишу, чтобы пожаловаться на ноутбук, заказанный на вашем сайте." },
+      { en: "I am writing to enquire about the status of my order.", ru: "Пишу, чтобы узнать статус моего заказа." },
+      { en: "Unfortunately, the item was delivered damaged.", ru: "К сожалению, товар был доставлен повреждённым." },
+      { en: "The product was not as described on the website.", ru: "Товар не соответствовал описанию на сайте." },
+      { en: "I would be grateful if you could replace it as soon as possible.", ru: "Был бы признателен, если бы вы как можно скорее заменили его." },
+      { en: "I would like to request a full refund.", ru: "Прошу вернуть полную стоимость." },
+      { en: "Unless the problem is solved within seven days, I will contact my bank.", ru: "Если проблема не будет решена в течение семи дней, я обращусь в банк." },
+      { en: "Please find attached a copy of the receipt.", ru: "Во вложении копия чека." },
+      { en: "Thank you for your attention to this matter.", ru: "Благодарю за внимание к этому вопросу." },
+      { en: "I look forward to hearing from you.", ru: "Жду вашего ответа." },
+      { en: "Yours faithfully,", ru: "С уважением," }
+    ],
+    checks: [
+      { text: "Формальное обращение (Dear Sir or Madam / Dear Mr …)", pattern: "\\bdear (sir|madam|mr|mrs|ms|miss|dr)\\b" },
+      { text: "Названа цель письма (I am writing to / regarding…)", pattern: "\\bi am writing (to|regarding|about|in connection with)\\b" },
+      { text: "Есть вежливая просьба (I would be grateful if / I would like to / Could you…)", pattern: "\\bi would (be (grateful|pleased|obliged)|like to|appreciate)\\b|\\b(could|would) you (please )?\\w+" },
+      { text: "Нет сокращений (I'm, don't, it's…) — в формальном письме они не нужны", pattern: "\\b(i['’](m|ve|d|ll)|(it|that|there|we|they|you|he|she)['’](s|re|ve|ll|d)|(can|won)['’]t|(do|does|did|could|would|should|is|are|was|were|have|has|had)n['’]t)\\b", forbid: true },
+      { text: "Формальное завершение (Yours faithfully / sincerely / Kind regards)", pattern: "\\byours (faithfully|sincerely)\\b|\\bkind regards\\b" }
+    ] },
+
+  { id: "wr-b2-for-against", level: "B2", title: "Эссе «за и против»: видеоигры",
+    prompt: "Напишите эссе: польза и вред видеоигр. Приведите доводы обеих сторон и сделайте осторожный вывод.",
+    minWords: 200, maxWords: 260, topics: ["linking-words", "passive-advanced", "vocab-technology-media"],
+    steps: [
+      { title: "Введение", hint: "Тема и почему о ней спорят. Своё мнение пока не раскрывайте: It is often argued that…" },
+      { title: "Аргументы «за»", hint: "2 довода с примером: Firstly,… Moreover,… Безличный пассив: Games are said to improve concentration." },
+      { title: "Аргументы «против»", hint: "2 довода: However,… Critics point out that… Whereas some players…, others…" },
+      { title: "Оговорки", hint: "Осторожные формулы: may / might / tend to / seems to — не пишите «всегда» и «никогда»." },
+      { title: "Вывод", hint: "In conclusion / On balance, + ваше мнение и условие (provided that…)." }
+    ],
+    phrases: [
+      { en: "It is often argued that video games waste young people's time.", ru: "Часто утверждают, что видеоигры отнимают время у молодёжи." },
+      { en: "Supporters of gaming claim that it develops useful skills.", ru: "Сторонники игр утверждают, что они развивают полезные навыки." },
+      { en: "Firstly, many games improve reaction time and teamwork.", ru: "Во-первых, многие игры улучшают реакцию и командную работу." },
+      { en: "Moreover, online games help people stay in touch.", ru: "Кроме того, онлайн-игры помогают поддерживать связь." },
+      { en: "Games are said to improve concentration.", ru: "Говорят, что игры улучшают концентрацию." },
+      { en: "However, critics point out that they can be addictive.", ru: "Однако критики указывают, что они могут вызывать зависимость." },
+      { en: "Whereas some players relax, others lose sleep.", ru: "Если одни игроки расслабляются, то другие недосыпают." },
+      { en: "Too much screen time may lead to health problems.", ru: "Слишком много времени у экрана может привести к проблемам со здоровьем." },
+      { en: "Not only is gaming popular, but it is also a huge industry.", ru: "Игры не только популярны, но и представляют огромную индустрию." },
+      { en: "Despite these drawbacks, games are not harmful in themselves.", ru: "Несмотря на эти недостатки, игры сами по себе не вредны." },
+      { en: "On balance, I believe that games are harmless provided that they are played in moderation.", ru: "В целом я считаю, что игры безвредны при условии умеренности." },
+      { en: "To sum up, the key is balance.", ru: "Подводя итог, главное — баланс." }
+    ],
+    checks: [
+      { text: "Не меньше 2 связок (Firstly, Moreover, However, Therefore…)", pattern: "\\b(firstly|secondly|finally|moreover|furthermore|in addition|however|nevertheless|on the other hand|therefore|as a result|consequently)\\b", min: 2 },
+      { text: "Есть безличный пассив (It is argued that… / are said to…)", pattern: "\\bit (is|was) (often |widely |generally |commonly )?(argued|said|believed|claimed|thought|known|suggested)\\b|\\b(is|are) (often |widely |generally |commonly )?(said|believed|thought|claimed|known|considered) to\\b" },
+      { text: "Есть уступка (although / whereas / despite)", pattern: "\\b(although|though|whereas|despite|in spite of)\\b" },
+      { text: "Есть осторожное высказывание (may / might / could / tend to…)", pattern: "\\b(may|might|could) (be|lead|have|cause|help|make|become|also|not|sometimes|improve|reduce|increase|affect)\\b|\\btends? to\\b|\\b(seems?|appears?) to\\b" },
+      { text: "Есть вывод (In conclusion / To sum up / On balance…)", pattern: "\\b(in conclusion|to sum up|to conclude|on balance|all in all)\\b|\\boverall," }
+    ] },
+
+  { id: "wr-b2-film-review", level: "B2", title: "Рецензия на фильм или игру",
+    prompt: "Напишите рецензию на фильм, сериал или игру, которые вы недавно посмотрели или прошли: сюжет без спойлеров, ваша оценка и рекомендация.",
+    minWords: 180, maxWords: 240, topics: ["non-defining-relative", "vocab-films-games", "participle-clauses"],
+    steps: [
+      { title: "Что это и о чём в целом", hint: "Название, жанр, когда вышло. Придаточное через запятую: …, which came out in 2023, is a…" },
+      { title: "Сюжет и герои", hint: "Без спойлеров: The plot revolves around… The main character, who is…" },
+      { title: "Что понравилось и что нет", hint: "Не только good/bad: stunning, gripping, predictable, slow. Уступка: Although the ending is predictable…" },
+      { title: "Техническая сторона", hint: "Актёры, графика, музыка, геймплей: The acting is convincing; the graphics are stunning." },
+      { title: "Рекомендация", hint: "I would recommend it to anyone who… / I would not recommend it if… + оценка из пяти." }
+    ],
+    phrases: [
+      { en: "The film, which was released last year, is a science-fiction thriller.", ru: "Фильм, вышедший в прошлом году, — это научно-фантастический триллер." },
+      { en: "The plot revolves around a young engineer who discovers a secret.", ru: "Сюжет строится вокруг молодого инженера, который раскрывает тайну." },
+      { en: "The main character, who is played by a famous actor, is very convincing.", ru: "Главный герой, которого играет известный актёр, очень убедителен." },
+      { en: "Without giving away the ending, I can say that it is full of surprises.", ru: "Не раскрывая концовку, скажу, что в ней много сюрпризов." },
+      { en: "What I liked most was the soundtrack.", ru: "Больше всего мне понравился саундтрек." },
+      { en: "The graphics are stunning and the gameplay is addictive.", ru: "Графика потрясающая, а геймплей затягивает." },
+      { en: "It is a bit slow in places.", ru: "Местами он затянут." },
+      { en: "Although the ending is predictable, it is still moving.", ru: "Хотя концовка предсказуема, она всё равно трогает." },
+      { en: "Set in a futuristic city, the story keeps you guessing.", ru: "Действие происходит в городе будущего, и история держит в напряжении." },
+      { en: "I would highly recommend it to anyone who enjoys a good mystery.", ru: "Очень рекомендую всем, кто любит хорошие детективы." },
+      { en: "It is definitely worth watching.", ru: "Это определённо стоит посмотреть." },
+      { en: "I would give it four out of five.", ru: "Я бы поставил четыре из пяти." }
+    ],
+    checks: [
+      { text: "Есть рекомендация (recommend / worth watching…)", pattern: "\\brecommend(ed)?\\b|\\bworth (watching|seeing|playing|reading)\\b" },
+      { text: "Не меньше 2 придаточных через запятую с which / who", pattern: ",\\s*(which|who)\\b", min: 2 },
+      { text: "Есть уступка или контраст (although / despite / however…)", pattern: "\\b(although|even though|though|despite|in spite of|however|whereas)\\b" },
+      { text: "Есть лексика кино и игр (plot, character, ending, graphics…) — минимум 3", pattern: "\\b(plot|story|storyline|character|characters|scene|ending|setting|actor|actress|director|graphics|soundtrack|gameplay|level|levels)\\b", min: 3 },
+      { text: "Не меньше 2 ярких оценочных слов (stunning, gripping, predictable…)", pattern: "\\b(brilliant|stunning|boring|predictable|gripping|moving|impressive|disappointing|convincing|entertaining|thrilling|slow|powerful|memorable|original|dull|addictive)\\b", min: 2 }
+    ] },
+
+  { id: "wr-b2-report", level: "B2", title: "Короткий отчёт с рекомендациями",
+    prompt: "Вы проверили, как сотрудники небольшой компании пользуются офисом и онлайн-инструментами. Напишите отчёт директору: что выяснилось и что вы рекомендуете.",
+    minWords: 180, maxWords: 240, topics: ["passive-advanced", "reporting-verbs", "unless-as-long-as"],
+    steps: [
+      { title: "Introduction", hint: "Заголовок и цель: The aim of this report is to… и на чём основан отчёт (опрос, наблюдение)." },
+      { title: "Findings", hint: "Факты и цифры, Passive: It was found that… Staff were asked… Используйте the majority / a small number of / half of." },
+      { title: "Problems", hint: "Главные проблемы по пунктам; передайте чужие слова: Several employees complained that…" },
+      { title: "Recommendations", hint: "I would recommend introducing… / It is recommended that… / The company should… + условие (provided that…)." },
+      { title: "Conclusion", hint: "Один-два предложения: что изменится, если принять рекомендации." }
+    ],
+    phrases: [
+      { en: "The aim of this report is to assess how staff use the office.", ru: "Цель отчёта — оценить, как сотрудники используют офис." },
+      { en: "This report is based on a survey of thirty employees.", ru: "Отчёт основан на опросе тридцати сотрудников." },
+      { en: "It was found that most employees prefer to work from home.", ru: "Выяснилось, что большинство сотрудников предпочитает работать из дома." },
+      { en: "The majority of staff said that meetings take too long.", ru: "Большинство сотрудников сказали, что совещания слишком затянуты." },
+      { en: "Only a small number of people use the shared calendar.", ru: "Общим календарём пользуется лишь небольшое число людей." },
+      { en: "Several employees complained that the internet was unreliable.", ru: "Несколько сотрудников пожаловались, что интернет ненадёжен." },
+      { en: "According to the survey, half of the team feel isolated.", ru: "Согласно опросу, половина команды чувствует себя изолированной." },
+      { en: "I would recommend introducing a four-day office week.", ru: "Я рекомендую ввести четырёхдневную офисную неделю." },
+      { en: "It is recommended that all meetings be limited to thirty minutes.", ru: "Рекомендуется ограничить все совещания тридцатью минутами." },
+      { en: "One possible solution would be to buy better equipment.", ru: "Одним из решений было бы купить более качественное оборудование." },
+      { en: "If these changes are made, productivity should improve.", ru: "Если эти изменения будут внесены, производительность должна вырасти." },
+      { en: "In conclusion, small changes could make a big difference.", ru: "В заключение, небольшие изменения могут сильно повлиять." }
+    ],
+    checks: [
+      { text: "Есть заголовки разделов (Introduction, Findings, Recommendations, Conclusion) — минимум 3", pattern: "\\b(introduction|findings|recommendations|conclusion)\\b", min: 3 },
+      { text: "Есть пассив для фактов (was found / were asked / were interviewed…)", pattern: "\\b(was|were|is|are|has been|have been) (found|asked|interviewed|surveyed|reported|noted|recommended|suggested|observed|completed|carried out)\\b" },
+      { text: "Есть рекомендация (I would recommend / It is recommended / should)", pattern: "\\b(i|we) (would )?(recommend|suggest|propose)\\b|\\bit is (recommended|suggested)\\b|\\b(should|ought to)\\b" },
+      { text: "Есть количественные слова или проценты (the majority, half, 40%…) — минимум 2", pattern: "\\b(the majority of|the minority of|most|a number of|a few|a small number of|half of|per cent|percent|a third of)\\b|%", min: 2 },
+      { text: "Нет сокращений (don't, it's…) — отчёт пишется формально", pattern: "\\b(i['’](m|ve|d|ll)|(it|that|there|we|they|you|he|she)['’](s|re|ve|ll|d)|(can|won)['’]t|(do|does|did|could|would|should|is|are|was|were|have|has|had)n['’]t)\\b", forbid: true }
+    ] },
+
+  { id: "wr-b2-cover-letter", level: "B2", title: "Сопроводительное письмо к вакансии",
+    prompt: "Откликнитесь на вакансию, которая вам интересна (например, менеджер проектов или тестировщик игр): расскажите об опыте, достижениях и почему подходите компании.",
+    minWords: 190, maxWords: 250, topics: ["present-perfect", "second-conditional", "collocations-b2", "vocab-work"],
+    steps: [
+      { title: "Обращение и вакансия", hint: "Dear Mr/Ms … , I am writing to apply for the position of… Где увидели объявление." },
+      { title: "Опыт", hint: "Present Perfect: I have worked as… for three years. I have experience in…" },
+      { title: "Достижения", hint: "Past Simple и глаголы действия: I managed, I increased, I launched — по возможности с результатом." },
+      { title: "Почему эта компания", hint: "Коротко и конкретно: что вас привлекает, чем будете полезны: my skills would be an asset…" },
+      { title: "Завершение", hint: "I have enclosed my CV. I look forward to hearing from you. Yours sincerely, и имя." }
+    ],
+    phrases: [
+      { en: "I am writing to apply for the position of project manager.", ru: "Пишу, чтобы откликнуться на должность менеджера проектов." },
+      { en: "I saw your advertisement on your company website.", ru: "Я увидел ваше объявление на сайте компании." },
+      { en: "I have been working in marketing for three years.", ru: "Я работаю в маркетинге три года." },
+      { en: "I have experience in managing small teams.", ru: "У меня есть опыт управления небольшими командами." },
+      { en: "In my current role, I am responsible for planning and budgeting.", ru: "На текущей должности я отвечаю за планирование и бюджет." },
+      { en: "I successfully led a project that increased sales by twenty per cent.", ru: "Я успешно провёл проект, который увеличил продажи на двадцать процентов." },
+      { en: "I developed a new system that reduced mistakes.", ru: "Я разработал новую систему, которая сократила число ошибок." },
+      { en: "I am a fast learner and I work well under pressure.", ru: "Я быстро учусь и хорошо работаю в условиях цейтнота." },
+      { en: "I believe my skills would be an asset to your company.", ru: "Уверен, мои навыки будут полезны вашей компании." },
+      { en: "I would welcome the opportunity to discuss my application.", ru: "Буду рад возможности обсудить мою кандидатуру." },
+      { en: "I have enclosed my CV for your consideration.", ru: "Прилагаю резюме для рассмотрения." },
+      { en: "I look forward to hearing from you.", ru: "Жду вашего ответа." }
+    ],
+    checks: [
+      { text: "Есть цель письма (I am writing to apply / I would like to apply)", pattern: "\\bi am writing to apply\\b|\\bi would like to apply\\b" },
+      { text: "Есть Present Perfect об опыте (I have worked / have experience…)", pattern: "\\bi have (been|worked|managed|led|gained|developed|completed|had|studied|run|built|trained|taken|dealt|spent)\\b" },
+      { text: "Есть не меньше 2 глаголов достижений в Past Simple (managed, increased, launched…)", pattern: "\\b(managed|led|increased|reduced|organised|organized|developed|created|improved|launched|trained|completed|achieved|built)\\b", min: 2 },
+      { text: "Есть вежливое завершение (Yours sincerely / faithfully / Kind regards)", pattern: "\\byours (sincerely|faithfully)\\b|\\bkind regards\\b" },
+      { text: "Нет сокращений (I'm, I've, don't…) — письмо формальное", pattern: "\\b(i['’](m|ve|d|ll)|(it|that|there|we|they|you|he|she)['’](s|re|ve|ll|d)|(can|won)['’]t|(do|does|did|could|would|should|is|are|was|were|have|has|had)n['’]t)\\b", forbid: true }
     ] }
 );
 
