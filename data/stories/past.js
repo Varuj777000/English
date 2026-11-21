@@ -112,32 +112,32 @@ DATA.stories.push(
   },
 
   {
-    id: "story-past-004", title: "Grandpa's Village", level: "A2",
+    id: "story-past-004", title: "Grandpa's Bicycle", level: "A2",
     box: [
-      { verb: "live",   forms: ["live", "lives", "living", "lived"] },
-      { verb: "walk",   forms: ["walk", "walks", "walking", "walked"] },
-      { verb: "go",     forms: ["go", "goes", "going", "went", "gone"] },
-      { verb: "build",  forms: ["build", "builds", "building", "built"] },
-      { verb: "close",  forms: ["close", "closes", "closing", "closed"] },
-      { verb: "change", forms: ["change", "changes", "changing", "changed"] },
-      { verb: "grow",   forms: ["grow", "grows", "growing", "grew", "grown"] },
-      { verb: "visit",  forms: ["visit", "visits", "visiting", "visited"] },
-      { verb: "sell",   forms: ["sell", "sells", "selling", "sold"] }
+      { verb: "live", forms: ["live","lives","living","lived"] },
+      { verb: "walk", forms: ["walk","walks","walking","walked"] },
+      { verb: "go", forms: ["go","goes","going","went","gone"] },
+      { verb: "build", forms: ["build","builds","building","built"] },
+      { verb: "close", forms: ["close","closes","closing","closed"] },
+      { verb: "change", forms: ["change","changes","changing","changed"] },
+      { verb: "grow", forms: ["grow","grows","growing","grew","grown"] },
+      { verb: "visit", forms: ["visit","visits","visiting","visited"] },
+      { verb: "sell", forms: ["sell","sells","selling","sold"] }
     ],
     text: [
-      "My grandpa Joe is eighty years old, and he knows every corner of his village. When he was a boy, he (1) ___ in a small house near the river. Every morning he (2) ___ five kilometres to school. Today the village children (3) ___ to school by bus.",
-      "Last year the village (4) ___ a new library. The old shop (5) ___ in 2015, so now people drive to the town. Grandpa says that the village (6) ___ every year. He still (7) ___ vegetables in his garden, just as he did as a boy. My cousins and I (8) ___ him every summer. Last summer he (9) ___ his old bicycle to a neighbour."
+      "Last Sunday Grandpa Joe showed me an old photo of his house. When he was a boy, he (1) ___ in a small house near the river, and every morning he (2) ___ five kilometres to school. Today the village children (3) ___ to school by bus, and Grandpa finds that a little sad.",
+      "Last year the village (4) ___ a new library, but the old shop (5) ___ in 2015, so now people drive to the town. Grandpa says that the village (6) ___ every year, but some things never change. He still (7) ___ vegetables in his garden, just as he did as a boy, and my cousins and I (8) ___ him every summer to help. Last summer he (9) ___ his old bicycle to a neighbour and gave all the money to the new library."
     ],
     gaps: [
-      { n: 1, verb: "live",   topic: "past-simple",     answers: ["lived"],  explain: "When he was a boy — прошлое. live + d (глагол на -e)." },
-      { n: 2, verb: "walk",   topic: "past-simple",     answers: ["walked"], explain: "Every morning, но в детстве (прошлое) → Past Simple: walked." },
-      { n: 3, verb: "go",     topic: "present-simple",  answers: ["go"],     explain: "Today — сегодня, привычка. The children = they → go, без -s." },
-      { n: 4, verb: "build",  topic: "irregular-verbs", answers: ["built"],  explain: "Last year → прошлое; build → built." },
-      { n: 5, verb: "close",  topic: "past-simple",     answers: ["closed"], explain: "in 2015 → прошлое: close + d." },
-      { n: 6, verb: "change", topic: "present-simple",  answers: ["changes"], explain: "every year — регулярно, Present Simple; the village = it → changes." },
-      { n: 7, verb: "grow",   topic: "present-simple",  answers: ["grows"],  explain: "He still ... — сейчас, привычка: he → grows." },
-      { n: 8, verb: "visit",  topic: "present-simple",  answers: ["visit"],  explain: "every summer — привычка; My cousins and I = we → visit, без -s." },
-      { n: 9, verb: "sell",   topic: "irregular-verbs", answers: ["sold"],   explain: "Last summer → прошлое; sell → sold." }
+      { n: 1, verb: "live", topic: "past-simple", answers: ["lived"], explain: "Сигнал — «When he was a boy»: законченный период в прошлом → Past Simple, lived." },
+      { n: 2, verb: "walk", topic: "past-simple", answers: ["walked"], explain: "Сигнал — «every morning» в рассказе о детстве: привычка в прошлом → Past Simple, walked." },
+      { n: 3, verb: "go", topic: "present-simple", answers: ["go"], explain: "Сигнал — «Today»: привычка сейчас → Present Simple, go (children — множественное число, без -s)." },
+      { n: 4, verb: "build", topic: "irregular-verbs", answers: ["built"], explain: "Сигнал — «Last year»: законченное действие в прошлом → Past Simple; build — built (неправильный глагол)." },
+      { n: 5, verb: "close", topic: "past-simple", answers: ["closed"], explain: "Сигнал — «in 2015»: точный год в прошлом → Past Simple, closed." },
+      { n: 6, verb: "change", topic: "present-simple", answers: ["changes"], explain: "Сигнал — «every year»: регулярное явление → Present Simple; the village — he/she/it, поэтому changes." },
+      { n: 7, verb: "grow", topic: "present-simple", answers: ["grows"], explain: "Сигнал — «still»: делает и сейчас → Present Simple; Grandpa — he, поэтому grows." },
+      { n: 8, verb: "visit", topic: "present-simple", answers: ["visit"], explain: "Сигнал — «every summer»: регулярное действие → Present Simple; my cousins and I — мн. число, поэтому visit." },
+      { n: 9, verb: "sell", topic: "irregular-verbs", answers: ["sold"], explain: "Сигнал — «Last summer»: законченное действие в прошлом → Past Simple; sell — sold (неправильный глагол)." }
     ]
   }
 

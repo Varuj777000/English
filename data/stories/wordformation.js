@@ -45,31 +45,30 @@ DATA.stories.push(
   {
     id: "story-wf-002", title: "A Weekend in Lisbon", level: "B1",
     box: [
-      { verb: "adventure",   forms: ["adventure", "adventures", "adventurous"] },
-      { verb: "expense",     forms: ["expense", "expenses", "expensive", "inexpensive"] },
-      { verb: "arrive",      forms: ["arrive", "arrives", "arriving", "arrived", "arrival", "arrivals"] },
-      { verb: "accommodate", forms: ["accommodate", "accommodates", "accommodating", "accommodated", "accommodation"] },
-      { verb: "convenient",  forms: ["convenient", "inconvenient", "conveniently", "convenience", "inconvenience"] },
-      { verb: "tour",        forms: ["tour", "tours", "touring", "toured", "tourist", "tourists"] },
-      { verb: "danger",      forms: ["danger", "dangers", "dangerous", "dangerously"] },
-      { verb: "foreign",     forms: ["foreign", "foreigner", "foreigners"] },
-      { verb: "back",        forms: ["back", "backs", "backed", "backwards", "backward"] }
+      { verb: "adventure", forms: ["adventure","adventures","adventurous"] },
+      { verb: "expense", forms: ["expense","expenses","expensive","inexpensive"] },
+      { verb: "arrive", forms: ["arrive","arrives","arriving","arrived","arrival","arrivals"] },
+      { verb: "accommodate", forms: ["accommodate","accommodates","accommodating","accommodated","accommodation"] },
+      { verb: "convenient", forms: ["convenient","inconvenient","conveniently","convenience","inconvenience"] },
+      { verb: "tour", forms: ["tour","tours","touring","toured","tourist","tourists"] },
+      { verb: "danger", forms: ["danger","dangers","dangerous","dangerously"] },
+      { verb: "foreign", forms: ["foreign","foreigner","foreigners"] },
+      { verb: "back", forms: ["back","backs","backed","backwards","backward"] }
     ],
     text: [
-      "My friend Tom is a very (1) ___ person: he loves trying new things. Last month he invited me to spend a weekend in Lisbon. We found cheap tickets, because Lisbon is not an (2) ___ city for visitors. Our (3) ___ at the airport was at midnight, but the owner of the hostel was waiting for us.",
-      "The (4) ___ was simple but clean. It was a bit (5) ___, though, because the metro was a twenty-minute walk away.",
-      "On Saturday we joined a group of (6) ___ and walked through the old streets. Some people say that the yellow trams are (7) ___, because the hills are so steep, but our driver was very careful. In the market we heard many (8) ___ languages. In the evening Tom, who loves jokes, walked (9) ___ along the beach and fell on the sand. We laughed all the way home."
+      "My friend Tom is a very (1) ___ person: he loves trying new things, so when he found cheap tickets to Lisbon, he invited me for a weekend. Lisbon is not an (2) ___ city for visitors, and that was perfect for our small budget. Our (3) ___ at the airport was at midnight, but the owner of the hostel was waiting for us.",
+      "The (4) ___ was simple but clean. It was a bit (5) ___, though, because the metro was a twenty-minute walk away, so on Saturday we joined a group of (6) ___ and took the old yellow tram. Some people say that the trams are (7) ___, because the hills are so steep, but our driver was very careful. In the market we heard many (8) ___ languages, and Tom, who loves jokes, tried to talk to everyone. In the evening he walked (9) ___ along the beach, laughing, and fell on the sand. We laughed all the way home."
     ],
     gaps: [
-      { n: 1, verb: "adventure",   topic: "word-formation", answers: ["adventurous"], explain: "После very — прилагательное: adventurous (любит приключения)." },
-      { n: 2, verb: "expense",     topic: "word-formation", answers: ["expensive"], explain: "Перед city — прилагательное: expensive (дорогой)." },
-      { n: 3, verb: "arrive",      topic: "word-formation", answers: ["arrival"], explain: "После Our — существительное: arrival (прибытие)." },
-      { n: 4, verb: "accommodate", topic: "word-formation", answers: ["accommodation"], explain: "После The — существительное: accommodation (жильё)." },
-      { n: 5, verb: "convenient",  topic: "word-formation", answers: ["inconvenient"], explain: "«Но метро далеко» — значит неудобно: in + convenient." },
-      { n: 6, verb: "tour",        topic: "word-formation", answers: ["tourists"], explain: "group of + люди во мн. числе: tourists." },
-      { n: 7, verb: "danger",      topic: "word-formation", answers: ["dangerous"], explain: "После are — прилагательное: dangerous." },
-      { n: 8, verb: "foreign",     topic: "word-formation", answers: ["foreign"], explain: "Перед languages — прилагательное: foreign (иностранные)." },
-      { n: 9, verb: "back",        topic: "word-formation", answers: ["backwards", "backward"], explain: "После глагола walked — наречие: backwards (задом наперёд)." }
+      { n: 1, verb: "adventure", topic: "word-formation", answers: ["adventurous"], explain: "Прилагательное после «a very» и перед существительным person: adventure → adventurous (суффикс -ous). Сигнал — «loves trying new things»." },
+      { n: 2, verb: "expense", topic: "word-formation", answers: ["expensive"], explain: "Прилагательное после «an» перед существительным city: expense → expensive (суффикс -ive). Сигнал — «cheap tickets» и «small budget»." },
+      { n: 3, verb: "arrive", topic: "word-formation", answers: ["arrival"], explain: "Существительное после «Our»: arrive → arrival (суффикс -al). Сигнал — «at the airport was at midnight»." },
+      { n: 4, verb: "accommodate", topic: "word-formation", answers: ["accommodation"], explain: "Существительное после «The»: accommodate → accommodation (суффикс -ation). Сигнал — «hostel» и «simple but clean»." },
+      { n: 5, verb: "convenient", topic: "word-formation", answers: ["inconvenient"], explain: "Прилагательное после «a bit»: convenient с отрицательной приставкой in- → inconvenient. Сигнал — «though» и «twenty-minute walk away»." },
+      { n: 6, verb: "tour", topic: "word-formation", answers: ["tourists"], explain: "Существительное во мн. числе после «group of»: tour → tourist, во мн. числе tourists. Сигнал — «a group of»." },
+      { n: 7, verb: "danger", topic: "word-formation", answers: ["dangerous"], explain: "Прилагательное после «are»: danger → dangerous (суффикс -ous). Сигнал — «hills are so steep»." },
+      { n: 8, verb: "foreign", topic: "word-formation", answers: ["foreign"], explain: "Прилагательное перед существительным languages: foreign — «иностранный». Сигнал — «In the market we heard many…»." },
+      { n: 9, verb: "back", topic: "word-formation", answers: ["backwards","backward"], explain: "Наречие после глагола walked: back → backwards («задом наперёд»). Сигнал — «fell on the sand» (шёл неправильно)." }
     ]
   }
 

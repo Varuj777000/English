@@ -45,31 +45,30 @@ DATA.stories.push(
   {
     id: "story-mix-002", title: "My First Week", level: "B1",
     box: [
-      { verb: "work",     forms: ["work", "works", "working", "worked"] },
-      { verb: "arrive",   forms: ["arrive", "arrives", "arriving", "arrived"] },
-      { verb: "talk",     forms: ["talk", "talks", "talking", "talked"] },
-      { verb: "leave",    forms: ["leave", "leaves", "leaving", "left"] },
-      { verb: "check",    forms: ["check", "checks", "checking", "checked"] },
-      { verb: "show",     forms: ["show", "shows", "showing", "showed", "shown"] },
-      { verb: "use",      forms: ["use", "uses", "using", "used"] },
-      { verb: "organise", forms: ["organise", "organises", "organising", "organised", "organize", "organizes", "organizing", "organized"] },
-      { verb: "end",      forms: ["end", "ends", "ending", "ended"] }
+      { verb: "work", forms: ["work","works","working","worked"] },
+      { verb: "arrive", forms: ["arrive","arrives","arriving","arrived"] },
+      { verb: "talk", forms: ["talk","talks","talking","talked"] },
+      { verb: "leave", forms: ["leave","leaves","leaving","left"] },
+      { verb: "check", forms: ["check","checks","checking","checked"] },
+      { verb: "show", forms: ["show","shows","showing","showed","shown"] },
+      { verb: "use", forms: ["use","uses","using","used"] },
+      { verb: "organise", forms: ["organise","organises","organising","organised","organize","organizes","organizing","organized"] },
+      { verb: "end", forms: ["end","ends","ending","ended"] }
     ],
     text: [
-      "I (1) ___ at my new company for five days now, and so far I really like it. Last Monday, my first day, I (2) ___ at nine o'clock sharp.",
-      "When I came in, my new boss (3) ___ on the phone, so I waited quietly. Later she told me that the previous manager (4) ___ the company a month before, so nobody could explain the old system to me.",
-      "Every morning I (5) ___ the team's emails before the first meeting. Right now my colleague Tom (6) ___ me how to use the new software, so I can't talk for long. I (7) ___ such a complicated system before, and I'm a bit worried. Next Friday the company (8) ___ a party for the new employees, and the invitation is already on my desk. When my trial period (9) ___ next month, I will ask for a permanent contract."
+      "Dear Kate, I (1) ___ at my new company for five days now, and the first week is a real adventure. Last Monday I (2) ___ at nine o'clock sharp, full of energy. When I came in, my new boss (3) ___ on the phone, and she looked worried. Later she explained that the previous manager (4) ___ the company a month before without leaving any instructions, so nobody could explain the old system to me.",
+      "That is why every morning I (5) ___ the team's emails before the first meeting — it is the only way to understand what is going on. Right now my colleague Tom (6) ___ me how to use the new software, so I can't write for long. I (7) ___ such a complicated system before, but Tom is very patient. Next Friday the company (8) ___ a party for the new employees, and the invitation is already on my desk, so at least something is easy! When my trial period (9) ___ next month, I will ask for a permanent contract. Write soon! Anna"
     ],
     gaps: [
-      { n: 1, verb: "work",     topic: "mixed-tenses", answers: ["have worked", "have been working", "'ve worked", "'ve been working"], explain: "Сигнал — «for five days now» и «so far»: период от прошлого до сегодняшнего дня → Present Perfect (Continuous), have worked / have been working." },
-      { n: 2, verb: "arrive",   topic: "mixed-tenses", answers: ["arrived"], explain: "Сигнал — «Last Monday, my first day»: конкретный момент в прошлом → Past Simple, arrived." },
-      { n: 3, verb: "talk",     topic: "mixed-tenses", answers: ["was talking"], explain: "Сигнал — «When I came in…»: в момент, когда я вошла, начальница уже говорила — длительный фон → Past Continuous, was talking." },
-      { n: 4, verb: "leave",    topic: "mixed-tenses", answers: ["had left"], explain: "Сигнал — «a month before» и «she told me»: уход случился раньше рассказа → Past Perfect, had left." },
-      { n: 5, verb: "check",    topic: "mixed-tenses", answers: ["check"], explain: "Сигнал — «Every morning»: регулярное действие → Present Simple, check." },
-      { n: 6, verb: "show",     topic: "mixed-tenses", answers: ["is showing", "'s showing"], explain: "Сигнал — «Right now» и «I can't talk for long»: происходит сейчас → Present Continuous, is showing." },
-      { n: 7, verb: "use",      topic: "mixed-tenses", answers: ["have never used", "'ve never used", "haven't used", "have not used", "'ve not used"], explain: "Сигнал — «before» и «I'm a bit worried»: опыта до сегодняшнего дня не было → Present Perfect, have never used / haven't used." },
-      { n: 8, verb: "organise", topic: "mixed-tenses", answers: ["is organising", "'s organising", "is going to organise", "'s going to organise", "is organizing", "'s organizing", "is going to organize", "'s going to organize"], explain: "Сигнал — «Next Friday» и «the invitation is already on my desk»: уже решено и подготовлено → Present Continuous (или be going to), is organising." },
-      { n: 9, verb: "end",      topic: "mixed-tenses", answers: ["ends"], explain: "Сигнал — «When…» + «I will ask»: после when в предложении о будущем стоит Present Simple, ends (не will end)." }
+      { n: 1, verb: "work", topic: "mixed-tenses", answers: ["have worked","have been working","'ve worked","'ve been working"], explain: "Сигнал — «for five days now»: период от прошлого до сегодняшнего дня → Present Perfect (Continuous), have worked / have been working." },
+      { n: 2, verb: "arrive", topic: "mixed-tenses", answers: ["arrived"], explain: "Сигнал — «Last Monday»: конкретный момент в прошлом → Past Simple, arrived." },
+      { n: 3, verb: "talk", topic: "mixed-tenses", answers: ["was talking"], explain: "Сигнал — «When I came in…»: в момент, когда я вошла, начальница уже говорила — длительный фон → Past Continuous, was talking." },
+      { n: 4, verb: "leave", topic: "mixed-tenses", answers: ["had left"], explain: "Сигнал — «a month before» и «she explained»: уход случился раньше рассказа → Past Perfect, had left." },
+      { n: 5, verb: "check", topic: "mixed-tenses", answers: ["check"], explain: "Сигнал — «every morning»: регулярное действие → Present Simple, check." },
+      { n: 6, verb: "show", topic: "mixed-tenses", answers: ["is showing","'s showing"], explain: "Сигнал — «Right now» и «I can't write for long»: происходит сейчас → Present Continuous, is showing." },
+      { n: 7, verb: "use", topic: "mixed-tenses", answers: ["have never used","'ve never used","haven't used","have not used","'ve not used"], explain: "Сигнал — «before» и «but Tom is very patient»: опыта до сегодняшнего дня не было → Present Perfect, have never used / haven't used." },
+      { n: 8, verb: "organise", topic: "mixed-tenses", answers: ["is organising","'s organising","is going to organise","'s going to organise","is organizing","'s organizing","is going to organize","'s going to organize"], explain: "Сигнал — «Next Friday» и «the invitation is already on my desk»: уже решено и подготовлено → Present Continuous (или be going to), is organising." },
+      { n: 9, verb: "end", topic: "mixed-tenses", answers: ["ends"], explain: "Сигнал — «When…» + «I will ask»: после when в предложении о будущем стоит Present Simple, ends (не will end)." }
     ]
   }
 
