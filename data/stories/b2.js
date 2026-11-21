@@ -1,5 +1,5 @@
 // =====================================================================
-// Мини-рассказы с рамкой глаголов — уровень B2 (4 штуки по 9 пропусков).
+// Мини-рассказы с рамкой глаголов — уровень B2 (6 штук по 9 пропусков).
 // Формат — см. data/stories/past.js и passive.js. Здесь в пропуск вписывается
 // вся глагольная группа B2-грамматики: should have tested, had booked,
 // would have found, is being repaired, will have finished, Waiting…
@@ -10,6 +10,8 @@
 //   story-b2-002 — I wish / If only + смешанные условные (Holiday Regrets)
 //   story-b2-003 — сложный пассив (The Old Bridge)
 //   story-b2-004 — Future Continuous / Perfect + причастные обороты (Rob's Busy Summer)
+//   story-b2-005 — causative have/get + be/get used to (Starting Again in Canada)
+//   story-b2-006 — глаголы передачи речи + gerund/infinitive (The Rumour at Work)
 // =====================================================================
 
 DATA.stories.push(
@@ -134,6 +136,68 @@ DATA.stories.push(
       { n: 7, verb: "open",   topic: "participle-clauses", answers: ["Opening"], explain: "Действия почти одновременны: Opening the door, he saw…" },
       { n: 8, verb: "look",   topic: "participle-clauses", answers: ["looking"], explain: "Причастие вместо придаточного: a small café, looking out over the harbour (= which looked out)." },
       { n: 9, verb: "hear",   topic: "participle-clauses", answers: ["Having heard", "Hearing"], explain: "Сначала услышала, потом позвонила: Having heard (раньше) — или просто Hearing." }
+    ]
+  },
+
+  {
+    id: "story-b2-005", title: "Starting Again in Canada", level: "B2",
+    box: [
+      { verb: "paint",     forms: ["paint", "paints", "painting", "painted", "repaint", "repainted"] },
+      { verb: "translate", forms: ["translate", "translates", "translating", "translated"] },
+      { verb: "repair",    forms: ["repair", "repairs", "repairing", "repaired"] },
+      { verb: "drive",     forms: ["drive", "drives", "driving", "drove", "driven"] },
+      { verb: "wake",      forms: ["wake", "wakes", "waking", "woke", "woken"] },
+      { verb: "check",     forms: ["check", "checks", "checking", "checked"] },
+      { verb: "work",      forms: ["work", "works", "working", "worked"] },
+      { verb: "cut",       forms: ["cut", "cuts", "cutting"] },
+      { verb: "live",      forms: ["live", "lives", "living", "lived"] }
+    ],
+    text: [
+      "Moving to Canada was a big step for our family. The walls of our new flat were an ugly yellow, so we (1) ___ before we moved in. Our university certificates were in Russian, so we (2) ___ into English by an official translator. On the plane my husband's laptop broke, and he (3) ___ in a shop near our building.",
+      "Everyday life was strange at first. Driving on the right felt wrong for me, but now I (4) ___ on the right-hand side of the road. My son finds school starts too early, but he is slowly (5) ___ up at six every day. The heating in our flat is noisy, so next week we (6) ___ by an engineer.",
+      "Many people here work from home, but I (7) ___ alone all day. My hair was a mess after the move, so I (8) ___ at the barber's on the corner. It is not always easy, but I am sure that in a year we (9) ___ here like locals."
+    ],
+    gaps: [
+      { n: 1, verb: "paint",     topic: "causative-have",  answers: ["had them painted", "had the walls painted", "had them repainted", "had the walls repainted", "got them painted", "got the walls painted"], explain: "Стены красили нанятые люди (мы сами не красили) → have + предмет + V3: had them painted. Ловушка: ✗ we painted — тогда красили сами." },
+      { n: 2, verb: "translate", topic: "causative-have",  answers: ["had them translated", "had the certificates translated", "got them translated", "got the certificates translated"], explain: "Перевёл «an official translator» (by …) — услугу заказали: had them translated (V3 после предмета), не ✗ had them translate." },
+      { n: 3, verb: "repair",    topic: "causative-have",  answers: ["had it repaired", "had his laptop repaired", "had the laptop repaired", "got it repaired", "got his laptop repaired", "got the laptop repaired"], explain: "Чинил мастер «in a shop» — услугу получил, не делал сам: had it repaired. Предмет (it) стоит между have и V3." },
+      { n: 4, verb: "drive",     topic: "be-get-used-to",  answers: ["am used to driving", "'m used to driving", "have got used to driving", "'ve got used to driving", "have gotten used to driving", "'ve gotten used to driving", "am getting used to driving", "'m getting used to driving"], explain: "Сигнал — «felt wrong at first, but now»: уже привыкла → be used to + -ing (или have got used to): am used to driving. Ловушка: ✗ am used to drive." },
+      { n: 5, verb: "wake",      topic: "be-get-used-to",  answers: ["getting used to waking"], explain: "Сигнал — «slowly»: процесс привыкания → get used to + -ing: (is) getting used to waking. Перед пропуском уже есть is slowly, поэтому нужна форма с -ing." },
+      { n: 6, verb: "check",     topic: "causative-have",  answers: ["are having it checked", "'re having it checked", "are going to have it checked", "'re going to have it checked", "are having the heating checked", "'re having the heating checked", "are going to have the heating checked", "'re going to have the heating checked"], explain: "Сигнал — «next week» и «by an engineer»: услуга запланирована → are having it checked (Present Continuous для планов) / are going to have it checked." },
+      { n: 7, verb: "work",      topic: "be-get-used-to",  answers: ["am not used to working", "'m not used to working", "am still not used to working", "'m still not used to working", "haven't got used to working", "have not got used to working", "haven't gotten used to working", "have not gotten used to working"], explain: "Сигнал — «but I…»: у других это нормально, а мне ещё нет → отрицание: am not used to working (после used to — глагол с -ing). Ловушка: ✗ am not used to work." },
+      { n: 8, verb: "cut",       topic: "causative-have",  answers: ["had it cut", "had my hair cut", "got it cut", "got my hair cut"], explain: "Сигнал — «at the barber's»: стригли в парикмахерской, не сама → had it cut (V3 у cut совпадает с V1: cut — cut — cut)." },
+      { n: 9, verb: "live",      topic: "be-get-used-to",  answers: ["will be used to living", "'ll be used to living", "will have got used to living", "'ll have got used to living", "will have gotten used to living", "'ll have gotten used to living", "will be living"], explain: "Сигнал — «in a year» и «like locals»: прогноз, что к тому времени привыкнем → will be used to living (или will have got used to living)." }
+    ]
+  },
+
+  {
+    id: "story-b2-006", title: "The Rumour at Work", level: "B2",
+    box: [
+      { verb: "break", forms: ["break", "breaks", "breaking", "broke", "broken"] },
+      { verb: "send",  forms: ["send", "sends", "sending", "sent"] },
+      { verb: "copy",  forms: ["copy", "copies", "copying", "copied"] },
+      { verb: "take",  forms: ["take", "takes", "taking", "took", "taken"] },
+      { verb: "go",    forms: ["go", "goes", "going", "went", "gone"] },
+      { verb: "lock",  forms: ["lock", "locks", "locking", "locked"] },
+      { verb: "tell",  forms: ["tell", "tells", "telling", "told"] },
+      { verb: "press", forms: ["press", "presses", "pressing", "pressed"] },
+      { verb: "join",  forms: ["join", "joins", "joining", "joined"] }
+    ],
+    text: [
+      "Monday was a strange day in our office. First, the printer stopped working. Anna said, “I'm sorry, I broke it when I was moving the paper.” She (1) ___ the printer, so nobody was angry. Then Mr Clark said, “I will send the new invoice before noon, I promise.” He (2) ___ the invoice before noon, and he did.",
+      "Later, the boss said to Tom, “You copied the design from another company!” He (3) ___ the design from another company. Tom answered, “No, I didn't take the idea from anyone.” He (4) ___ the idea from anyone. At lunch Anna said, “Let's go to the café and talk about it.” She (5) ___ to the café to talk about it.",
+      "In the evening the cleaner found the office door open, but Tom was sure that he (6) ___ it, because he could still hear the click of the key. The next day Anna apologised, because she (7) ___ everyone about the meeting, and half the team missed it. The printer still didn't work, so Tom (8) ___ the green button for ten seconds, but nothing changed. Finally, Tom said, “OK, I'll come to the café.” He (9) ___ the others there."
+    ],
+    gaps: [
+      { n: 1, verb: "break", topic: "reporting-verbs",            answers: ["admitted breaking", "admitted having broken", "admitted to breaking", "confessed to breaking", "owned up to breaking", "apologised for breaking", "apologized for breaking"], explain: "Анна говорит «I broke it» — признаёт свою вину: admit + -ing (admitted breaking). После admit нельзя ✗ to break." },
+      { n: 2, verb: "send",  topic: "reporting-verbs",            answers: ["promised to send", "promised he would send", "promised that he would send"], explain: "Прямая речь с «I promise»: promise + to + инфинитив (promised to send). Ловушка: ✗ promised sending." },
+      { n: 3, verb: "copy",  topic: "reporting-verbs",            answers: ["accused Tom of copying", "accused him of copying", "blamed Tom for copying", "blamed him for copying"], explain: "Босс говорит «You copied…!» — обвиняет: accuse + кого + of + -ing (accused Tom of copying). Ловушка: ✗ accused Tom to copy." },
+      { n: 4, verb: "take",  topic: "reporting-verbs",            answers: ["denied taking", "denied having taken"], explain: "Том говорит «No, I didn't take…» — отрицает: deny + -ing (denied taking). Отрицание уже в самом глаголе, поэтому ✗ denied not taking." },
+      { n: 5, verb: "go",    topic: "reporting-verbs",            answers: ["suggested going", "suggested we go", "suggested that we go", "suggested they go", "suggested that they go"], explain: "Прямая речь «Let's go…»: suggest + -ing или suggest (that) we go (suggested going). Ловушка: ✗ suggested to go." },
+      { n: 6, verb: "lock",  topic: "gerund-infinitive-meaning",  answers: ["remembered locking", "remembered having locked"], explain: "Сигнал — «could still hear the click»: он помнит само действие в прошлом → remember + -ing (remembered locking). Remember + to означало бы «не забыл сделать»." },
+      { n: 7, verb: "tell",  topic: "gerund-infinitive-meaning",  answers: ["forgot to tell"], explain: "Сигнал — «half the team missed it»: она не сделала то, что нужно было → forget + to + инфинитив (forgot to tell). Forgot telling значило бы «забыла, что рассказывала»." },
+      { n: 8, verb: "press", topic: "gerund-infinitive-meaning",  answers: ["tried pressing"], explain: "Сигнал — «for ten seconds, but nothing changed»: он попробовал как эксперимент → try + -ing (tried pressing). Try + to — «пытался, прилагал усилие»." },
+      { n: 9, verb: "join",  topic: "reporting-verbs",            answers: ["agreed to join", "promised to join"], explain: "Прямая речь «OK, I'll come…»: agree + to + инфинитив (agreed to join). Ловушка: ✗ agreed joining." }
     ]
   }
 
